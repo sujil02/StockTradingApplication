@@ -1,0 +1,7 @@
+For serialization and deserialization to support the following operations.
+
+- The ability to save a portfolio to file.
+- The ability to retrieve a portfolio from a file.
+
+We have used the free open source google's gson library which converts the java objects to appropriate json objects and vice-versa.
+Licencing information for the library could be found at :- https://github.com/google/gson

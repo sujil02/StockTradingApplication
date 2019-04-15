@@ -1,0 +1,45 @@
+{
+  "portfolioName": "5Stock",
+  "ownedStocks": [
+    {
+      "companyName": "Google",
+      "tickerSymbol": "GOOG",
+      "quantity": 100,
+      "costPrice": 1189.59,
+      "purchaseDate": "03/15/2019 12:00:00",
+      "commission": 0.0
+    },
+    {
+      "companyName": "Microsoft",
+      "tickerSymbol": "MSFT",
+      "quantity": 500,
+      "costPrice": 111.965,
+      "purchaseDate": "03/11/2019 12:00:00",
+      "commission": 0.0
+    },
+    {
+      "companyName": "Amazon",
+      "tickerSymbol": "AMZN",
+      "quantity": 18,
+      "costPrice": 1649.15,
+      "purchaseDate": "03/11/2019 12:00:00",
+      "commission": 1.0
+    },
+    {
+      "companyName": "Apple",
+      "tickerSymbol": "AAPL",
+      "quantity": 50,
+      "costPrice": 177.235,
+      "purchaseDate": "03/11/2019 12:00:00",
+      "commission": 20.0
+    },
+    {
+      "companyName": "Facebook",
+      "tickerSymbol": "FB",
+      "quantity": 28,
+      "costPrice": 172.94,
+      "purchaseDate": "03/11/2019 12:00:00",
+      "commission": 2.0
+    }
+  ]
+}

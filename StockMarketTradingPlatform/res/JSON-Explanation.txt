@@ -1,0 +1,21 @@
+
+This is a sample json file which can reffered to create a sample portfolio design by a user.
+
+The json expects the object of type porfolio having respective feilds.
+Refer to the sample json written below with left tag as key name and right tag as values.
+
+{
+  "portfolioName": 'Name of the portfolio to be created',
+  "ownedStocks": [ --->  All the stocks in the portfolio.
+    {
+      "companyName": --> Company name
+      "tickerSymbol": "Company ticker symbol",
+      "quantity": quantity of the stocks to be bought,
+      "costPrice": total cost of the transaction,
+      "purchaseDate": Valid Date on which the transaction was done,
+      "commission": commision fees
+    },
+	
+	// Add multiple entries of the sample stock design to have multile stocks.
+  ]
+}

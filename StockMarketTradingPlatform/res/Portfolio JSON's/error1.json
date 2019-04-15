@@ -1,0 +1,18 @@
+{
+  "portfolioName": "Default",
+  "ownedStocks": [
+    {
+      "companyName": "Google",
+      "tickerSymbol": "GOOG",
+      "quantity": 100,
+      "costPrice": 1189.59,
+      "purchaseDate": "03/15/2019 12:00:00",
+      "commission": 0.0
+    },
+    {
+      "companyName": "Microsoft",
+      "tickerSymbol": "MSFT",
+      "quantity": 500,
+      "costPrice": 111.965,
+      "purchaseDate": "03/11/2019 12:00:00",
+      "commission": 0.0
