@@ -9,13 +9,12 @@ import view.IView;
 import view.View;
 
 /**
- * This class contains the main method of the application. This class is the
- * start point of the application.
+ * This class contains the main method of the application. This class is the start point of the
+ * application.
  */
 public class Stocks {
   /**
-   * This is the main method of the application which gets called on execution
-   * of the application.
+   * This is the main method of the application which gets called on execution of the application.
    *
    * @param args command line arguments.
    */
@@ -31,5 +30,6 @@ public class Stocks {
       IController guiController = new GUIController(user);
       guiController.start();
     }
+
   }
 }

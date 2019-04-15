@@ -23,4 +23,5 @@ public interface IView extends IMainView {
    * @throws IOException if the object is no longer accessible.
    */
   void append(String output) throws IOException;
+
 }

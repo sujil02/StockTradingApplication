@@ -9,11 +9,11 @@ import view.guiview.IJFrameView;
 import view.guiview.JFrameView;
 
 /**
- * GUI Controller class which takes inputs from the user and tells the model what to do and the
- * view what to show. Basically decides which operations to be called over the model based on the
- * inputs from the view.
+ * GUI Controller class which takes inputs from the user and tells the model what to do and the view
+ * what to show. Basically decides which operations to be called over the model based on the inputs
+ * from the view.
  */
-public class GUIController extends AbstractController implements IFeatures {
+public class GUIController extends AbstractController {
   private IJFrameView view;
 
   public GUIController(IUserV2 model) {
