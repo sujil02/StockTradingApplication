@@ -1,4 +1,4 @@
-package controller;
+package controller.textcommands;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -6,14 +6,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.NoSuchElementException;
 
+import controller.TextController;
 import model.TradeType;
 import view.IView;
 
 /**
- * Class handles the command to buy a stock for a particular user over the
- * selected portfolio by the user.
+ * Class handles the command to buy a stock for a particular user over the selected portfolio by the
+ * user.
  */
-public class BuyStockCommand implements IPortfolioCommand {
+public class BuyStockUsingDefaultStrategyCommand implements IPortfolioCommand {
   @Override
   public void execute(TextController textController, IView view, String portfolioName)
           throws IOException, NoSuchElementException {
@@ -95,6 +96,6 @@ public class BuyStockCommand implements IPortfolioCommand {
 
   @Override
   public String gerDescription() {
-    return "Buy Shares on this portfolio";
+    return "Buy Stocks using no Strategy on this portfolio";
   }
 }

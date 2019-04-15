@@ -3,32 +3,32 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="903.0" y="1147.0">controller.ImportPortfolioCommand</node>
+    <node x="903.0" y="1147.0">controller.textcommands.ImportPortfolioCommand</node>
     <node x="452.0" y="758.0">controller.TextController</node>
-    <node x="921.0" y="1435.0">controller.PortfolioValueCommand</node>
-    <node x="614.0" y="1300.0">controller.IPortfolioCommand</node>
-    <node x="614.0" y="1424.0">controller.PortfolioCostBiasCommand</node>
-    <node x="540.0" y="1113.0">controller.ExaminePortfolioCommand</node>
+    <node x="921.0" y="1435.0">controller.textcommands.PortfolioValueCommand</node>
+    <node x="614.0" y="1300.0">controller.textcommands.IPortfolioCommand</node>
+    <node x="614.0" y="1424.0">controller.textcommands.PortfolioCostBiasCommand</node>
+    <node x="540.0" y="1113.0">controller.textcommands.ExaminePortfolioCommand</node>
     <node x="264.5" y="323.0">controller.AbstractController</node>
     <node x="0.0" y="0.0">controller.IFeatures</node>
-    <node x="270.0" y="1147.0">controller.DisplayPortfoliosCommand</node>
-    <node x="0.0" y="1147.0">controller.CreatePortfolioCommand</node>
-    <node x="428.25" y="989.0">controller.ICommand</node>
-    <node x="1228.0" y="1424.0">controller.BuyStockCommand</node>
+    <node x="270.0" y="1147.0">controller.textcommands.DisplayPortfoliosCommand</node>
+    <node x="0.0" y="1147.0">controller.textcommands.CreatePortfolioCommand</node>
+    <node x="428.25" y="989.0">controller.textcommands.ICommand</node>
+    <node x="1228.0" y="1424.0">controller.textcommands.BuyStockCommand</node>
     <node x="0.0" y="692.0">controller.GUIController</node>
-    <node x="307.0" y="1435.0">controller.ExportPortfolioCommand</node>
+    <node x="307.0" y="1435.0">controller.textcommands.ExportPortfolioCommand</node>
     <node x="526.5" y="110.5">controller.IController</node>
-    <node x="0.0" y="1435.0">controller.PortfolioContentsCommand</node>
+    <node x="0.0" y="1435.0">controller.textcommands.PortfolioContentsCommand</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="controller.PortfolioValueCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.PortfolioValueCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="0.0" y="-37.0" />
       <point x="1064.5" y="1404.0" />
       <point x="814.9" y="1404.0" />
       <point x="57.39999999999998" y="37.0" />
     </edge>
-    <edge source="controller.ExportPortfolioCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.ExportPortfolioCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="0.0" y="-37.0" />
       <point x="450.5" y="1404.0" />
       <point x="700.1" y="1404.0" />
@@ -38,7 +38,7 @@
       <point x="108.0" y="-159.5" />
       <point x="0.0" y="26.0" />
     </edge>
-    <edge source="controller.CreatePortfolioCommand" target="controller.ICommand">
+    <edge source="controller.textcommands.CreatePortfolioCommand" target="controller.textcommands.ICommand">
       <point x="0.0" y="-37.0" />
       <point x="125.0" y="1083.0" />
       <point x="459.5" y="1083.0" />
@@ -60,35 +60,35 @@
       <point x="-108.0" y="-126.0" />
       <point x="-108.0" y="136.5" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.ICommand">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.ICommand">
       <point x="0.0" y="-71.0" />
       <point x="711.5" y="1093.0" />
       <point x="584.5" y="1093.0" />
       <point x="31.25" y="37.0" />
     </edge>
-    <edge source="controller.BuyStockCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.BuyStockCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="0.0" y="-48.0" />
       <point x="1371.5" y="1394.0" />
       <point x="872.3" y="1394.0" />
       <point x="114.79999999999995" y="37.0" />
     </edge>
-    <edge source="controller.PortfolioCostBiasCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.PortfolioCostBiasCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="0.0" y="-48.0" />
       <point x="0.0" y="37.0" />
     </edge>
-    <edge source="controller.DisplayPortfoliosCommand" target="controller.ICommand">
+    <edge source="controller.textcommands.DisplayPortfoliosCommand" target="controller.textcommands.ICommand">
       <point x="0.0" y="-37.0" />
       <point x="395.0" y="1093.0" />
       <point x="522.0" y="1093.0" />
       <point x="-31.25" y="37.0" />
     </edge>
-    <edge source="controller.PortfolioContentsCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="0.0" y="-37.0" />
       <point x="143.5" y="1394.0" />
       <point x="642.7" y="1394.0" />
       <point x="-114.79999999999995" y="37.0" />
     </edge>
-    <edge source="controller.ImportPortfolioCommand" target="controller.ICommand">
+    <edge source="controller.textcommands.ImportPortfolioCommand" target="controller.textcommands.ICommand">
       <point x="0.0" y="-37.0" />
       <point x="1028.0" y="1083.0" />
       <point x="647.0" y="1083.0" />
@@ -101,22 +101,22 @@
   </edges>
   <settings layout="Hierarchic Group" zoom="1.0" x="523.5" y="199.0" />
   <SelectedNodes>
-    <node>controller.ImportPortfolioCommand</node>
-    <node>controller.PortfolioCostBiasCommand</node>
-    <node>controller.ExaminePortfolioCommand</node>
+    <node>controller.textcommands.ImportPortfolioCommand</node>
+    <node>controller.textcommands.PortfolioCostBiasCommand</node>
+    <node>controller.textcommands.ExaminePortfolioCommand</node>
     <node>controller.AbstractController</node>
     <node>controller.IFeatures</node>
-    <node>controller.DisplayPortfoliosCommand</node>
-    <node>controller.CreatePortfolioCommand</node>
+    <node>controller.textcommands.DisplayPortfoliosCommand</node>
+    <node>controller.textcommands.CreatePortfolioCommand</node>
     <node>controller.TextController</node>
-    <node>controller.ICommand</node>
-    <node>controller.PortfolioValueCommand</node>
-    <node>controller.IPortfolioCommand</node>
-    <node>controller.BuyStockCommand</node>
+    <node>controller.textcommands.ICommand</node>
+    <node>controller.textcommands.PortfolioValueCommand</node>
+    <node>controller.textcommands.IPortfolioCommand</node>
+    <node>controller.textcommands.BuyStockCommand</node>
     <node>controller.GUIController</node>
-    <node>controller.ExportPortfolioCommand</node>
+    <node>controller.textcommands.ExportPortfolioCommand</node>
     <node>controller.IController</node>
-    <node>controller.PortfolioContentsCommand</node>
+    <node>controller.textcommands.PortfolioContentsCommand</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>

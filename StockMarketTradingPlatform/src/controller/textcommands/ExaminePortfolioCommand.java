@@ -1,10 +1,11 @@
-package controller;
+package controller.textcommands;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import controller.TextController;
 import view.IView;
 
 /**
@@ -18,10 +19,10 @@ public class ExaminePortfolioCommand implements ICommand {
    * Void constructor to initialize the list of all possible commands that could be executed over a
    * portfolio.
    */
-  protected ExaminePortfolioCommand() {
+  public ExaminePortfolioCommand() {
     this.commandsMap = new LinkedHashMap<>();
     commandsMap.put(1, new PortfolioContentsCommand());
-    commandsMap.put(2, new BuyStockCommand());
+    commandsMap.put(2, new BuyStockUsingDefaultStrategyCommand());
     commandsMap.put(3, new PortfolioCostBiasCommand());
     commandsMap.put(4, new PortfolioValueCommand());
     commandsMap.put(5, new ExportPortfolioCommand());

@@ -1,8 +1,9 @@
-package controller;
+package controller.textcommands;
 
 import java.io.IOException;
 import java.util.NoSuchElementException;
 
+import controller.TextController;
 import model.IPortfolioV2;
 import model.IStock;
 import view.IView;

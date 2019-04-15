@@ -5,7 +5,7 @@
   <nodes>
     <node x="4993.254043423662" y="22.0">model.TradeType</node>
     <node x="2890.629043423662" y="536.0">model.Stock</node>
-    <node x="304.89999999999964" y="1509.0">controller.ImportPortfolioCommand</node>
+    <node x="304.89999999999964" y="1509.0">controller.textcommands.ImportPortfolioCommand</node>
     <node x="4452.576445798983" y="2898.0">Stocks</node>
     <node x="3441.9465603921294" y="164.0">model.IStock</node>
     <node x="4278.973643725463" y="2556.0">model.UserImpl</node>
@@ -16,36 +16,36 @@
     <node x="2354.4833333333327" y="1127.0">view.View</node>
     <node x="4045.879043423662" y="1127.0">model.ISerializeAndDeserialize</node>
     <node x="921.2961427686796" y="2666.0">controller.TextController</node>
-    <node x="1508.8999999999999" y="1509.0">controller.PortfolioValueCommand</node>
-    <node x="1445.295710090329" y="1127.0">controller.IPortfolioCommand</node>
+    <node x="1508.8999999999999" y="1509.0">controller.textcommands.PortfolioValueCommand</node>
+    <node x="1445.295710090329" y="1127.0">controller.textcommands.IPortfolioCommand</node>
     <node x="4735.6285291323165" y="1487.0">model.IUserV2</node>
     <node x="2411.1083333333327" y="0.0">model.FileIO</node>
     <node x="2773.1083333333327" y="11.0">model.IStockDataAPI</node>
     <node x="5380.815148313555" y="1454.0">view.guiview.IJFrameView</node>
     <node x="5676.815148313555" y="1520.0">view.guiview.JFrameView.DisplayPortfolioButtonListener</node>
-    <node x="1201.8999999999996" y="1498.0">controller.PortfolioCostBiasCommand</node>
-    <node x="979.5465603921298" y="2044.0">controller.ExaminePortfolioCommand</node>
+    <node x="1201.8999999999996" y="1498.0">controller.textcommands.PortfolioCostBiasCommand</node>
+    <node x="979.5465603921298" y="2044.0">controller.textcommands.ExaminePortfolioCommand</node>
     <node x="4893.438636363636" y="1956.0">controller.AbstractController</node>
     <node x="5950.815148313555" y="1520.0">view.guiview.JFrameView.CostBiasButtonListener</node>
     <node x="5925.147982817602" y="1028.0">controller.IFeatures</node>
-    <node x="575.8999999999996" y="1509.0">controller.DisplayPortfoliosCommand</node>
+    <node x="575.8999999999996" y="1509.0">controller.textcommands.DisplayPortfoliosCommand</node>
     <node x="4134.896969696969" y="646.0">model.IPortfolioV2</node>
-    <node x="27.699999999999818" y="1509.0">controller.CreatePortfolioCommand</node>
+    <node x="27.699999999999818" y="1509.0">controller.textcommands.CreatePortfolioCommand</node>
     <node x="3237.346969696969" y="285.0">view.IMainView</node>
     <node x="3728.238227058796" y="2055.0">model.SerializeAndDeserialize</node>
     <node x="882.0457100903291" y="668.0">view.IView</node>
     <node x="6773.815148313555" y="1520.0">view.guiview.JFrameView.BuyStockButtonListener</node>
     <node x="6225.815148313555" y="1520.0">view.guiview.JFrameView.ImportPortfolioButtonListener</node>
     <node x="6499.815148313555" y="1520.0">view.guiview.JFrameView.GetValueButtonListener</node>
-    <node x="422.04571009032907" y="1127.0">controller.ICommand</node>
+    <node x="422.04571009032907" y="1127.0">controller.textcommands.ICommand</node>
     <node x="4585.5035291323165" y="1083.0">model.IUser</node>
     <node x="4194.004893725463" y="230.0">model.IPortfolio</node>
     <node x="3636.879043423662" y="984.0">model.Portfolio</node>
-    <node x="2123.8999999999996" y="1498.0">controller.BuyStockCommand</node>
+    <node x="2123.8999999999996" y="1498.0">controller.textcommands.BuyStockCommand</node>
     <node x="5249.777976449563" y="2589.0">controller.GUIController</node>
-    <node x="846.8999999999996" y="1509.0">controller.ExportPortfolioCommand</node>
+    <node x="846.8999999999996" y="1509.0">controller.textcommands.ExportPortfolioCommand</node>
     <node x="5236.815148313555" y="1520.0">controller.IController</node>
-    <node x="1816.8999999999999" y="1509.0">controller.PortfolioContentsCommand</node>
+    <node x="1816.8999999999999" y="1509.0">controller.textcommands.PortfolioContentsCommand</node>
   </nodes>
   <notes />
   <edges>
@@ -63,7 +63,7 @@
       <point x="3992.5457100903286" y="1434.0" />
       <point x="161.66666666666652" y="180.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.ExportPortfolioCommand">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.ExportPortfolioCommand">
       <point x="-46.950000000000045" y="-48.0" />
       <point x="1089.0965603921295" y="1698.0" />
       <point x="1062.1499999999996" y="1698.0" />
@@ -93,7 +93,7 @@
       <point x="5125.21186246565" y="1718.0" />
       <point x="177.08333333333303" y="59.0" />
     </edge>
-    <edge source="controller.PortfolioValueCommand" target="view.IView">
+    <edge source="controller.textcommands.PortfolioValueCommand" target="view.IView">
       <point x="71.75" y="-37.0" />
       <point x="1724.1499999999999" y="1434.0" />
       <point x="1775.720292466879" y="1434.0" />
@@ -101,13 +101,13 @@
       <point x="1013.9123767569959" y="934.0" />
       <point x="45.86666666666679" y="37.0" />
     </edge>
-    <edge source="controller.BuyStockCommand" target="controller.TextController">
+    <edge source="controller.textcommands.BuyStockCommand" target="controller.TextController">
       <point x="71.75" y="48.0" />
       <point x="2339.1499999999996" y="2506.0" />
       <point x="1023.5961427686798" y="2506.0" />
       <point x="40.30000000000018" y="-26.0" />
     </edge>
-    <edge source="controller.TextController" target="controller.ICommand">
+    <edge source="controller.TextController" target="controller.textcommands.ICommand">
       <point x="-34.09999999999991" y="-26.0" />
       <point x="949.1961427686797" y="2496.0" />
       <point x="288.1999999999998" y="2496.0" />
@@ -139,7 +139,7 @@
       <point x="5016.890407060026" y="124.0" />
       <point x="-28.363636363636033" y="15.0" />
     </edge>
-    <edge source="controller.PortfolioContentsCommand" target="controller.TextController">
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="controller.TextController">
       <point x="71.75" y="37.0" />
       <point x="2032.1499999999999" y="2496.0" />
       <point x="1017.3961427686795" y="2496.0" />
@@ -151,13 +151,13 @@
       <point x="5026.344952514571" y="134.0" />
       <point x="-18.90909090909099" y="15.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.PortfolioCostBiasCommand">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.PortfolioCostBiasCommand">
       <point x="46.950000000000045" y="-48.0" />
       <point x="1182.99656039213" y="1708.0" />
       <point x="1273.6499999999996" y="1708.0" />
       <point x="-71.75" y="48.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.ICommand">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.ICommand">
       <point x="-78.25" y="-48.0" />
       <point x="1057.7965603921298" y="1708.0" />
       <point x="836.3999999999996" y="1708.0" />
@@ -179,7 +179,7 @@
       <point x="6216.918126789561" y="1688.0" />
       <point x="-52.235294117646845" y="-334.0" />
     </edge>
-    <edge source="controller.TextController" target="controller.CreatePortfolioCommand">
+    <edge source="controller.TextController" target="controller.textcommands.CreatePortfolioCommand">
       <point x="-40.30000000000018" y="-26.0" />
       <point x="942.9961427686794" y="2506.0" />
       <point x="198.41685285900894" y="2506.0" />
@@ -187,7 +187,7 @@
       <point x="215.19999999999982" y="1738.0" />
       <point x="62.5" y="37.0" />
     </edge>
-    <edge source="controller.ICommand" target="controller.TextController">
+    <edge source="controller.textcommands.ICommand" target="controller.TextController">
       <point x="-35.71428571428578" y="37.0" />
       <point x="511.3314243760433" y="1424.0" />
       <point x="294.39999999999964" y="1424.0" />
@@ -201,7 +201,7 @@
       <point x="3603.879043423662" y="1708.0" />
       <point x="0.0" y="26.0" />
     </edge>
-    <edge source="controller.CreatePortfolioCommand" target="controller.TextController">
+    <edge source="controller.textcommands.CreatePortfolioCommand" target="controller.TextController">
       <point x="-62.5" y="37.0" />
       <point x="90.19999999999982" y="1738.0" />
       <point x="192.21685285900912" y="1738.0" />
@@ -209,7 +209,7 @@
       <point x="936.7961427686796" y="2516.0" />
       <point x="-46.5" y="-26.0" />
     </edge>
-    <edge source="controller.ExportPortfolioCommand" target="controller.TextController">
+    <edge source="controller.textcommands.ExportPortfolioCommand" target="controller.TextController">
       <point x="-71.75" y="37.0" />
       <point x="918.6499999999996" y="1738.0" />
       <point x="911.8711427686794" y="1738.0" />
@@ -255,7 +255,7 @@
       <point x="6341.71941138903" y="1374.0" />
       <point x="200.57142857142844" y="136.0" />
     </edge>
-    <edge source="controller.DisplayPortfoliosCommand" target="view.IView">
+    <edge source="controller.textcommands.DisplayPortfoliosCommand" target="view.IView">
       <point x="62.5" y="-37.0" />
       <point x="763.3999999999996" y="1434.0" />
       <point x="812.7957100903291" y="1434.0" />
@@ -263,7 +263,7 @@
       <point x="956.5790434236624" y="954.0" />
       <point x="-11.466666666666697" y="37.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="view.IView">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="view.IView">
       <point x="-15.650000000000091" y="-48.0" />
       <point x="1120.3965603921297" y="1738.0" />
       <point x="1144.3999999999996" y="1738.0" />
@@ -277,7 +277,7 @@
       <point x="5719.148481646888" y="1728.0" />
       <point x="-84.66666666666697" y="26.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.DisplayPortfoliosCommand">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.DisplayPortfoliosCommand">
       <point x="-109.55000000000018" y="-48.0" />
       <point x="1026.4965603921296" y="1718.0" />
       <point x="763.3999999999996" y="1718.0" />
@@ -305,7 +305,7 @@
       <point x="5267.815148313555" y="1738.0" />
       <point x="-31.0" y="26.0" />
     </edge>
-    <edge source="controller.CreatePortfolioCommand" target="controller.ICommand">
+    <edge source="controller.textcommands.CreatePortfolioCommand" target="controller.textcommands.ICommand">
       <point x="62.5" y="-37.0" />
       <point x="215.19999999999982" y="1404.0" />
       <point x="439.90285294747173" y="1404.0" />
@@ -325,7 +325,7 @@
       <point x="5271.438636363636" y="2526.0" />
       <point x="162.0" y="136.0" />
     </edge>
-    <edge source="controller.PortfolioValueCommand" target="controller.TextController">
+    <edge source="controller.textcommands.PortfolioValueCommand" target="controller.TextController">
       <point x="71.75" y="37.0" />
       <point x="1724.1499999999999" y="2476.0" />
       <point x="1004.9961427686794" y="2476.0" />
@@ -345,7 +345,7 @@
       <point x="6002.2908399604585" y="1404.0" />
       <point x="-138.85714285714312" y="136.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.BuyStockCommand">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.BuyStockCommand">
       <point x="140.8499999999999" y="-48.0" />
       <point x="1276.8965603921297" y="1738.0" />
       <point x="2195.6499999999996" y="1738.0" />
@@ -389,13 +389,13 @@
       <point x="5035.799497969117" y="144.0" />
       <point x="-9.454545454545041" y="15.0" />
     </edge>
-    <edge source="controller.DisplayPortfoliosCommand" target="controller.ICommand">
+    <edge source="controller.textcommands.DisplayPortfoliosCommand" target="controller.textcommands.ICommand">
       <point x="-62.5" y="-37.0" />
       <point x="638.3999999999996" y="1434.0" />
       <point x="618.4742815189006" y="1434.0" />
       <point x="71.42857142857144" y="37.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.PortfolioContentsCommand">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.PortfolioContentsCommand">
       <point x="109.54999999999995" y="-48.0" />
       <point x="1245.5965603921295" y="1728.0" />
       <point x="1888.6499999999999" y="1728.0" />
@@ -429,7 +429,7 @@
       <point x="2759.9833333333327" y="456.0" />
       <point x="0.0" y="81.0" />
     </edge>
-    <edge source="controller.ImportPortfolioCommand" target="controller.TextController">
+    <edge source="controller.textcommands.ImportPortfolioCommand" target="controller.TextController">
       <point x="-62.5" y="37.0" />
       <point x="367.39999999999964" y="1738.0" />
       <point x="469.41685285900894" y="1738.0" />
@@ -443,7 +443,7 @@
       <point x="3438.629043423662" y="1434.0" />
       <point x="102.0" y="26.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="15.650000000000091" y="-48.0" />
       <point x="1151.6965603921299" y="1698.0" />
       <point x="1191.3999999999996" y="1698.0" />
@@ -463,13 +463,13 @@
       <point x="3263.096969696969" y="476.0" />
       <point x="-25.75" y="15.0" />
     </edge>
-    <edge source="controller.PortfolioCostBiasCommand" target="controller.TextController">
+    <edge source="controller.textcommands.PortfolioCostBiasCommand" target="controller.TextController">
       <point x="71.75" y="48.0" />
       <point x="1417.1499999999999" y="2466.0" />
       <point x="998.7961427686796" y="2466.0" />
       <point x="15.5" y="-26.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.PortfolioValueCommand">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.PortfolioValueCommand">
       <point x="78.25" y="-48.0" />
       <point x="1214.2965603921298" y="1718.0" />
       <point x="1580.6499999999999" y="1718.0" />
@@ -493,7 +493,7 @@
       <point x="5083.072225241844" y="104.0" />
       <point x="37.81818181818198" y="15.0" />
     </edge>
-    <edge source="controller.BuyStockCommand" target="view.IView">
+    <edge source="controller.textcommands.BuyStockCommand" target="view.IView">
       <point x="0.0" y="-48.0" />
       <point x="2267.3999999999996" y="1434.0" />
       <point x="2309.7333333333327" y="1434.0" />
@@ -501,7 +501,7 @@
       <point x="1036.8457100903288" y="914.0" />
       <point x="68.79999999999973" y="37.0" />
     </edge>
-    <edge source="controller.TextController" target="controller.ExaminePortfolioCommand">
+    <edge source="controller.TextController" target="controller.textcommands.ExaminePortfolioCommand">
       <point x="3.099999999999909" y="-26.0" />
       <point x="986.3961427686795" y="2446.0" />
       <point x="1057.7965603921298" y="2446.0" />
@@ -513,13 +513,13 @@
       <point x="3733.879043423662" y="1434.0" />
       <point x="-97.0" y="180.0" />
     </edge>
-    <edge source="controller.ExaminePortfolioCommand" target="controller.TextController">
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.TextController">
       <point x="78.25" y="48.0" />
       <point x="1214.2965603921298" y="2456.0" />
       <point x="992.5961427686798" y="2456.0" />
       <point x="9.300000000000182" y="-26.0" />
     </edge>
-    <edge source="controller.DisplayPortfoliosCommand" target="controller.TextController">
+    <edge source="controller.textcommands.DisplayPortfoliosCommand" target="controller.TextController">
       <point x="-62.5" y="37.0" />
       <point x="638.3999999999996" y="1738.0" />
       <point x="631.6211427686794" y="1738.0" />
@@ -527,7 +527,7 @@
       <point x="973.9961427686794" y="2456.0" />
       <point x="-9.300000000000182" y="-26.0" />
     </edge>
-    <edge source="controller.ExportPortfolioCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.ExportPortfolioCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="71.75" y="-37.0" />
       <point x="1062.1499999999996" y="1414.0" />
       <point x="1465.795710090329" y="1414.0" />
@@ -569,7 +569,7 @@
       <point x="6816.148481646888" y="1718.0" />
       <point x="-84.66666666666697" y="26.0" />
     </edge>
-    <edge source="controller.PortfolioContentsCommand" target="model.IPortfolioV2">
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="model.IPortfolioV2">
       <point x="107.625" y="-37.0" />
       <point x="2068.0249999999996" y="1434.0" />
       <point x="2020.670710090329" y="1434.0" />
@@ -587,7 +587,7 @@
       <point x="5045.254043423662" y="144.0" />
       <point x="0.0" y="15.0" />
     </edge>
-    <edge source="controller.TextController" target="controller.ImportPortfolioCommand">
+    <edge source="controller.TextController" target="controller.textcommands.ImportPortfolioCommand">
       <point x="-15.5" y="-26.0" />
       <point x="967.7961427686796" y="2466.0" />
       <point x="475.61685285900876" y="2466.0" />
@@ -595,7 +595,7 @@
       <point x="492.39999999999964" y="1738.0" />
       <point x="62.5" y="37.0" />
     </edge>
-    <edge source="controller.CreatePortfolioCommand" target="view.IView">
+    <edge source="controller.textcommands.CreatePortfolioCommand" target="view.IView">
       <point x="-62.5" y="-37.0" />
       <point x="90.19999999999982" y="924.0" />
       <point x="922.1790434236623" y="924.0" />
@@ -615,7 +615,7 @@
       <point x="4464.696969696969" y="944.0" />
       <point x="135.80000000000018" y="59.0" />
     </edge>
-    <edge source="controller.BuyStockCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.BuyStockCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="-95.66666666666652" y="-48.0" />
       <point x="2171.7333333333336" y="1404.0" />
       <point x="1711.795710090329" y="1404.0" />
@@ -629,13 +629,13 @@
       <point x="4348.2969696969685" y="964.0" />
       <point x="19.399999999999636" y="59.0" />
     </edge>
-    <edge source="controller.PortfolioCostBiasCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.PortfolioCostBiasCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="71.75" y="-48.0" />
       <point x="1417.1499999999996" y="1434.0" />
       <point x="1547.795710090329" y="1434.0" />
       <point x="-41.0" y="37.0" />
     </edge>
-    <edge source="controller.IPortfolioCommand" target="view.IView">
+    <edge source="controller.textcommands.IPortfolioCommand" target="view.IView">
       <point x="0.0" y="-37.0" />
       <point x="1588.795710090329" y="944.0" />
       <point x="1002.4457100903292" y="944.0" />
@@ -655,7 +655,7 @@
       <point x="3453.613227058796" y="486.0" />
       <point x="-93.33333333333348" y="136.0" />
     </edge>
-    <edge source="controller.ICommand" target="view.IView">
+    <edge source="controller.textcommands.ICommand" target="view.IView">
       <point x="0.0" y="-37.0" />
       <point x="547.0457100903291" y="944.0" />
       <point x="945.1123767569957" y="944.0" />
@@ -669,7 +669,7 @@
       <point x="4231.896969696969" y="954.0" />
       <point x="-97.0" y="59.0" />
     </edge>
-    <edge source="controller.IPortfolioCommand" target="controller.TextController">
+    <edge source="controller.textcommands.IPortfolioCommand" target="controller.TextController">
       <point x="41.0" y="37.0" />
       <point x="1629.795710090329" y="1424.0" />
       <point x="1806.3999999999999" y="1424.0" />
@@ -683,7 +683,7 @@
       <point x="5971.433697103316" y="1394.0" />
       <point x="-169.71428571428532" y="136.0" />
     </edge>
-    <edge source="controller.PortfolioContentsCommand" target="model.IStock">
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="model.IStock">
       <point x="35.875" y="-37.0" />
       <point x="1996.2749999999999" y="1434.0" />
       <point x="1981.845292466879" y="1434.0" />
@@ -723,7 +723,7 @@
       <point x="6094.862268531887" y="1434.0" />
       <point x="-46.285714285714675" y="136.0" />
     </edge>
-    <edge source="controller.ExportPortfolioCommand" target="view.IView">
+    <edge source="controller.textcommands.ExportPortfolioCommand" target="view.IView">
       <point x="-71.75" y="-37.0" />
       <point x="918.6499999999996" y="964.0" />
       <point x="968.0457100903291" y="964.0" />
@@ -755,7 +755,7 @@
       <point x="5587.065148313555" y="1738.0" />
       <point x="68.75" y="92.0" />
     </edge>
-    <edge source="controller.PortfolioValueCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.PortfolioValueCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="-71.75" y="-37.0" />
       <point x="1580.6499999999999" y="1434.0" />
       <point x="1588.795710090329" y="1434.0" />
@@ -819,7 +819,7 @@
       <point x="3546.9465603921294" y="516.0" />
       <point x="0.0" y="136.0" />
     </edge>
-    <edge source="controller.PortfolioContentsCommand" target="view.IView">
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="view.IView">
       <point x="-35.875" y="-37.0" />
       <point x="1924.5249999999999" y="1434.0" />
       <point x="1970.845292466879" y="1434.0" />
@@ -859,7 +859,7 @@
       <point x="2852.3583333333327" y="144.0" />
       <point x="-79.25" y="26.0" />
     </edge>
-    <edge source="controller.PortfolioCostBiasCommand" target="view.IView">
+    <edge source="controller.textcommands.PortfolioCostBiasCommand" target="view.IView">
       <point x="-71.75" y="-48.0" />
       <point x="1273.6499999999996" y="1404.0" />
       <point x="1233.9465603921299" y="1404.0" />
@@ -899,7 +899,7 @@
       <point x="3500.279893725463" y="506.0" />
       <point x="-46.666666666666515" y="136.0" />
     </edge>
-    <edge source="controller.BuyStockCommand" target="model.TradeType">
+    <edge source="controller.textcommands.BuyStockCommand" target="model.TradeType">
       <point x="95.66666666666652" y="-48.0" />
       <point x="2363.0666666666666" y="1434.0" />
       <point x="2320.7333333333327" y="1434.0" />
@@ -909,7 +909,7 @@
       <point x="4997.981316150935" y="104.0" />
       <point x="-47.272727272727025" y="15.0" />
     </edge>
-    <edge source="controller.PortfolioContentsCommand" target="controller.IPortfolioCommand">
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="controller.textcommands.IPortfolioCommand">
       <point x="-107.625" y="-37.0" />
       <point x="1852.7749999999999" y="1414.0" />
       <point x="1670.795710090329" y="1414.0" />
@@ -923,7 +923,7 @@
       <point x="5329.815148313555" y="1658.0" />
       <point x="31.0" y="26.0" />
     </edge>
-    <edge source="controller.ImportPortfolioCommand" target="view.IView">
+    <edge source="controller.textcommands.ImportPortfolioCommand" target="view.IView">
       <point x="-62.5" y="-37.0" />
       <point x="367.39999999999964" y="1394.0" />
       <point x="358.44656039212987" y="1394.0" />
@@ -931,7 +931,7 @@
       <point x="933.645710090329" y="934.0" />
       <point x="-34.40000000000009" y="37.0" />
     </edge>
-    <edge source="controller.ImportPortfolioCommand" target="controller.ICommand">
+    <edge source="controller.textcommands.ImportPortfolioCommand" target="controller.textcommands.ICommand">
       <point x="62.5" y="-37.0" />
       <point x="492.39999999999964" y="1434.0" />
       <point x="547.0457100903291" y="1434.0" />
@@ -954,7 +954,7 @@
   <SelectedNodes>
     <node>model.TradeType</node>
     <node>model.Stock</node>
-    <node>controller.ImportPortfolioCommand</node>
+    <node>controller.textcommands.ImportPortfolioCommand</node>
     <node>Stocks</node>
     <node>model.IStock</node>
     <node>model.UserImpl</node>
@@ -965,36 +965,36 @@
     <node>view.View</node>
     <node>model.ISerializeAndDeserialize</node>
     <node>controller.TextController</node>
-    <node>controller.PortfolioValueCommand</node>
-    <node>controller.IPortfolioCommand</node>
+    <node>controller.textcommands.PortfolioValueCommand</node>
+    <node>controller.textcommands.IPortfolioCommand</node>
     <node>model.IUserV2</node>
     <node>model.FileIO</node>
     <node>model.IStockDataAPI</node>
     <node>view.guiview.IJFrameView</node>
     <node>view.guiview.JFrameView.DisplayPortfolioButtonListener</node>
-    <node>controller.PortfolioCostBiasCommand</node>
-    <node>controller.ExaminePortfolioCommand</node>
+    <node>controller.textcommands.PortfolioCostBiasCommand</node>
+    <node>controller.textcommands.ExaminePortfolioCommand</node>
     <node>controller.AbstractController</node>
     <node>view.guiview.JFrameView.CostBiasButtonListener</node>
     <node>controller.IFeatures</node>
-    <node>controller.DisplayPortfoliosCommand</node>
+    <node>controller.textcommands.DisplayPortfoliosCommand</node>
     <node>model.IPortfolioV2</node>
-    <node>controller.CreatePortfolioCommand</node>
+    <node>controller.textcommands.CreatePortfolioCommand</node>
     <node>view.IMainView</node>
     <node>model.SerializeAndDeserialize</node>
     <node>view.IView</node>
     <node>view.guiview.JFrameView.BuyStockButtonListener</node>
     <node>view.guiview.JFrameView.ImportPortfolioButtonListener</node>
     <node>view.guiview.JFrameView.GetValueButtonListener</node>
-    <node>controller.ICommand</node>
+    <node>controller.textcommands.ICommand</node>
     <node>model.IUser</node>
     <node>model.IPortfolio</node>
     <node>model.Portfolio</node>
-    <node>controller.BuyStockCommand</node>
+    <node>controller.textcommands.BuyStockCommand</node>
     <node>controller.GUIController</node>
-    <node>controller.ExportPortfolioCommand</node>
+    <node>controller.textcommands.ExportPortfolioCommand</node>
     <node>controller.IController</node>
-    <node>controller.PortfolioContentsCommand</node>
+    <node>controller.textcommands.PortfolioContentsCommand</node>
   </SelectedNodes>
   <Categories>
     <Category>Inner Classes</Category>

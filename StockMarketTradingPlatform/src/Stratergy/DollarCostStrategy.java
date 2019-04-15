@@ -11,7 +11,7 @@ import controller.IFeatures;
 import model.TradeType;
 import view.IMainView;
 
-public class DollarCostWithPortfolioStrategy implements IStrategy {
+public class DollarCostStrategy implements IStrategy {
   private String portfolioName;
   private TradeType tradeType;
   private Map<String, Float> tickerSymbols;
@@ -22,11 +22,11 @@ public class DollarCostWithPortfolioStrategy implements IStrategy {
   private Date endDate;
   private int period;
 
-  private DollarCostWithPortfolioStrategy(String portfolioName, TradeType tradeType,
-                                          Map<String, Float> tickerSymbols, int totalQuantity,
-                                          float commission, float investmentAmount,
-                                          Date startDate, Date endDate,
-                                          int period) {
+  private DollarCostStrategy(String portfolioName, TradeType tradeType,
+                             Map<String, Float> tickerSymbols, int totalQuantity,
+                             float commission, float investmentAmount,
+                             Date startDate, Date endDate,
+                             int period) {
     this.portfolioName = portfolioName;
     this.tradeType = tradeType;
     this.tickerSymbols = tickerSymbols;
@@ -79,6 +79,11 @@ public class DollarCostWithPortfolioStrategy implements IStrategy {
     view.showSuccessMessage("Strategy completed");
   }
 
+  @Override
+  public void export() {
+
+  }
+
   public static IDollarCostStrategyBuilder getStrategyBuilder() {
     return new DollarCostWithPortfolioStrategyBuilder();
   }
@@ -112,7 +117,7 @@ public class DollarCostWithPortfolioStrategy implements IStrategy {
 
     @Override
     public IStrategy build() {
-      return new DollarCostWithPortfolioStrategy(this.portfolioName, this.tradeType,
+      return new DollarCostStrategy(this.portfolioName, this.tradeType,
               this.tickerSymbols, this.totalQuantity, this.commission, this.investmentAmount,
               this.startDate, this.endDate, this.period);
     }

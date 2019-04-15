@@ -8,4 +8,6 @@ import view.IMainView;
 
 public interface IStrategy {
   void buyStock(IFeatures controller, IMainView view) throws IOException;
+
+  void export();
 }

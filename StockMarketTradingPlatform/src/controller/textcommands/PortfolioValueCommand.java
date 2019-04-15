@@ -1,4 +1,4 @@
-package controller;
+package controller.textcommands;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.NoSuchElementException;
 
+import controller.TextController;
 import view.IView;
 
 /**

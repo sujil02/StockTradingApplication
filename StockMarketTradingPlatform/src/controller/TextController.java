@@ -5,6 +5,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import controller.textcommands.CreatePortfolioCommand;
+import controller.textcommands.ExaminePortfolioCommand;
+import controller.textcommands.ICommand;
+import controller.textcommands.ImportPortfolioCommand;
 import model.IUserV2;
 import view.IView;
 

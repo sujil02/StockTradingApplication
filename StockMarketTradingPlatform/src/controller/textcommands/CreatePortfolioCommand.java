@@ -1,8 +1,9 @@
-package controller;
+package controller.textcommands;
 
 import java.io.IOException;
 import java.util.NoSuchElementException;
 
+import controller.TextController;
 import view.IView;
 
 /**
