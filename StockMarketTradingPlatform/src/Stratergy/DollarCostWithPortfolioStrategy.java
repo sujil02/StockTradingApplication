@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import controller.IFeatures;
 import model.TradeType;
@@ -13,19 +14,18 @@ import view.IMainView;
 public class DollarCostWithPortfolioStrategy implements IStrategy {
   private String portfolioName;
   private TradeType tradeType;
-  private List<String> tickerSymbols;
+  private Map<String, Float> tickerSymbols;
   private int totalQuantity;
   private float commission;
   private float investmentAmount;
-  private List<Float> proportion;
   private Date startDate;
   private Date endDate;
   private int period;
 
   private DollarCostWithPortfolioStrategy(String portfolioName, TradeType tradeType,
-                                          List<String> tickerSymbols, int totalQuantity,
+                                          Map<String, Float> tickerSymbols, int totalQuantity,
                                           float commission, float investmentAmount,
-                                          List<Float> proportion, Date startDate, Date endDate,
+                                          Date startDate, Date endDate,
                                           int period) {
     this.portfolioName = portfolioName;
     this.tradeType = tradeType;
@@ -33,7 +33,6 @@ public class DollarCostWithPortfolioStrategy implements IStrategy {
     this.totalQuantity = totalQuantity;
     this.commission = commission;
     this.investmentAmount = investmentAmount;
-    this.proportion = proportion;
     this.startDate = startDate;
     this.endDate = endDate;
     this.period = period;
@@ -44,8 +43,8 @@ public class DollarCostWithPortfolioStrategy implements IStrategy {
   public void buyStock(IFeatures controller, IMainView view) throws IOException {
     List<Date> purchaseDates = getPurchaseDates(startDate, endDate, period);
     for (Date purchaseDate : purchaseDates) {
-      for (String stock : tickerSymbols) {
-        float weight = proportion.get(tickerSymbols.indexOf(stock));
+      for (String stock : tickerSymbols.keySet()) {
+        float weight = tickerSymbols.get(stock);
         if (totalQuantity != 0) {
           int quant = (int) weight * totalQuantity;
           while (purchaseDate.before(endDate)) {
@@ -80,7 +79,7 @@ public class DollarCostWithPortfolioStrategy implements IStrategy {
     view.showSuccessMessage("Strategy completed");
   }
 
-  public static IDollarCostStrategyBuilder getStratergyBuilder() {
+  public static IDollarCostStrategyBuilder getStrategyBuilder() {
     return new DollarCostWithPortfolioStrategyBuilder();
   }
 
@@ -98,7 +97,7 @@ public class DollarCostWithPortfolioStrategy implements IStrategy {
   }
 
   private Date addDay(Date refDate) {
-    Date curr = startDate;
+    Date curr = refDate;
 
     Calendar c = Calendar.getInstance();
     c.setTime(curr);
@@ -115,7 +114,7 @@ public class DollarCostWithPortfolioStrategy implements IStrategy {
     public IStrategy build() {
       return new DollarCostWithPortfolioStrategy(this.portfolioName, this.tradeType,
               this.tickerSymbols, this.totalQuantity, this.commission, this.investmentAmount,
-              this.proportion, this.startDate, this.endDate, this.period);
+              this.startDate, this.endDate, this.period);
     }
   }
 

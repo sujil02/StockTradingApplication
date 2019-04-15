@@ -1,7 +1,7 @@
 package Stratergy;
 
 import java.util.Date;
-import java.util.List;
+import java.util.Map;
 
 import model.TradeType;
 
@@ -10,7 +10,7 @@ public interface IDollarCostStrategyBuilder {
 
   IDollarCostStrategyBuilder setTradeType(TradeType tradeType);
 
-  IDollarCostStrategyBuilder setTickerSymbolsAndProportions(List<String> tickerSymbols, List<Float> proportion);
+  IDollarCostStrategyBuilder setTickerSymbolsAndProportions(Map<String, Float> tickerSymbols);
 
   IDollarCostStrategyBuilder setTotalQuantity(int totalQuantity);
 

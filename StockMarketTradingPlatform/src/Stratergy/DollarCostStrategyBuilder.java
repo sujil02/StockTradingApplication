@@ -2,18 +2,18 @@ package Stratergy;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import model.TradeType;
 
 abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
   protected String portfolioName;
   protected TradeType tradeType;
-  protected List<String> tickerSymbols;
+  protected Map<String, Float> tickerSymbols;
   protected int totalQuantity;
   protected float commission;
   protected float investmentAmount;
-  protected List<Float> proportion;
   protected Date startDate;
   protected Date endDate;
   protected int period;
@@ -21,11 +21,10 @@ abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
   protected DollarCostStrategyBuilder() {
     this.portfolioName = "";
     this.tradeType = TradeType.BUY;
-    this.tickerSymbols = new ArrayList<>();
+    this.tickerSymbols = new HashMap<>();
     this.totalQuantity = 0;
     this.commission = 0;
     this.investmentAmount = 0;
-    this.proportion = new ArrayList<>();
     this.startDate = new Date();
     this.endDate = new Date();
     this.period = 0;
@@ -41,15 +40,14 @@ abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
     return this;
   }
 
-  public IDollarCostStrategyBuilder setTickerSymbolsAndProportions(List<String> tickerSymbols, List<Float> proportion) {
-    if (tickerSymbols.size() != proportion.size()) {
+  public IDollarCostStrategyBuilder setTickerSymbolsAndProportions(Map<String, Float> tickerSymbols) {
+    if (tickerSymbols.isEmpty()) {
       throw new IllegalArgumentException("Invalid Input");
     }
-    if (proportion.stream().mapToDouble(x -> x.doubleValue()).sum() != 1) {
+    if (tickerSymbols.values().stream().mapToDouble(x -> x.doubleValue()).sum() != 1) {
       throw new IllegalArgumentException("Invalid Proportion");
     }
     this.tickerSymbols = tickerSymbols;
-    this.proportion = proportion;
     return this;
   }
 

@@ -2,7 +2,7 @@ package Stratergy;
 
 import java.io.IOException;
 import java.util.Date;
-import java.util.List;
+import java.util.Map;
 
 import controller.IFeatures;
 import model.TradeType;
@@ -11,19 +11,18 @@ import view.IMainView;
 public class DollarCostWithoutPortfolioStrategy implements IStrategy {
   private String portfolioName;
   private TradeType tradeType;
-  private List<String> tickerSymbols;
+  private Map<String, Float> tickerSymbols;
   private int totalQuantity;
   private float commission;
   private float investmentAmount;
-  private List<Float> proportion;
   private Date startDate;
   private Date endDate;
   private int period;
 
   private DollarCostWithoutPortfolioStrategy(String portfolioName, TradeType tradeType,
-                                             List<String> tickerSymbols, int totalQuantity,
+                                             Map<String, Float> tickerSymbols, int totalQuantity,
                                              float commission, float investmentAmount,
-                                             List<Float> proportion, Date startDate, Date endDate,
+                                             Date startDate, Date endDate,
                                              int period) {
     this.portfolioName = portfolioName;
     this.tradeType = tradeType;
@@ -31,7 +30,6 @@ public class DollarCostWithoutPortfolioStrategy implements IStrategy {
     this.totalQuantity = totalQuantity;
     this.commission = commission;
     this.investmentAmount = investmentAmount;
-    this.proportion = proportion;
     this.startDate = startDate;
     this.endDate = endDate;
     this.period = period;
@@ -42,8 +40,8 @@ public class DollarCostWithoutPortfolioStrategy implements IStrategy {
     try {
       controller.createPortfolio(portfolioName);
       IStrategy buyingStrategy = DollarCostWithPortfolioStrategy
-              .getStratergyBuilder().setPortfolioName(portfolioName)
-              .setTradeType(tradeType).setTickerSymbolsAndProportions(tickerSymbols, proportion)
+              .getStrategyBuilder().setPortfolioName(portfolioName)
+              .setTradeType(tradeType).setTickerSymbolsAndProportions(tickerSymbols)
               .setTotalQuantity(totalQuantity).setInvestmentAmount(investmentAmount)
               .setDuration(startDate, endDate, period).build();
       buyingStrategy.buyStock(controller, view);
@@ -62,7 +60,7 @@ public class DollarCostWithoutPortfolioStrategy implements IStrategy {
     public IStrategy build() {
       return new DollarCostWithoutPortfolioStrategy(this.portfolioName, this.tradeType,
               this.tickerSymbols, this.totalQuantity, this.commission, this.investmentAmount,
-              this.proportion, this.startDate, this.endDate, this.period);
+              this.startDate, this.endDate, this.period);
     }
   }
 }

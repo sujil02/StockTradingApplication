@@ -6,7 +6,6 @@ import java.util.Date;
 import controller.IFeatures;
 import model.TradeType;
 import view.IMainView;
-import view.IView;
 
 public class DefaultStrategy implements IStrategy {
   private String portfolioName;
@@ -71,38 +70,46 @@ public class DefaultStrategy implements IStrategy {
       this.investmentAmount = 0;
     }
 
-    public void setPortfolioName(String portfolioName) {
+    public DefaultStrategyBuilder setPortfolioName(String portfolioName) {
       this.portfolioName = portfolioName;
+      return this;
     }
 
-    public void setTradeType(TradeType tradeType) {
+    public DefaultStrategyBuilder setTradeType(TradeType tradeType) {
       this.tradeType = tradeType;
+      return this;
     }
 
-    public void setDate(Date date) {
+    public DefaultStrategyBuilder setDate(Date date) {
       this.date = date;
+      return this;
     }
 
-    public void setTickerSymbol(String tickerSymbol) {
+    public DefaultStrategyBuilder setTickerSymbol(String tickerSymbol) {
       this.tickerSymbol = tickerSymbol;
+      return this;
     }
 
-    public void setCompanyName(String companyName) {
+    public DefaultStrategyBuilder setCompanyName(String companyName) {
       this.companyName = companyName;
+      return this;
     }
 
-    public void setQuantity(int quantity) {
+    public DefaultStrategyBuilder setQuantity(int quantity) {
       this.quantity = quantity;
       this.investmentAmount = 0;
+      return this;
     }
 
-    public void setCommission(float commission) {
+    public DefaultStrategyBuilder setCommission(float commission) {
       this.commission = commission;
+      return this;
     }
 
-    public void setInvestmentAmount(float investmentAmount) {
+    public DefaultStrategyBuilder setInvestmentAmount(float investmentAmount) {
       this.investmentAmount = investmentAmount;
       this.quantity = 0;
+      return this;
     }
 
     public IStrategy build() {
