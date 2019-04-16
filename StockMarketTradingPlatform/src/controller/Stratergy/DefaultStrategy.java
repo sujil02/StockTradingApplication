@@ -106,8 +106,12 @@ public class DefaultStrategy implements IStrategy {
     }
 
     public DefaultStrategyBuilder setQuantity(int quantity) {
-      this.quantity = quantity;
-      this.investmentAmount = 0;
+      if (quantity > 0) {
+        this.quantity = quantity;
+        this.investmentAmount = 0;
+      } else {
+        this.quantity = 0;
+      }
       return this;
     }
 
@@ -117,8 +121,12 @@ public class DefaultStrategy implements IStrategy {
     }
 
     public DefaultStrategyBuilder setInvestmentAmount(float investmentAmount) {
-      this.investmentAmount = investmentAmount;
-      this.quantity = 0;
+      if (investmentAmount > 0) {
+        this.investmentAmount = investmentAmount;
+        this.quantity = 0;
+      } else {
+        this.investmentAmount = 0;
+      }
       return this;
     }
 

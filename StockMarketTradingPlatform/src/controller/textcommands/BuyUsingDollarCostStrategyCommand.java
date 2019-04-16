@@ -16,15 +16,12 @@ import model.TradeType;
 import view.IView;
 
 public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCommand {
-  private IStrategy strategy;
   private Map<Integer, String> commandsMap;
 
   public BuyUsingDollarCostStrategyCommand() {
-    strategy = null;
     commandsMap = new HashMap<>();
     commandsMap.put(1, "Create Strategy");
     commandsMap.put(2, "Export Strategy");
-    commandsMap.put(3, "Import Strategy");
   }
 
   @Override
@@ -131,13 +128,12 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
     freq = (freq == 0) ? 1 : freq;
 
     try {
-      strategy = DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
+      textController.setStrategy(DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
               .setTickerSymbolsAndProportions(tickerSymbols)
               .setInvestmentAmount(investment).setTotalQuantity(quant).setTradeType(TradeType.BUY)
-              .setDuration(startDate, endDate, freq).setCommission(commission).build();
-      strategy.buyStock(textController, view);
-    }
-    catch (IllegalArgumentException e){
+              .setDuration(startDate, endDate, freq).setCommission(commission).build());
+      textController.executeStrategy(textController, view);
+    } catch (IllegalArgumentException e) {
       view.append("Error Creating strategy try again");
     }
   }

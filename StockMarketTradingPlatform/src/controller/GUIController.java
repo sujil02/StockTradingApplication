@@ -8,6 +8,7 @@ import controller.Stratergy.DollarCostStrategy;
 import controller.Stratergy.IStrategy;
 import model.IUserV2;
 import model.TradeType;
+import view.IMainView;
 import view.guiview.IJFrameView;
 import view.guiview.JFrameView;
 
@@ -123,8 +124,8 @@ public class GUIController extends AbstractController {
 
   }
 
-  public void executeStrategy() {
-    Map<String, Object> parameters = view.getStrategyFields();
+  public void executeStrategy(IFeatures features, IMainView view) throws IOException {
+    Map<String, Object> parameters = this.view.getStrategyFields();
     String portfolioName = (String) parameters.get("portfolioName");
     TradeType type = TradeType.BUY;
     Map<String, Float> tickerSymbols = (Map<String, Float>) parameters.get("tickerSymbols");
@@ -135,11 +136,11 @@ public class GUIController extends AbstractController {
     int freq = (int) parameters.get("frequency");
 
     try {
-      strategy = DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
+      super.setStrategy(DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
               .setTradeType(type).setTickerSymbolsAndProportions(tickerSymbols)
               .setInvestmentAmount(investmentAmount).setCommission(commission)
-              .setDuration(startDate, endDate, freq).build();
-      strategy.buyStock(this, view);
+              .setDuration(startDate, endDate, freq).build());
+      super.executeStrategy(this, view);
     } catch (IOException e) {
       view.showErrorMessage("Error creating Strategy " + e.getMessage());
     }

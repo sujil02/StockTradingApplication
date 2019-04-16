@@ -63,8 +63,10 @@ public class BuyStockUsingDefaultStrategyCommand implements IPortfolioCommand {
       IStrategy strategy = DefaultStrategy.getDefaultStrategyBuilder().setPortfolioName(portfolioName)
               .setCompanyName(companyName).setTickerSymbol(tickerSymbol).setQuantity(quant)
               .setInvestmentAmount(investment).setDate(ref).setCommission(commission).build();
-      strategy.buyStock(textController, view);
-      view.append("Trade completed successfully.");
+      textController.setStrategy(strategy);
+      textController.executeStrategy(textController, view);
+
+
     } catch (IllegalArgumentException e) {
       view.append("Transaction could not be completed.\n" + e.getMessage());
     }

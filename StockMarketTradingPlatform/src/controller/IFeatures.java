@@ -7,6 +7,7 @@ import java.util.List;
 import controller.Stratergy.IStrategy;
 import model.IPortfolioV2;
 import model.TradeType;
+import view.IMainView;
 
 /**
  * This interface represents a set of features that the program offers. Each feature is exposed as a
@@ -122,9 +123,9 @@ public interface IFeatures {
 
   void exportStrategy(String path) throws IOException;
 
-  void importStrategy(String path,String portfolioName) throws IOException;
+  void importStrategy(String path, String portfolioName) throws IOException;
 
-  void executeStrategy();
+  void executeStrategy(IFeatures features, IMainView view) throws IOException;
 
   void setStrategy(IStrategy strategy);
 

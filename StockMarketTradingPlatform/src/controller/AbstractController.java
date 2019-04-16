@@ -8,6 +8,7 @@ import controller.Stratergy.IStrategy;
 import model.IPortfolioV2;
 import model.IUserV2;
 import model.TradeType;
+import view.IMainView;
 
 /**
  * This class abstracts out the funtionalities offered by the controller. The model object and all
@@ -91,23 +92,23 @@ public abstract class AbstractController implements IController, IFeatures {
     model.importPortfolio(path);
   }
 
-  public void exportStrategy(String path) throws IOException{
+  public void exportStrategy(String path) throws IOException {
 
   }
 
-  public void importStrategy(String path, String portfolioName) throws IOException{
+  public void importStrategy(String path, String portfolioName) throws IOException {
 
   }
 
-  public void executeStrategy(){
-
+  public void executeStrategy(IFeatures features, IMainView view) throws IOException {
+    strategy.buyStock(features, view);
   }
 
-  public void setStrategy(IStrategy strategy){
+  public void setStrategy(IStrategy strategy) {
     this.strategy = strategy;
   }
 
-  public IStrategy getStrategy(){
+  public IStrategy getStrategy() {
     return strategy;
   }
 

@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7da8f00-6ee5-45cd-aa98-7ff0d9efe06d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/IGUIFeatures.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StockMarketTradingPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StockMarketTradingPlatform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stratergy/DefaultStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stratergy/DefaultStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stratergy/DollarCostStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stratergy/DollarCostStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stratergy/IStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stratergy/IStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AbstractController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/GUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/GUIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/IFeatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/IFeatures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/TextController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TextController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/IGUIFeatures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/textcommands/BuyStockUsingDefaultStrategyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/textcommands/BuyStockUsingDefaultStrategyCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/guiview/IJFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/guiview/IJFrameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/guiview/JFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/guiview/JFrameView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,72 +23,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/GUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="121" column="62" selection-start-line="121" selection-start-column="62" selection-end-line="121" selection-end-column="62" />
+            <state relative-caret-position="545">
+              <caret line="147" column="3" lean-forward="true" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/guiview/IJFrameView.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/guiview/JFrameView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3200">
-              <caret line="418" column="4" selection-start-line="418" selection-start-column="4" selection-end-line="418" selection-end-column="16" />
-              <folding>
-                <element signature="e#13990#13991#0" expanded="true" />
-                <element signature="e#14011#14012#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="103" column="35" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/IFeatures.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="124" column="54" selection-start-line="124" selection-start-column="54" selection-end-line="124" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Stratergy/IStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Stratergy/DefaultStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+            <state relative-caret-position="160">
+              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1772#1773#0" expanded="true" />
@@ -104,14 +44,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Stratergy/DollarCostStrategy.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyStockCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+            <state relative-caret-position="30">
+              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3030#3031#0" expanded="true" />
-                <element signature="e#3073#3074#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Portfolio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="67" column="42" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+              <folding>
+                <element signature="e#4310#4311#0" expanded="true" />
+                <element signature="e#4340#4341#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,14 +71,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/AbstractController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
+            <state relative-caret-position="137">
+              <caret line="102" column="84" lean-forward="true" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="84" />
               <folding>
-                <element signature="e#2899#2900#0" expanded="true" />
-                <element signature="e#2932#2933#0" expanded="true" />
-                <element signature="e#2934#2935#0" expanded="true" />
-                <element signature="e#2958#2959#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#3090#3091#0" expanded="true" />
+                <element signature="e#3151#3152#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/IFeatures.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="127" column="78" selection-start-line="127" selection-start-column="78" selection-end-line="127" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -135,8 +94,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyStockUsingDefaultStrategyCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="306">
+              <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="134" column="37" selection-start-line="134" selection-start-column="37" selection-end-line="134" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/TextController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-407">
+              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,6 +148,8 @@
       <find>mana</find>
       <find>system.out</find>
       <find>doin</find>
+      <find>Investment Amount can not be negative or zero</find>
+      <find>Trade completed successfully.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,18 +184,19 @@
         <option value="$PROJECT_DIR$/src/controller/textcommands/BuyStockCommand.java" />
         <option value="$PROJECT_DIR$/src/model/StockDataAPI.java" />
         <option value="$PROJECT_DIR$/src/Stratergy/DollarCostStrategyBuilder.java" />
-        <option value="$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java" />
         <option value="$PROJECT_DIR$/src/controller/TextController.java" />
         <option value="$PROJECT_DIR$/src/controller/IGUIFeatures.java" />
-        <option value="$PROJECT_DIR$/src/controller/textcommands/BuyStockUsingDefaultStrategyCommand.java" />
-        <option value="$PROJECT_DIR$/src/controller/IFeatures.java" />
         <option value="$PROJECT_DIR$/src/Stratergy/IStrategy.java" />
         <option value="$PROJECT_DIR$/src/Stratergy/DefaultStrategy.java" />
         <option value="$PROJECT_DIR$/src/Stratergy/DollarCostStrategy.java" />
-        <option value="$PROJECT_DIR$/src/controller/AbstractController.java" />
         <option value="$PROJECT_DIR$/src/view/guiview/IJFrameView.java" />
         <option value="$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java" />
         <option value="$PROJECT_DIR$/src/view/guiview/JFrameView.java" />
+        <option value="$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java" />
+        <option value="$PROJECT_DIR$/src/controller/AbstractController.java" />
+        <option value="$PROJECT_DIR$/src/controller/textcommands/BuyStockUsingDefaultStrategyCommand.java" />
+        <option value="$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java" />
+        <option value="$PROJECT_DIR$/src/controller/IFeatures.java" />
         <option value="$PROJECT_DIR$/src/controller/GUIController.java" />
       </list>
     </option>
@@ -240,32 +235,6 @@
             <path>
               <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="textcommands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Stratergy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="guiview" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -281,7 +250,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555440524504" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555442188527" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/res/swingx-plaf-1.6.7.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -369,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555404659618</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactoring strategy package">
+      <created>1555440603022</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555440603022</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -381,11 +357,11 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.24949698" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24949698" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="2" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32956153" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32956153" />
@@ -439,14 +415,15 @@
     <MESSAGE value="adding stratergies to text view" />
     <MESSAGE value="added method to GUI controller" />
     <MESSAGE value="text based controller working with strategies" />
-    <option name="LAST_COMMIT_MESSAGE" value="text based controller working with strategies" />
+    <MESSAGE value="refactoring strategy package" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring strategy package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java</url>
-          <line>106</line>
+          <line>103</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -454,30 +431,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java</url>
-          <line>133</line>
+          <line>130</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Stratergy/DollarCostStrategy.java</url>
+          <url>file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java</url>
           <line>64</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Stratergy/DollarCostStrategy.java</url>
+          <url>file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java</url>
           <line>109</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Stratergy/DollarCostStrategy.java</url>
+          <url>file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java</url>
           <line>74</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Stratergy/DollarCostStrategy.java</url>
+          <url>file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java</url>
           <line>44</line>
           <properties />
           <option name="timeStamp" value="12" />
@@ -607,18 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyStockCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/textcommands/PortfolioCostBiasCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -643,7 +608,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stratergy/IDollarCostStrategyBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/IDollarCostStrategyBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
@@ -660,7 +625,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stratergy/DollarCostStrategyBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategyBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
@@ -674,17 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1550">
           <caret line="43" column="20" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Portfolio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="180" column="63" selection-start-line="180" selection-start-column="42" selection-end-line="180" selection-end-column="63" />
-          <folding>
-            <element signature="e#4310#4311#0" expanded="true" />
-            <element signature="e#4340#4341#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,25 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2125#2126#0" expanded="true" />
-            <element signature="e#2191#2192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/TextController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/IGUIFeatures.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -735,63 +670,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyStockUsingDefaultStrategyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stratergy/IStrategy.java">
+    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/IStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stratergy/DefaultStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stratergy/DollarCostStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3030#3031#0" expanded="true" />
-            <element signature="e#3073#3074#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/IFeatures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="124" column="54" selection-start-line="124" selection-start-column="54" selection-end-line="124" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/AbstractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
-          <folding>
-            <element signature="e#2899#2900#0" expanded="true" />
-            <element signature="e#2932#2933#0" expanded="true" />
-            <element signature="e#2934#2935#0" expanded="true" />
-            <element signature="e#2958#2959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -824,10 +708,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Portfolio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="67" column="42" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+          <folding>
+            <element signature="e#4310#4311#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyStockCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1772#1773#0" expanded="true" />
+            <element signature="e#1815#1816#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyStockUsingDefaultStrategyCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="134" column="37" selection-start-line="134" selection-start-column="37" selection-end-line="134" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/TextController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-407">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/AbstractController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="102" column="84" lean-forward="true" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3090#3091#0" expanded="true" />
+            <element signature="e#3151#3152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/IFeatures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="127" column="78" selection-start-line="127" selection-start-column="78" selection-end-line="127" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/GUIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="121" column="62" selection-start-line="121" selection-start-column="62" selection-end-line="121" selection-end-column="62" />
+        <state relative-caret-position="545">
+          <caret line="147" column="3" lean-forward="true" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
         </state>
       </provider>
     </entry>
