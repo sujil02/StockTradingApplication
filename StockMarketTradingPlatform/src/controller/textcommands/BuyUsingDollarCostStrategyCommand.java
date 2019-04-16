@@ -132,7 +132,7 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
               .setTickerSymbolsAndProportions(tickerSymbols)
               .setInvestmentAmount(investment).setTotalQuantity(quant).setTradeType(TradeType.BUY)
               .setDuration(startDate, endDate, freq).setCommission(commission).build());
-      textController.executeStrategy(textController, view);
+      textController.executeStrategy(textController);
     } catch (IllegalArgumentException e) {
       view.append("Error Creating strategy try again");
     }

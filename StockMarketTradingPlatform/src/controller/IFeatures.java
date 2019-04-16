@@ -125,7 +125,7 @@ public interface IFeatures {
 
   void importStrategy(String path, String portfolioName, IMainView view) throws IOException;
 
-  void executeStrategy(IFeatures features, IMainView view) throws IOException;
+  void executeStrategy(IFeatures features) throws IOException;
 
   void setStrategy(IStrategy strategy);
 

@@ -134,7 +134,13 @@ public class DollarCostAveragingView extends JPanel {
         e.printStackTrace();
       }
     });
-    //executeStrategy.addActionListener(l->features.e);
+    executeStrategy.addActionListener(l-> {
+      try {
+        features.executeStrategy(features);
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    });
     addChoice.addActionListener(l -> {
       addToCombinationToMap();
     });

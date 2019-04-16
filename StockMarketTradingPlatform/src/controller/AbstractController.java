@@ -12,12 +12,13 @@ import view.IMainView;
 
 /**
  * This class abstracts out the funtionalities offered by the controller. The model object and all
- * its functionalitites are accessed from here directly and whichever controller extending this can
- * use to communicate with the model.
+ * its functionalitites are accessed from here directly and whichever controller extending this
+ * can use to communicate with the model.
  */
 public abstract class AbstractController implements IController, IFeatures {
   protected IUserV2 model;
   protected IStrategy strategy;
+  protected IMainView view;
 
   protected AbstractController(IUserV2 model) {
     if (model == null) {
@@ -103,12 +104,12 @@ public abstract class AbstractController implements IController, IFeatures {
       createPortfolio(portfolioName);
     }
     getStrategy().setPortfolioName(portfolioName);
-    executeStrategy(this,view);
+    executeStrategy(this);
 
 
   }
 
-  public void executeStrategy(IFeatures features, IMainView view) throws IOException {
+  public void executeStrategy(IFeatures features) throws IOException {
     strategy.buyStock(features, view);
   }
 

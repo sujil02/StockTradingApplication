@@ -124,7 +124,7 @@ public class GUIController extends AbstractController {
 
   }
 
-  public void executeStrategy(IFeatures features, IMainView view) throws IOException {
+  public void executeStrategy(IFeatures features) throws IOException {
     Map<String, Object> parameters = this.view.getStrategyFields();
     String portfolioName = (String) parameters.get("portfolioName");
     TradeType type = TradeType.BUY;

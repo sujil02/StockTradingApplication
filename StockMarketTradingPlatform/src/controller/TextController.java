@@ -14,8 +14,8 @@ import model.IUserV2;
 import view.IView;
 
 /**
- * TextController class which takes inputs from the user and tells the model what to do and the view
- * what to show.
+ * TextController class which takes inputs from the user and tells the model what to do and the
+ * view what to show.
  */
 public class TextController extends AbstractController {
   private final IView view;
@@ -35,11 +35,12 @@ public class TextController extends AbstractController {
       throw new IllegalArgumentException("View cannot be null");
     }
     this.view = view;
+    super.view = view;
     commands = new LinkedHashMap<>();
     commands.put(1, new CreatePortfolioCommand());
     commands.put(2, new ExaminePortfolioCommand());
-    commands.put(3,new BuyUsingDollarCostStrategyCommand());
-    commands.put(4,new ImportPortfolioCommand());
+    commands.put(3, new BuyUsingDollarCostStrategyCommand());
+    commands.put(4, new ImportPortfolioCommand());
   }
 
   @Override
