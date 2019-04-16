@@ -88,4 +88,8 @@ public abstract class AbstractController implements IController, IFeatures {
   public void importPortfolio(String path) throws IOException {
     model.importPortfolio(path);
   }
+
+  public void implementStrategy(){
+
+  }
 }

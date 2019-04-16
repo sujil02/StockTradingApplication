@@ -72,4 +72,14 @@ public class TextController extends AbstractController {
       throw new IllegalStateException("Error in reading input");
     }
   }
+
+  @Override
+  public void exportStrategy(String path) throws IOException {
+
+  }
+
+  @Override
+  public void importStrategy(String path) throws IOException {
+
+  }
 }

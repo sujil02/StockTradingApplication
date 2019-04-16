@@ -113,6 +113,16 @@ public class GUIController extends AbstractController {
     }
   }
 
+  @Override
+  public void exportStrategy(String path) throws IOException {
+
+  }
+
+  @Override
+  public void importStrategy(String path) throws IOException {
+
+  }
+
   public void executeStratergy(String portfolioName, TradeType type, Map<String, Float> tickerSymbols
           , int totalQuantity, float investmentAmount, float commission, Date startDate,
                                Date endDate, int freq) {

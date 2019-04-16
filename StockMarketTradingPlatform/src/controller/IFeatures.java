@@ -119,4 +119,10 @@ public interface IFeatures {
    */
   void exitProgram();
 
+  // Adding featuers
+
+  void exportStrategy(String path) throws IOException;
+
+  void importStrategy(String path) throws IOException;
+
 }

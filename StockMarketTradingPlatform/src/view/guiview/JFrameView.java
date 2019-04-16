@@ -216,7 +216,6 @@ public class JFrameView extends JFrame implements IJFrameView {
     pane.add(commissionLabel);
     commissionInput = new JTextField();
     pane.add(commissionInput);
-
     dollarCostAverageStrategyPane.add(new DollarCostAveragingView(selectedPortfolio),BorderLayout.CENTER);
     setTradeSelectionPane(pane);
     parentPanel.add(pane);
