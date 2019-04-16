@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
+import SerializeAndDeserialize.SerializeAndDeserialize;
 import controller.Stratergy.IStrategy;
 import model.IPortfolioV2;
 import model.IUserV2;
@@ -94,7 +95,8 @@ public abstract class AbstractController implements IController, IFeatures {
   }
 
   public void exportStrategy(String path) throws IOException {
-
+    SerializeAndDeserialize serializeAndDeserialize = new SerializeAndDeserialize();
+    serializeAndDeserialize.exportStrategy(strategy,path);
   }
 
   public void importStrategy(String path, String portfolioName, IMainView view) throws IOException {

@@ -2,6 +2,7 @@ package SerializeAndDeserialize;
 
 import java.io.IOException;
 
+import controller.Stratergy.IStrategy;
 import model.IPortfolioV2;
 
 /**
@@ -25,4 +26,6 @@ public interface ISerializeAndDeserialize {
    * @param path path where portfolio is to be exported.
    */
   public void exportPortfolio(IPortfolioV2 portfolio, String path);
+
+  void exportStrategy(IStrategy strategy, String path);
 }

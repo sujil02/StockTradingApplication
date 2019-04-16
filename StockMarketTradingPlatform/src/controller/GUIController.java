@@ -116,11 +116,6 @@ public class GUIController extends AbstractController {
   }
 
   @Override
-  public void exportStrategy(String path) throws IOException {
-
-  }
-
-  @Override
   public void importStrategy(String path, String portfolioName, IMainView view) throws IOException {
 
   }

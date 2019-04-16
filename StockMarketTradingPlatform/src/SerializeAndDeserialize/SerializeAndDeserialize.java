@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 
+import controller.Stratergy.IStrategy;
 import model.FileIO;
 import model.IPortfolioV2;
 import model.IStock;
@@ -47,5 +48,15 @@ public class SerializeAndDeserialize implements ISerializeAndDeserialize {
     Gson gson = gsonBuilder.setPrettyPrinting().create();
     String jsonString = gson.toJson(portfolio);
     new FileIO().createFile(jsonString, path, portfolio.getPortfolioName(), false, ".json");
+  }
+
+  @Override
+  public void exportStrategy(IStrategy strategy, String path) {
+    GsonBuilder gsonBuilder = new GsonBuilder();
+    gsonBuilder.setDateFormat("MM/dd/yyyy HH:mm:ss");
+    gsonBuilder.disableHtmlEscaping();
+    Gson gson = gsonBuilder.setPrettyPrinting().create();
+    String jsonString = gson.toJson(strategy);
+    new FileIO().createFile(jsonString, path, "YO", false, ".json");
   }
 }
