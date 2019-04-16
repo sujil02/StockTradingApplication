@@ -14,7 +14,7 @@ import controller.IFeatures;
 
 public class DollarCostAveragingView extends JPanel {
   private JTextField dollarAmountInvested;
-  private JLabel dollarAmountInvestLable;
+  private JLabel dollarAmountInvestLabel;
   private JLabel portfolioNameLabel;
   private JLabel stockTickerSymbolLabel;
   private JLabel stockWeightLabel;
@@ -23,7 +23,7 @@ public class DollarCostAveragingView extends JPanel {
   private JCheckBox enterWeights;
   private JButton addChoice;
   private JTextArea displayArea;
-  private Map<String, Double> strategy;
+  private Map<String, Float> strategy;
   private JButton exportStrategy;
   private String selectedPortfolio;
   private JXDatePicker startDatePicker;
@@ -100,8 +100,8 @@ public class DollarCostAveragingView extends JPanel {
 
   private void setDollarAmountInvestment() {
     Container pane = new JPanel(new GridLayout(1, 4, 5, 5));
-    dollarAmountInvestLable = new JLabel("Enter the amount to be invested in dollars $");
-    pane.add(dollarAmountInvestLable);
+    dollarAmountInvestLabel = new JLabel("Enter the amount to be invested in dollars $");
+    pane.add(dollarAmountInvestLabel);
     dollarAmountInvested = new JTextField();
     pane.add(dollarAmountInvested);
     this.add(pane);
@@ -151,13 +151,13 @@ public class DollarCostAveragingView extends JPanel {
     if (tickerSymbol == null) {
       JOptionPane.showMessageDialog(new JFrame(), "Ticker Symbol cannot be null", "Dialog", JOptionPane.ERROR_MESSAGE);
     }
-    Double weight = 0.0;
+    float weight = 0.0f;
     try {
       if (stockWeightText.getText().equalsIgnoreCase("")) {
-        strategy.put(tickerSymbol, 0.0);
+        strategy.put(tickerSymbol, 0.0f);
         recalculateWeight();
       } else {
-        weight = Double.parseDouble(stockWeightText.getText());
+        weight = Float.parseFloat(stockWeightText.getText());
         strategy.put(tickerSymbol, weight);
       }
     } catch (NumberFormatException e) {
@@ -168,8 +168,8 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   private void recalculateWeight() {
-    Double newValue = Double.valueOf(100 / strategy.size());
-    for (Map.Entry<String, Double> entry : strategy.entrySet()) {
+    float newValue = Float.valueOf(100 / strategy.size());
+    for (Map.Entry<String, Float> entry : strategy.entrySet()) {
       entry.setValue(newValue);
     }
   }
@@ -177,7 +177,7 @@ public class DollarCostAveragingView extends JPanel {
   private void display() {
     displayArea.setText("");
     displayArea.append("Current Strategy pattern : \n");
-    for (Map.Entry<String, Double> entry : strategy.entrySet()) {
+    for (Map.Entry<String, Float> entry : strategy.entrySet()) {
       displayArea.append(entry.getKey() + "\t" + entry.getValue());
       displayArea.append("\n");
       clearSymbolAndWeight();
@@ -215,6 +215,16 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   public Map<String, Object> getStrategyFeild() {
+    try {
+      Map<String, Object> parameters = new HashMap<>();
+      parameters.put("portfolioName", selectedPortfolio);
+      parameters.put("tickerSymbols", strategy);
+      float investment = Float.parseFloat(dollarAmountInvested.getText());
+      parameters.put("investmentAmount",investment);
+      //float commission = Float.parseFloat()
+    } catch (NumberFormatException e){
+      throw new IllegalArgumentException("Invalid parameter");
+    }
     return null;
   }
 }

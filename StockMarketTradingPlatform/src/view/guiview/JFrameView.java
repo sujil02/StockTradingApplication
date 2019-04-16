@@ -417,7 +417,7 @@ public class JFrameView extends JFrame implements IJFrameView {
 
   private void hideStrategyPane() {
     dollarCostAverageStrategyPane.setVisible(false);
-    //dollarCostAverageStrategyPane.remove();
+    //dollarCostAverageStrategyPane.remove(0);
     this.remove(dollarCostAverageStrategyPane);
   }
 

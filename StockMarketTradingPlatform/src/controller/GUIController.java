@@ -142,4 +142,26 @@ public class GUIController extends AbstractController {
     }
 
   }
+
+  public void exportStrategy(String path) throws IOException {
+    Map<String, Object> parameters = this.view.getStrategyFields();
+    String portfolioName = (String) parameters.get("portfolioName");
+    TradeType type = TradeType.BUY;
+    Map<String, Float> tickerSymbols = (Map<String, Float>) parameters.get("tickerSymbols");
+    float investmentAmount = (float) parameters.get("investmentAmount");
+    float commission = (float) parameters.get("commission");
+    Date startDate = (Date) parameters.get("startDate");
+    Date endDate = (Date) parameters.get("endDate");
+    int freq = (int) parameters.get("frequency");
+
+    try {
+      super.setStrategy(DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
+              .setTradeType(type).setTickerSymbolsAndProportions(tickerSymbols)
+              .setInvestmentAmount(investmentAmount).setCommission(commission)
+              .setDuration(startDate, endDate, freq).build());
+      super.exportStrategy(path);
+    } catch (IOException e) {
+      view.showErrorMessage("Error creating Strategy " + e.getMessage());
+    }
+  }
 }
