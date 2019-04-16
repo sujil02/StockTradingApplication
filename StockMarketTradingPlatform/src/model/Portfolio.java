@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+import SerializeAndDeserialize.SerializeAndDeserialize;
+
 /**
  * This class implements IPortfolio using IStock. It uniquely identifies each
  * portfolio by its portfolio name.
@@ -246,5 +248,7 @@ public class Portfolio implements IPortfolio, IPortfolioV2 {
     return result;
   }
 
-
+  public void setOwnedStocks(List<IStock> ownedStocks) {
+    this.ownedStocks = ownedStocks;
+  }
 }

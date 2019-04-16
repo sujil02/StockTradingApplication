@@ -1,6 +1,8 @@
-package model;
+package SerializeAndDeserialize;
 
 import java.io.IOException;
+
+import model.IPortfolioV2;
 
 /**
  * Any serialization and deserialization supported by the model has to be processed fulfilling this

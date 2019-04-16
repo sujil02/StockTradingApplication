@@ -1,9 +1,14 @@
-package model;
+package SerializeAndDeserialize;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
+
+import model.FileIO;
+import model.IPortfolioV2;
+import model.IStock;
+import model.Portfolio;
 
 /**
  * This class handles the serialization and deserialization of java objects. It

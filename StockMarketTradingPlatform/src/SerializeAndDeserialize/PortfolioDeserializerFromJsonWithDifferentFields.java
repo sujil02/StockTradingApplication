@@ -1,4 +1,4 @@
-package model;
+package SerializeAndDeserialize;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -13,6 +13,10 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.LinkedList;
 import java.util.List;
+
+import model.IPortfolioV2;
+import model.IStock;
+import model.Portfolio;
 
 /**
  * This class is used as a reference mapping by the gson library to parse the {@link IPortfolioV2}
@@ -35,7 +39,7 @@ public class PortfolioDeserializerFromJsonWithDifferentFields
     List<IStock> iStocks = gson.fromJson(stocks, new TypeToken<LinkedList<IStock>>() {
     }.getType());
     Portfolio portfolio = new Portfolio(portfolioName);
-    portfolio.ownedStocks = iStocks;
+    portfolio.setOwnedStocks(iStocks);
     return portfolio;
   }
 }

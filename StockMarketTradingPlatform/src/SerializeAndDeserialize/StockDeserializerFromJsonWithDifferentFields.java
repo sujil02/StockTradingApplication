@@ -1,4 +1,4 @@
-package model;
+package SerializeAndDeserialize;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -10,6 +10,9 @@ import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import model.IStock;
+import model.Stock;
 
 /**
  * This class is used as a reference mapping by the gson library to parse the Stock json object.
