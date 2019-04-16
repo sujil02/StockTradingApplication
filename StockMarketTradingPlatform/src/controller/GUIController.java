@@ -120,7 +120,7 @@ public class GUIController extends AbstractController {
   }
 
   @Override
-  public void importStrategy(String path, String portfolioName) throws IOException {
+  public void importStrategy(String path, String portfolioName, IMainView view) throws IOException {
 
   }
 

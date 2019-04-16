@@ -96,7 +96,15 @@ public abstract class AbstractController implements IController, IFeatures {
 
   }
 
-  public void importStrategy(String path, String portfolioName) throws IOException {
+  public void importStrategy(String path, String portfolioName, IMainView view) throws IOException {
+    IStrategy strategy;
+    //TODO import strategy
+    if (!validatePortfolioName(portfolioName)) {
+      createPortfolio(portfolioName);
+    }
+    getStrategy().setPortfolioName(portfolioName);
+    executeStrategy(this,view);
+
 
   }
 

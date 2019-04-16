@@ -123,7 +123,7 @@ public interface IFeatures {
 
   void exportStrategy(String path) throws IOException;
 
-  void importStrategy(String path, String portfolioName) throws IOException;
+  void importStrategy(String path, String portfolioName, IMainView view) throws IOException;
 
   void executeStrategy(IFeatures features, IMainView view) throws IOException;
 
