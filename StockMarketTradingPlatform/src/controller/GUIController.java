@@ -2,7 +2,10 @@ package controller;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.Map;
 
+import Stratergy.DollarCostStrategy;
+import Stratergy.IStrategy;
 import model.IUserV2;
 import model.TradeType;
 import view.guiview.IJFrameView;
@@ -15,9 +18,11 @@ import view.guiview.JFrameView;
  */
 public class GUIController extends AbstractController {
   private IJFrameView view;
+  private IStrategy strategy;
 
   public GUIController(IUserV2 model) {
     super(model);
+    strategy = null;
     setView();
   }
 
@@ -106,5 +111,20 @@ public class GUIController extends AbstractController {
     } catch (IllegalArgumentException ee) {
       view.showErrorMessage("Portfolio with similar name already exist or Improper Json format");
     }
+  }
+
+  public void executeStratergy(String portfolioName, TradeType type, Map<String, Float> tickerSymbols
+          , int totalQuantity, float investmentAmount, float commission, Date startDate,
+                               Date endDate, int freq) {
+    try {
+      strategy = DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
+              .setTradeType(type).setTickerSymbolsAndProportions(tickerSymbols)
+              .setTotalQuantity(totalQuantity).setInvestmentAmount(investmentAmount)
+              .setCommission(commission).setDuration(startDate, endDate, freq).build();
+      strategy.buyStock(this, view);
+    } catch (IOException e) {
+      view.showErrorMessage("Error creating Strategy " + e.getMessage());
+    }
+
   }
 }
