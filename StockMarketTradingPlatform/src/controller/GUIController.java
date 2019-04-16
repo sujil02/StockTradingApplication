@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.Map;
 
-import Stratergy.DollarCostStrategy;
-import Stratergy.IStrategy;
+import controller.Stratergy.DollarCostStrategy;
+import controller.Stratergy.IStrategy;
 import model.IUserV2;
 import model.TradeType;
 import view.guiview.IJFrameView;
@@ -119,18 +119,26 @@ public class GUIController extends AbstractController {
   }
 
   @Override
-  public void importStrategy(String path) throws IOException {
+  public void importStrategy(String path, String portfolioName) throws IOException {
 
   }
 
-  public void executeStratergy(String portfolioName, TradeType type, Map<String, Float> tickerSymbols
-          , int totalQuantity, float investmentAmount, float commission, Date startDate,
-                               Date endDate, int freq) {
+  public void executeStrategy() {
+    Map<String, Object> parameters = view.getStrategyFields();
+    String portfolioName = (String) parameters.get("portfolioName");
+    TradeType type = TradeType.BUY;
+    Map<String, Float> tickerSymbols = (Map<String, Float>) parameters.get("tickerSymbols");
+    float investmentAmount = (float) parameters.get("investmentAmount");
+    float commission = (float) parameters.get("commission");
+    Date startDate = (Date) parameters.get("startDate");
+    Date endDate = (Date) parameters.get("endDate");
+    int freq = (int) parameters.get("frequency");
+
     try {
       strategy = DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
               .setTradeType(type).setTickerSymbolsAndProportions(tickerSymbols)
-              .setTotalQuantity(totalQuantity).setInvestmentAmount(investmentAmount)
-              .setCommission(commission).setDuration(startDate, endDate, freq).build();
+              .setInvestmentAmount(investmentAmount).setCommission(commission)
+              .setDuration(startDate, endDate, freq).build();
       strategy.buyStock(this, view);
     } catch (IOException e) {
       view.showErrorMessage("Error creating Strategy " + e.getMessage());

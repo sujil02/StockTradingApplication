@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
+import controller.Stratergy.IStrategy;
 import model.IPortfolioV2;
 import model.IUserV2;
 import model.TradeType;
@@ -15,6 +16,7 @@ import model.TradeType;
  */
 public abstract class AbstractController implements IController, IFeatures {
   protected IUserV2 model;
+  protected IStrategy strategy;
 
   protected AbstractController(IUserV2 model) {
     if (model == null) {
@@ -89,7 +91,25 @@ public abstract class AbstractController implements IController, IFeatures {
     model.importPortfolio(path);
   }
 
-  public void implementStrategy(){
+  public void exportStrategy(String path) throws IOException{
 
   }
+
+  public void importStrategy(String path, String portfolioName) throws IOException{
+
+  }
+
+  public void executeStrategy(){
+
+  }
+
+  public void setStrategy(IStrategy strategy){
+    this.strategy = strategy;
+  }
+
+  public IStrategy getStrategy(){
+    return strategy;
+  }
+
+
 }

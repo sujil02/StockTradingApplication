@@ -1,4 +1,4 @@
-package Stratergy;
+package controller.Stratergy;
 
 import java.io.IOException;
 
@@ -10,4 +10,6 @@ public interface IStrategy {
   void buyStock(IFeatures controller, IMainView view) throws IOException;
 
   void export();
+
+  void setPortfolioName(String portfolioName);
 }

@@ -1,4 +1,4 @@
-package Stratergy;
+package controller.Stratergy;
 
 import java.io.IOException;
 import java.util.Date;
@@ -51,7 +51,12 @@ public class DefaultStrategy implements IStrategy {
 
   @Override
   public void export() {
+    //Not supported for this strategy.
+  }
 
+  @Override
+  public void setPortfolioName(String portfolioName) {
+    this.portfolioName = portfolioName;
   }
 
   public static class DefaultStrategyBuilder {

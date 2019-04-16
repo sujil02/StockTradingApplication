@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.*;
 
@@ -411,6 +412,11 @@ public class JFrameView extends JFrame implements IJFrameView {
   public void showUserPane() {
     userPane.setVisible(true);
     this.add(userPane);
+  }
+
+  @Override
+  public Map<String, Object> getStrategyFields() {
+    return null;
   }
 
   private void updateCurrentPortfolio(String portfolioName) {

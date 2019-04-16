@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
+import controller.Stratergy.IStrategy;
 import model.IPortfolioV2;
 import model.TradeType;
 
@@ -119,10 +120,13 @@ public interface IFeatures {
    */
   void exitProgram();
 
-  // Adding featuers
-
   void exportStrategy(String path) throws IOException;
 
-  void importStrategy(String path) throws IOException;
+  void importStrategy(String path,String portfolioName) throws IOException;
 
+  void executeStrategy();
+
+  void setStrategy(IStrategy strategy);
+
+  IStrategy getStrategy();
 }

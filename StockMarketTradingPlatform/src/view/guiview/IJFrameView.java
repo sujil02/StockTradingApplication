@@ -1,5 +1,7 @@
 package view.guiview;
 
+import java.util.Map;
+
 import controller.IFeatures;
 import view.IMainView;
 
@@ -36,6 +38,8 @@ public interface IJFrameView extends IMainView {
   public void hideManagePane();
 
   public void showUserPane();
+
+  Map<String,Object> getStrategyFields();
 
 
 }

@@ -1,4 +1,4 @@
-package Stratergy;
+package controller.Stratergy;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -86,6 +86,11 @@ public class DollarCostStrategy implements IStrategy {
   @Override
   public void export() {
 
+  }
+
+  @Override
+  public void setPortfolioName(String portfolioName) {
+    this.portfolioName = portfolioName;
   }
 
   public static IDollarCostStrategyBuilder getStrategyBuilder() {

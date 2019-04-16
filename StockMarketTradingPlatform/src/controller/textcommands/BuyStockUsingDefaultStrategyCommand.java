@@ -4,14 +4,11 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.NoSuchElementException;
 
-import Stratergy.DefaultStrategy;
-import Stratergy.IStrategy;
+import controller.Stratergy.DefaultStrategy;
+import controller.Stratergy.IStrategy;
 import controller.TextController;
-import model.TradeType;
 import view.IView;
 
 /**

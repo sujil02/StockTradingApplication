@@ -9,8 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import Stratergy.DollarCostStrategy;
-import Stratergy.IStrategy;
+import controller.Stratergy.DollarCostStrategy;
+import controller.Stratergy.IStrategy;
 import controller.TextController;
 import model.TradeType;
 import view.IView;
@@ -43,9 +43,6 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
           //TODO add export strategy
           break;
         }
-        case 3: {
-          //TODO add Import strategy
-        }
         default: {
           view.append("Invalid Command Try Again");
         }
@@ -71,9 +68,6 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
         case 2: {
           //TODO add export strategy
           break;
-        }
-        case 3: {
-          //TODO add Import strategy
         }
         default: {
           view.append("Invalid Command Try Again");
