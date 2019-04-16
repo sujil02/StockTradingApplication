@@ -25,6 +25,7 @@ public class GUIController extends AbstractController {
     super(model);
     strategy = null;
     setView();
+    super.view = view;
   }
 
   /**
@@ -140,7 +141,7 @@ public class GUIController extends AbstractController {
               .setTradeType(type).setTickerSymbolsAndProportions(tickerSymbols)
               .setInvestmentAmount(investmentAmount).setCommission(commission)
               .setDuration(startDate, endDate, freq).build());
-      super.executeStrategy(this, view);
+      super.executeStrategy(this);
     } catch (IOException e) {
       view.showErrorMessage("Error creating Strategy " + e.getMessage());
     }

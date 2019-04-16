@@ -64,7 +64,7 @@ public class BuyStockUsingDefaultStrategyCommand implements IPortfolioCommand {
               .setCompanyName(companyName).setTickerSymbol(tickerSymbol).setQuantity(quant)
               .setInvestmentAmount(investment).setDate(ref).setCommission(commission).build();
       textController.setStrategy(strategy);
-      textController.executeStrategy(textController, view);
+      textController.executeStrategy(textController);
 
 
     } catch (IllegalArgumentException e) {
