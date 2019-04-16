@@ -73,6 +73,7 @@ public class JFrameView extends JFrame implements IJFrameView {
   private JLabel minLabel;
   private JLabel secLabel;
   private JButton createPortfolioWithStrategy;
+  private JButton backFromStrategy;
 
   /**
    * GUI based view constructor. Creates a master container representing the basic GUI design
@@ -81,13 +82,13 @@ public class JFrameView extends JFrame implements IJFrameView {
   public JFrameView() {
     super();
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    this.setMinimumSize(new Dimension(800, 500));
+    this.setMinimumSize(new Dimension(900, 600));
     userPane = new JPanel();
     managePane = new JPanel();
     dollarCostAverageStrategyPane = new JPanel();
     userPane.setLayout(new GridLayout(4, 1, 10, 10));
     managePane.setLayout(new GridLayout(5, 1, 10, 10));
-    dollarCostAverageStrategyPane.setLayout(new BorderLayout());
+    dollarCostAverageStrategyPane.setLayout(new BorderLayout(10,10));
     this.add(userPane);
     setCreatePortfolioPane(userPane);
     setSelectPortfolioPane(userPane);
@@ -99,13 +100,18 @@ public class JFrameView extends JFrame implements IJFrameView {
     setButtonPane(managePane);
     setDisplayArea(managePane);
     setFooterPane(managePane);
-    registerBasicActionListners();
     displayBuyStockFields();
     displayQuantity();
     pack();
     setVisible(true);
     managePane.setVisible(false);
-    dollarPnel = new DollarCostAveragingView(selectedPortfolio);
+    setStrategyPanel();
+    registerBasicActionListners();
+  }
+
+  private void setStrategyPanel() {
+    dollarPnel = new DollarCostAveragingView();
+    backFromStrategy = new JButton("Back to Create and Manage Portfolios.");
     dollarCostAverageStrategyPane.add(dollarPnel);
     dollarCostAverageStrategyPane.setVisible(false);
   }
@@ -118,7 +124,12 @@ public class JFrameView extends JFrame implements IJFrameView {
     investAmountButton.addActionListener(l -> displayInvestmentAmount());
     backButton.addActionListener(l -> {
       hideManagePane();
+      showUserPane();
+    });
+    backFromStrategy.addActionListener(l->{
+      hideManagePane();
       hideStrategyPane();
+      dollarPnel.executeBackCleanUP();
       showUserPane();
     });
   }
@@ -217,7 +228,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     pane.add(commissionLabel);
     commissionInput = new JTextField();
     pane.add(commissionInput);
-    dollarCostAverageStrategyPane.add(new DollarCostAveragingView(selectedPortfolio),BorderLayout.CENTER);
+   // dollarCostAverageStrategyPane.add(new DollarCostAveragingView(selectedPortfolio),BorderLayout.CENTER);
     setTradeSelectionPane(pane);
     parentPanel.add(pane);
   }
@@ -300,7 +311,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     exportButton = new JButton("Export");
     pane.add(exportButton);
     backButton = new JButton("Back");
-    //pane.add(backButton);
+    pane.add(backButton);
     parentPanel.add(pane);
   }
 
@@ -406,6 +417,7 @@ public class JFrameView extends JFrame implements IJFrameView {
 
   private void hideStrategyPane() {
     dollarCostAverageStrategyPane.setVisible(false);
+    this.remove(dollarPnel);
     this.remove(dollarCostAverageStrategyPane);
   }
 
@@ -416,7 +428,7 @@ public class JFrameView extends JFrame implements IJFrameView {
 
   @Override
   public Map<String, Object> getStrategyFields() {
-    return null;
+    return dollarPnel.getStrategyFeild();
   }
 
   private void updateCurrentPortfolio(String portfolioName) {
@@ -443,6 +455,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     createPortfolioWithStrategy.addActionListener(l -> {
       if (features.createPortfolio(createPortfolioInput.getText())) {
         List<String> portfolioNames = features.getAllPortfolioNames();
+        selectedPortfolio = createPortfolioInput.getText();
         displayPortfolioNames(portfolioNames);
         enableStrategyScreen(features);
       }
@@ -469,9 +482,9 @@ public class JFrameView extends JFrame implements IJFrameView {
 
   private void enableStrategyScreen(IFeatures features) {
     hideUserPane();
-   // dollarCostAverageStrategyPane.add(new DollarCostAveragingView(selectedPortfolio,features),BorderLayout.CENTER);
-    dollarCostAverageStrategyPane.add(backButton,BorderLayout.SOUTH);
+    dollarCostAverageStrategyPane.add(backFromStrategy,BorderLayout.SOUTH);
     dollarCostAverageStrategyPane.setVisible(true);
+    dollarPnel.setPortfolioName(selectedPortfolio);
     this.add(dollarCostAverageStrategyPane);
   }
 

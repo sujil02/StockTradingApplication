@@ -32,20 +32,22 @@ public class DollarCostAveragingView extends JPanel {
   private JLabel startDateLabel;
   private JLabel endDateLable;
   private JTextField duration;
+  private JButton executeStrategy;
+  private JButton importStrategy;
 
 
-  public DollarCostAveragingView(String portfolioName) {
-    selectedPortfolio = portfolioName;
+  public DollarCostAveragingView() {
     strategy = new HashMap<>();
-    this.setLayout(new GridLayout(7, 1));
-    portfolioNameLabel = new JLabel("Selected Portfolio is : " + portfolioName);
-    this.add(portfolioNameLabel);
+    this.setLayout(new GridLayout(7, 1, 10, 10));
     setDollarAmountInvestment();
     setWeightsCheckBox();
     setStockEntryFeilds();
     setDateCapturePanel();
     displayArea = new JTextArea(50000, 50);
-    this.add(displayArea);
+    JScrollPane display = new JScrollPane(displayArea
+            , JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
+            , JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+    this.add(display);
     setExportStrategyButton();
   }
 
@@ -53,7 +55,11 @@ public class DollarCostAveragingView extends JPanel {
     Container pane = new Container();
     pane.setLayout(new FlowLayout());
     exportStrategy = new JButton("Export Strategy");
+    executeStrategy = new JButton("Execute Strategy");
+    importStrategy = new JButton("Import Strategy");
     pane.add(exportStrategy);
+    pane.add(executeStrategy);
+    pane.add(importStrategy);
     this.add(pane);
   }
 
@@ -65,13 +71,29 @@ public class DollarCostAveragingView extends JPanel {
     pane.add(startDatePicker);
     endDateLable = new JLabel("Strategy End Date");
     endDatePicker = new JXDatePicker();
+    pane.add(endDateLable);
     pane.add(endDatePicker);
+    durationLable = new JLabel("Execute in every (days):");
+    duration = new JTextField();
+    pane.add(durationLable);
+    pane.add(duration);
     this.add(pane);
   }
 
   private void setWeightsCheckBox() {
     Container pane = new JPanel(new GridLayout());
     enterWeights = new JCheckBox("Do u want to enter weights");
+    enterWeights.setEnabled(true);
+    enterWeights.addActionListener(l -> {
+      if (enterWeights.isSelected()) {
+        enterWeights.setEnabled(false);
+        stockWeightText.setVisible(true);
+        stockWeightLabel.setVisible(true);
+      } else {
+        stockWeightText.setVisible(false);
+        stockWeightLabel.setVisible(false);
+      }
+    });
     pane.add(enterWeights);
     this.add(pane);
   }
@@ -91,6 +113,8 @@ public class DollarCostAveragingView extends JPanel {
     stockTickerSymbolText = new JTextField(20);
     stockWeightLabel = new JLabel("Weight");
     stockWeightText = new JTextField(3);
+    stockWeightText.setVisible(false);
+    stockWeightLabel.setVisible(false);
     addChoice = new JButton("ADD");
     pane.add(stockTickerSymbolLabel);
     pane.add(stockTickerSymbolText);
@@ -110,6 +134,7 @@ public class DollarCostAveragingView extends JPanel {
         e.printStackTrace();
       }
     });
+    //executeStrategy.addActionListener(l->features.e);
     addChoice.addActionListener(l -> {
       addToCombinationToMap();
     });
@@ -122,19 +147,33 @@ public class DollarCostAveragingView extends JPanel {
     }
     Double weight = 0.0;
     try {
-      weight = Double.parseDouble(stockWeightText.getText());
+      if (stockWeightText.getText().equalsIgnoreCase("")) {
+        strategy.put(tickerSymbol, 0.0);
+        recalculateWeight();
+      } else {
+        weight = Double.parseDouble(stockWeightText.getText());
+        strategy.put(tickerSymbol, weight);
+      }
     } catch (NumberFormatException e) {
       JOptionPane.showMessageDialog(new JFrame(), "Invalid weight entry", "Dialog", JOptionPane.ERROR_MESSAGE);
       stockWeightText.setText("");
     }
-    strategy.put(tickerSymbol, weight);
     display();
   }
 
+  private void recalculateWeight() {
+    Double newValue = Double.valueOf(100 / strategy.size());
+    for (Map.Entry<String, Double> entry : strategy.entrySet()) {
+      entry.setValue(newValue);
+    }
+  }
+
   private void display() {
+    displayArea.setText("");
     displayArea.append("Current Strategy pattern : \n");
     for (Map.Entry<String, Double> entry : strategy.entrySet()) {
       displayArea.append(entry.getKey() + "\t" + entry.getValue());
+      displayArea.append("\n");
       clearSymbolAndWeight();
     }
   }
@@ -155,6 +194,21 @@ public class DollarCostAveragingView extends JPanel {
     if (chooser.showSaveDialog(new JDialog()) == JFileChooser.APPROVE_OPTION) {
       return chooser.getSelectedFile().getPath();
     }
+    return null;
+  }
+
+  public void executeBackCleanUP() {
+    enterWeights.setEnabled(true);
+  }
+
+  public void setPortfolioName(String selectedPortfolio) {
+    this.selectedPortfolio = selectedPortfolio;
+    portfolioNameLabel = new JLabel("Selected Portfolio is : " + selectedPortfolio);
+    this.add(portfolioNameLabel, 0);
+
+  }
+
+  public Map<String, Object> getStrategyFeild() {
     return null;
   }
 }
