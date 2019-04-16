@@ -2,9 +2,12 @@ package controller;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import SerializeAndDeserialize.SerializeAndDeserialize;
+import controller.Stratergy.DollarCostStrategy;
 import controller.Stratergy.IStrategy;
 import model.IPortfolioV2;
 import model.IUserV2;
@@ -96,7 +99,10 @@ public abstract class AbstractController implements IController, IFeatures {
 
   public void exportStrategy(String path) throws IOException {
     SerializeAndDeserialize serializeAndDeserialize = new SerializeAndDeserialize();
-    serializeAndDeserialize.exportStrategy(strategy,path);
+    Map<String,Float> stringDoubleMap = new HashMap<>();
+    stringDoubleMap.put("GOOG",Float.valueOf(10));
+    strategy = new DollarCostStrategy("aa", TradeType.BUY, stringDoubleMap, 5, 5, 5, new Date(), new Date(),5);
+    serializeAndDeserialize.exportStrategy(strategy, path);
   }
 
   public void importStrategy(String path, String portfolioName, IMainView view) throws IOException {

@@ -55,6 +55,7 @@ public class SerializeAndDeserialize implements ISerializeAndDeserialize {
     GsonBuilder gsonBuilder = new GsonBuilder();
     gsonBuilder.setDateFormat("MM/dd/yyyy HH:mm:ss");
     gsonBuilder.disableHtmlEscaping();
+    gsonBuilder.excludeFieldsWithoutExposeAnnotation();
     Gson gson = gsonBuilder.setPrettyPrinting().create();
     String jsonString = gson.toJson(strategy);
     new FileIO().createFile(jsonString, path, "YO", false, ".json");

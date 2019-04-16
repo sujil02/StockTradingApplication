@@ -1,5 +1,7 @@
 package controller.Stratergy;
 
+import com.google.gson.annotations.Expose;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -14,15 +16,22 @@ import view.IMainView;
 public class DollarCostStrategy implements IStrategy {
   private String portfolioName;
   private TradeType tradeType;
+  @Expose
   private Map<String, Float> tickerSymbols;
+  @Expose
   private int totalQuantity;
+  @Expose
   private float commission;
+  @Expose
   private float investmentAmount;
+  @Expose
   private Date startDate;
+  @Expose
   private Date endDate;
+  @Expose
   private int period;
 
-  private DollarCostStrategy(String portfolioName, TradeType tradeType,
+  public DollarCostStrategy(String portfolioName, TradeType tradeType,
                              Map<String, Float> tickerSymbols, int totalQuantity,
                              float commission, float investmentAmount,
                              Date startDate, Date endDate,
