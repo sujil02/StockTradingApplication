@@ -41,6 +41,7 @@ public class GUIController extends AbstractController {
       view.showSuccessMessage("Portfolio created successfully");
     } catch (IllegalArgumentException e) {
       view.showErrorMessage(e.getMessage());
+      return false;
     }
     return true;
   }
@@ -52,6 +53,7 @@ public class GUIController extends AbstractController {
       view.showManagePortfolioPane(portfolioName);
     } else {
       view.showErrorMessage("Portfolio Does Not Exist");
+      return false;
     }
     return true;
   }

@@ -49,6 +49,11 @@ public class DefaultStrategy implements IStrategy {
     }
   }
 
+  @Override
+  public void export() {
+
+  }
+
   private static class DefaultStrategyBuilder {
     private String portfolioName;
     private TradeType tradeType;
