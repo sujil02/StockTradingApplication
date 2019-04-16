@@ -1,10 +1,6 @@
 package view.guiview;
 
-import java.awt.Container;
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
-import java.awt.FlowLayout;
-import java.awt.Dimension;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -14,18 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import javax.swing.JTextField;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JFrame;
-import javax.swing.JRadioButton;
-import javax.swing.JButton;
-import javax.swing.JTextArea;
-import javax.swing.JPanel;
-import  javax.swing.JScrollPane;
-import javax.swing.ButtonGroup;
-import javax.swing.JOptionPane;
-import javax.swing.JDialog;
+import javax.swing.*;
 
 import controller.IFeatures;
 import model.IPortfolioV2;
@@ -40,7 +25,9 @@ import model.TradeType;
 
 public class JFrameView extends JFrame implements IJFrameView {
   private final Container userPane;
-  private final Container managePane;  // Two main containers of the UI screen.
+  private final Container managePane;
+  private final Container dollarCostAverageStrategyPane;
+  // Two main containers of the UI screen.
   private final JLabel currentPortfolio;
   private JButton createPortfolio;
   private JButton exitButton;
@@ -83,6 +70,7 @@ public class JFrameView extends JFrame implements IJFrameView {
   private JLabel hourLabel;
   private JLabel minLabel;
   private JLabel secLabel;
+  private JButton createPortfolioWithStrategy;
 
   /**
    * GUI based view constructor. Creates a master container representing the basic GUI design
@@ -94,8 +82,10 @@ public class JFrameView extends JFrame implements IJFrameView {
     this.setMinimumSize(new Dimension(800, 500));
     userPane = new JPanel();
     managePane = new JPanel();
+    dollarCostAverageStrategyPane = new JPanel();
     userPane.setLayout(new GridLayout(4, 1, 10, 10));
     managePane.setLayout(new GridLayout(5, 1, 10, 10));
+    dollarCostAverageStrategyPane.setLayout(new GridLayout(2, 1, 10, 10));
     this.add(userPane);
     setCreatePortfolioPane(userPane);
     setSelectPortfolioPane(userPane);
@@ -113,6 +103,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     pack();
     setVisible(true);
     managePane.setVisible(false);
+    dollarCostAverageStrategyPane.setVisible(false);
   }
 
   private void registerBasicActionListners() {
@@ -123,6 +114,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     investAmountButton.addActionListener(l -> displayInvestmentAmount());
     backButton.addActionListener(l -> {
       hideManagePane();
+      hideStrategyPane();
       showUserPane();
     });
   }
@@ -161,8 +153,10 @@ public class JFrameView extends JFrame implements IJFrameView {
     createPortfolioInput = new JTextField(10);
     pane.add(createPortfolioInput, BorderLayout.CENTER);
     createPortfolio = new JButton("Create Portfolio");
+    createPortfolioWithStrategy = new JButton("Create Portfolio Using Strategy");
     createPortfolio.setActionCommand("Create Portfolio Button");
     pane.add(createPortfolio, BorderLayout.EAST);
+    pane.add(createPortfolioWithStrategy, BorderLayout.SOUTH);
     pane.setSize(10, 10);
     parentPanel.add(pane);
   }
@@ -301,7 +295,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     exportButton = new JButton("Export");
     pane.add(exportButton);
     backButton = new JButton("Back");
-    pane.add(backButton);
+    //pane.add(backButton);
     parentPanel.add(pane);
   }
 
@@ -405,6 +399,11 @@ public class JFrameView extends JFrame implements IJFrameView {
     this.remove(managePane);
   }
 
+  private void hideStrategyPane() {
+    dollarCostAverageStrategyPane.setVisible(false);
+    this.remove(dollarCostAverageStrategyPane);
+  }
+
   public void showUserPane() {
     userPane.setVisible(true);
     this.add(userPane);
@@ -430,6 +429,13 @@ public class JFrameView extends JFrame implements IJFrameView {
       displayPortfolioNames(portfolioNames);
       clearScreenOneTextFeild();
     });
+    createPortfolioWithStrategy.addActionListener(l -> {
+      if (features.createPortfolio(createPortfolioInput.getText())) {
+        List<String> portfolioNames = features.getAllPortfolioNames();
+        displayPortfolioNames(portfolioNames);
+        enableStrategyScreen();
+      }
+    });
     managePortfolio.addActionListener(l -> {
       features.validatePortfolioName(selectPortfolioInput.getText());
       clearScreenOneTextFeild();
@@ -448,7 +454,14 @@ public class JFrameView extends JFrame implements IJFrameView {
       }
     });
     exitButton.addActionListener(l -> features.exitProgram());
+  }
 
+  private void enableStrategyScreen() {
+    hideUserPane();
+    dollarCostAverageStrategyPane.add(new DollarCostAveragingView(selectedPortfolio));
+    dollarCostAverageStrategyPane.add(backButton);
+    dollarCostAverageStrategyPane.setVisible(true);
+    this.add(dollarCostAverageStrategyPane);
   }
 
   private void clearScreenOneTextFeild() {
