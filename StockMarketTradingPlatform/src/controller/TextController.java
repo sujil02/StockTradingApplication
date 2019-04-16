@@ -5,6 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import controller.textcommands.BuyUsingDollarCostStrategyCommand;
 import controller.textcommands.CreatePortfolioCommand;
 import controller.textcommands.ExaminePortfolioCommand;
 import controller.textcommands.ICommand;
@@ -37,7 +38,8 @@ public class TextController extends AbstractController {
     commands = new LinkedHashMap<>();
     commands.put(1, new CreatePortfolioCommand());
     commands.put(2, new ExaminePortfolioCommand());
-    commands.put(3,new ImportPortfolioCommand());
+    commands.put(3,new BuyUsingDollarCostStrategyCommand());
+    commands.put(4,new ImportPortfolioCommand());
   }
 
   @Override

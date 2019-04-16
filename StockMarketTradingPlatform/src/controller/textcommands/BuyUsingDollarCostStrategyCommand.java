@@ -110,7 +110,6 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
         tickerSymbols.put(tickerSymbol, weight);
       }
     }
-    double temp = tickerSymbols.values().stream().mapToDouble(x -> x.doubleValue()).sum();
     if (Math.abs(tickerSymbols.values().stream().mapToDouble(x -> x.doubleValue()).sum() - 1) > 0.01) {
       view.append("Weighs Does Not equal to 100%");
       return;

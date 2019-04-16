@@ -55,6 +55,8 @@ public class DollarCostStrategy implements IStrategy {
             } catch (IllegalArgumentException e) {
               if (e.getMessage().equals("Invalid Date")) {
                 purchaseDate = addDay(purchaseDate);
+              } else {
+                throw new IllegalArgumentException("Invalid data");
               }
             }
           }
@@ -67,8 +69,10 @@ public class DollarCostStrategy implements IStrategy {
                       , stock, "", amount, commission);
               break;
             } catch (IllegalArgumentException e) {
-              if (e.getMessage().equals("Invalid Date")) {
+              if (e.getMessage().equals("Invalid Date") || e.getMessage().equals("Invalid Purchase Date")) {
                 purchaseDate = addDay(purchaseDate);
+              } else {
+                throw new IllegalArgumentException("Invalid data");
               }
             }
           }

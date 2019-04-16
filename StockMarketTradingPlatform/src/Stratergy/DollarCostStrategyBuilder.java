@@ -44,9 +44,6 @@ abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
     if (tickerSymbols.isEmpty()) {
       throw new IllegalArgumentException("Invalid Input");
     }
-    if (tickerSymbols.values().stream().mapToDouble(x -> x.doubleValue()).sum() != 1) {
-      throw new IllegalArgumentException("Invalid Proportion");
-    }
     this.tickerSymbols = tickerSymbols;
     return this;
   }
