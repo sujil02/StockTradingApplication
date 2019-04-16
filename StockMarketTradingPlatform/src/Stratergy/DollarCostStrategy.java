@@ -47,7 +47,7 @@ public class DollarCostStrategy implements IStrategy {
         float weight = tickerSymbols.get(stock);
         if (totalQuantity != 0) {
           int quant = (int) weight * totalQuantity;
-          while (purchaseDate.before(endDate)) {
+          while (purchaseDate.before(endDate) || purchaseDate.equals(endDate)) {
             try {
               controller.buyStocks(portfolioName, tradeType, purchaseDate
                       , stock, "", quant, commission);
@@ -61,7 +61,7 @@ public class DollarCostStrategy implements IStrategy {
 
         } else {
           float amount = weight * investmentAmount;
-          while (purchaseDate.before(endDate)) {
+          while (purchaseDate.before(endDate) || purchaseDate.equals(endDate)) {
             try {
               controller.buyStocks(portfolioName, tradeType, purchaseDate
                       , stock, "", amount, commission);
@@ -91,9 +91,9 @@ public class DollarCostStrategy implements IStrategy {
   private List<Date> getPurchaseDates(Date startDate, Date endDate, int period) {
     List<Date> purchaseDates = new ArrayList<>();
     Date curr = startDate;
+    Calendar c = Calendar.getInstance();
     while (curr.before(endDate) || curr.equals(endDate)) {
       purchaseDates.add(curr);
-      Calendar c = Calendar.getInstance();
       c.setTime(curr);
       c.add(Calendar.DATE, period);
       curr = c.getTime();
@@ -112,7 +112,7 @@ public class DollarCostStrategy implements IStrategy {
     return curr;
   }
 
-  private static class DollarCostWithPortfolioStrategyBuilder extends DollarCostStrategyBuilder {
+  public static class DollarCostWithPortfolioStrategyBuilder extends DollarCostStrategyBuilder {
 
 
     @Override

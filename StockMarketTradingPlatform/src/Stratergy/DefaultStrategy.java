@@ -49,7 +49,12 @@ public class DefaultStrategy implements IStrategy {
     }
   }
 
-  private static class DefaultStrategyBuilder {
+  @Override
+  public void export() {
+
+  }
+
+  public static class DefaultStrategyBuilder {
     private String portfolioName;
     private TradeType tradeType;
     private Date date;

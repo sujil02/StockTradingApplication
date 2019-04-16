@@ -4,8 +4,12 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.NoSuchElementException;
 
+import Stratergy.DefaultStrategy;
+import Stratergy.IStrategy;
 import controller.TextController;
 import model.TradeType;
 import view.IView;
@@ -59,18 +63,14 @@ public class BuyStockUsingDefaultStrategyCommand implements IPortfolioCommand {
       }
     }
     try {
-      if (quant != 0) {
-        textController.buyStocks(portfolioName, TradeType.BUY, ref, tickerSymbol
-                , companyName, quant, commission);
-      } else {
-        textController.buyStocks(portfolioName, TradeType.BUY, ref, tickerSymbol
-                , companyName, investment, commission);
-      }
+      IStrategy strategy = DefaultStrategy.getDefaultStrategyBuilder().setPortfolioName(portfolioName)
+              .setCompanyName(companyName).setTickerSymbol(tickerSymbol).setQuantity(quant)
+              .setInvestmentAmount(investment).setDate(ref).setCommission(commission).build();
+      strategy.buyStock(textController, view);
       view.append("Trade completed successfully.");
     } catch (IllegalArgumentException e) {
       view.append("Transaction could not be completed.\n" + e.getMessage());
     }
-
 
   }
 

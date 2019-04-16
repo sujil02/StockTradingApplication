@@ -22,7 +22,7 @@ public class ExaminePortfolioCommand implements ICommand {
   public ExaminePortfolioCommand() {
     this.commandsMap = new LinkedHashMap<>();
     commandsMap.put(1, new PortfolioContentsCommand());
-    commandsMap.put(2, new BuyStockUsingDefaultStrategyCommand());
+    commandsMap.put(2, new BuyStockCommand());
     commandsMap.put(3, new PortfolioCostBiasCommand());
     commandsMap.put(4, new PortfolioValueCommand());
     commandsMap.put(5, new ExportPortfolioCommand());

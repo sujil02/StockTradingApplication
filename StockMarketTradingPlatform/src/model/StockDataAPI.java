@@ -36,7 +36,7 @@ public class StockDataAPI implements IStockDataAPI {
               System.getProperty("file.separator") + tickerSymbol + "ApiData.txt");
       stockPrice = convertCSVToMAP(filedata);
     } catch (IOException e) {
-      System.out.println("No previous data found doing an api call");
+      //System.out.println("No previous data found doing an api call");
     }
     Date dateReference = new Date();
     try {
