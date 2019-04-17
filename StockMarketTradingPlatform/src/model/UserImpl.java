@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import SerializeAndDeserialize.SerializeAndDeserialize;
+import serializedeserialize.SerializeAndDeserialize;
 
 /**
  * This class implements {@link IUser}. This is the implementation of model for

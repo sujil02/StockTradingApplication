@@ -1,4 +1,4 @@
-package SerializeAndDeserialize;
+package serializedeserialize;
 
 import java.io.IOException;
 

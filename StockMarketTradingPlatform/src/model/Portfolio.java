@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-import SerializeAndDeserialize.SerializeAndDeserialize;
+import serializedeserialize.SerializeAndDeserialize;
 
 /**
  * This class implements IPortfolio using IStock. It uniquely identifies each
