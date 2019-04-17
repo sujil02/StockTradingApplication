@@ -15,6 +15,10 @@ import controller.TextController;
 import model.TradeType;
 import view.IView;
 
+/**
+ * Class handles the command to buy a stock for a particular user over the selected portfolio by the
+ * user using Dollar Cost Average Strategy.
+ */
 public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCommand {
   private Map<Integer, String> commandsMap;
   private IStrategy strategy;
@@ -27,7 +31,8 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
   }
 
   @Override
-  public void execute(TextController textController, IView view) throws IOException, NoSuchElementException {
+  public void execute(TextController textController, IView view)
+          throws IOException, NoSuchElementException {
     while (true) {
       int option = getInput(view);
       if (option == commandsMap.size() + 1) {
@@ -96,8 +101,8 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
 
   private void createStrategy(TextController textController, IView view, String portfolioName)
           throws IOException {
-    view.append("Enter Ticker Symbol with its weight in percentage (if weights are equal add only " +
-            "ticker symbol) one on each line. Enter \"Done\" to finalize the list");
+    view.append("Enter Ticker Symbol with its weight in percentage (if weights are equal " +
+            "add only ticker symbol) one on each line. Enter \"Done\" to finalize the list");
     Map<String, Float> tickerSymbols = getTickerSymbolsFromUser(view);
     if (tickerSymbols.values().stream().mapToDouble(x -> x.doubleValue()).sum() == 0) {
       float weight = (float) 1 / tickerSymbols.size();
@@ -105,7 +110,8 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
         tickerSymbols.put(tickerSymbol, weight);
       }
     }
-    if (Math.abs(tickerSymbols.values().stream().mapToDouble(x -> x.doubleValue()).sum() - 1) > 0.01) {
+    if (Math.abs(tickerSymbols.values().stream()
+            .mapToDouble(x -> x.doubleValue()).sum() - 1) > 0.01) {
       view.append("Weighs Does Not equal to 100%");
       return;
     }
@@ -121,10 +127,12 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
     view.append("Enter Commission");
     float commission = getFloatFromUser(view);
 
-    view.append("Enter Start Date(optional) n MM/dd/yyyy format Ex: 03/11/2019 for 11th March 2019");
+    view.append("Enter Start Date(optional) in MM/dd/yyyy " +
+            "format Ex: 03/11/2019 for 11th March 2019");
     Date startDate = addTimeToDate(getDateFromUser(view));
 
-    view.append("Enter End Date(optional) in MM/dd/yyyy format Ex: 03/11/2019 for 11th March 2019");
+    view.append("Enter End Date(optional) in MM/dd/yyyy " +
+            "format Ex: 03/11/2019 for 11th March 2019");
     Date endDate = addTimeToDate(getDateFromUser(view));
 
     view.append("Enter frequency of purchase in days(enter 0 if no repetition)");
