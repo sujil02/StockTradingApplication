@@ -74,10 +74,12 @@ public class JFrameView extends JFrame implements IJFrameView {
   private JLabel secLabel;
   private JButton createPortfolioWithStrategy;
   private JButton backFromStrategy;
+  private JButton buyUsingStrategy;
+  String prevScreen;
 
   /**
-   * GUI based view constructor. Creates a master container representing the basic GUI design
-   * having to main fram pane the managePane and the userpane.
+   * GUI based view constructor. Creates a master container representing the basic GUI design having
+   * to main fram pane the managePane and the userpane.
    */
   public JFrameView() {
     super();
@@ -88,7 +90,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     dollarCostAverageStrategyPane = new JPanel();
     userPane.setLayout(new GridLayout(4, 1, 10, 10));
     managePane.setLayout(new GridLayout(5, 1, 10, 10));
-    dollarCostAverageStrategyPane.setLayout(new BorderLayout(10,10));
+    dollarCostAverageStrategyPane.setLayout(new BorderLayout(10, 10));
     this.add(userPane);
     setCreatePortfolioPane(userPane);
     setSelectPortfolioPane(userPane);
@@ -112,7 +114,7 @@ public class JFrameView extends JFrame implements IJFrameView {
   private void setStrategyPanel() {
     dollarPnel = new DollarCostAveragingView();
     backFromStrategy = new JButton("Back to Create and Manage Portfolios.");
-    dollarCostAverageStrategyPane.add(dollarPnel);
+    dollarCostAverageStrategyPane.add(dollarPnel, BorderLayout.CENTER);
     dollarCostAverageStrategyPane.setVisible(false);
   }
 
@@ -126,12 +128,24 @@ public class JFrameView extends JFrame implements IJFrameView {
       hideManagePane();
       showUserPane();
     });
-    backFromStrategy.addActionListener(l->{
+    backFromStrategy.addActionListener(l -> {
       hideManagePane();
       hideStrategyPane();
       dollarPnel.executeBackCleanUP();
-      showUserPane();
+      showPrevScreen();
     });
+    buyUsingStrategy.addActionListener(l -> {
+      prevScreen = "MANAGE";
+      enableStrategyScreen();
+    });
+  }
+
+  private void showPrevScreen() {
+    if (prevScreen.equals("USER")) {
+      showUserPane();
+    } else {
+      showManagePortfolioPane(selectedPortfolio);
+    }
   }
 
 
@@ -228,7 +242,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     pane.add(commissionLabel);
     commissionInput = new JTextField();
     pane.add(commissionInput);
-   // dollarCostAverageStrategyPane.add(new DollarCostAveragingView(selectedPortfolio),BorderLayout.CENTER);
+    // dollarCostAverageStrategyPane.add(new DollarCostAveragingView(selectedPortfolio),BorderLayout.CENTER);
     setTradeSelectionPane(pane);
     parentPanel.add(pane);
   }
@@ -285,7 +299,7 @@ public class JFrameView extends JFrame implements IJFrameView {
 
   private void setButtonPane(Container parentPanel) {
     Container pane = new JPanel();
-    pane.setLayout(new GridLayout(2, 2));
+    pane.setLayout(new GridLayout(2, 3));
     buyStockButton = new JButton("Buy Stocks");
     pane.add(buyStockButton);
     getCostBiasButton = new JButton("Get Cost Bias");
@@ -294,6 +308,8 @@ public class JFrameView extends JFrame implements IJFrameView {
     pane.add(getValueButton);
     displayContentButton = new JButton("Display Portfolio Contents");
     pane.add(displayContentButton);
+    buyUsingStrategy = new JButton("Buy Using Strategy");
+    pane.add(buyUsingStrategy);
     parentPanel.add(pane);
   }
 
@@ -319,6 +335,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     getCostBiasButton.setVisible(false);
     getValueButton.setVisible(false);
     buyStockButton.setVisible(true);
+    buyUsingStrategy.setVisible(true);
     refDateLabel.setText("Purchase Date and Time");
     refDateLabel.setVisible(true);
     month.setVisible(true);
@@ -334,6 +351,7 @@ public class JFrameView extends JFrame implements IJFrameView {
   private void displayCostBiasContent() {
     buyStockButton.setVisible(false);
     getValueButton.setVisible(false);
+    buyUsingStrategy.setVisible(false);
     refDateLabel.setText("Reference Date");
     setBuyInputs(false);
 
@@ -350,6 +368,7 @@ public class JFrameView extends JFrame implements IJFrameView {
   private void displayGetValueContent() {
     getCostBiasButton.setVisible(false);
     buyStockButton.setVisible(false);
+    buyUsingStrategy.setVisible(false);
     refDateLabel.setText("Reference Date");
     setBuyInputs(false);
 
@@ -457,7 +476,8 @@ public class JFrameView extends JFrame implements IJFrameView {
         List<String> portfolioNames = features.getAllPortfolioNames();
         selectedPortfolio = createPortfolioInput.getText();
         displayPortfolioNames(portfolioNames);
-        enableStrategyScreen(features);
+        prevScreen = "USER";
+        enableStrategyScreen();
       }
     });
     managePortfolio.addActionListener(l -> {
@@ -480,9 +500,16 @@ public class JFrameView extends JFrame implements IJFrameView {
     exitButton.addActionListener(l -> features.exitProgram());
   }
 
-  private void enableStrategyScreen(IFeatures features) {
-    hideUserPane();
-    dollarCostAverageStrategyPane.add(backFromStrategy,BorderLayout.SOUTH);
+  private void enableStrategyScreen() {
+    if (prevScreen.equals("USER")) {
+      hideUserPane();
+    } else {
+      hideManagePane();
+    }
+    //setStrategyPanel();
+    dollarPnel = new DollarCostAveragingView();
+    dollarCostAverageStrategyPane.add(dollarPnel, BorderLayout.CENTER);
+    dollarCostAverageStrategyPane.add(backFromStrategy, BorderLayout.SOUTH);
     dollarCostAverageStrategyPane.setVisible(true);
     dollarPnel.setPortfolioName(selectedPortfolio);
     this.add(dollarCostAverageStrategyPane);
@@ -546,21 +573,24 @@ public class JFrameView extends JFrame implements IJFrameView {
                 , min.getText(),
                 sec.getText());
         date = df.parse(dateInput);
-
-        if (quantityButton.isSelected()) {
-          int quantity = Integer.parseInt(quantityInput.getText());
-          if (features.buyStocks(selectedPortfolio, TradeType.BUY, date,
-                  tickerSymbolInput.getText(), companyNameInput.getText()
-                  , quantity, commission)) {
-            showSuccessMessage("Trade completed successfully");
+        try {
+          if (quantityButton.isSelected()) {
+            int quantity = Integer.parseInt(quantityInput.getText());
+            if (features.buyStocks(selectedPortfolio, TradeType.BUY, date,
+                    tickerSymbolInput.getText(), companyNameInput.getText()
+                    , quantity, commission)) {
+              showSuccessMessage("Trade completed successfully");
+            }
+          } else {
+            float investmentAmount = Float.parseFloat(quantityInput.getText());
+            if (features.buyStocks(selectedPortfolio, TradeType.BUY, date,
+                    tickerSymbolInput.getText(), companyNameInput.getText()
+                    , investmentAmount, commission)) {
+              showSuccessMessage("Trade completed successfully");
+            }
           }
-        } else {
-          float investmentAmount = Float.parseFloat(quantityInput.getText());
-          if (features.buyStocks(selectedPortfolio, TradeType.BUY, date,
-                  tickerSymbolInput.getText(), companyNameInput.getText()
-                  , investmentAmount, commission)) {
-            showSuccessMessage("Trade completed successfully");
-          }
+        } catch (IllegalArgumentException exp) {
+          showErrorMessage("Error completing trade.");
         }
         clearTextFields();
 

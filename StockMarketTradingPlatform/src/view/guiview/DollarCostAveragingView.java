@@ -5,6 +5,7 @@ import org.jdesktop.swingx.JXDatePicker;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +16,8 @@ import controller.IFeatures;
 public class DollarCostAveragingView extends JPanel {
   private JTextField dollarAmountInvested;
   private JLabel dollarAmountInvestLabel;
+  private JTextField commissionAmount;
+  private JLabel commissionAmountLabel;
   private JLabel portfolioNameLabel;
   private JLabel stockTickerSymbolLabel;
   private JLabel stockWeightLabel;
@@ -49,6 +52,7 @@ public class DollarCostAveragingView extends JPanel {
             , JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
     this.add(display);
     setExportStrategyButton();
+    portfolioNameLabel = new JLabel("Selected Portfolio is : ");
   }
 
   private void setExportStrategyButton() {
@@ -100,10 +104,14 @@ public class DollarCostAveragingView extends JPanel {
 
   private void setDollarAmountInvestment() {
     Container pane = new JPanel(new GridLayout(1, 4, 5, 5));
-    dollarAmountInvestLabel = new JLabel("Enter the amount to be invested in dollars $");
+    dollarAmountInvestLabel = new JLabel("Investment Amount in dollars $");
     pane.add(dollarAmountInvestLabel);
     dollarAmountInvested = new JTextField();
     pane.add(dollarAmountInvested);
+    commissionAmountLabel = new JLabel("Commission");
+    commissionAmount = new JTextField();
+    pane.add(commissionAmountLabel);
+    pane.add(commissionAmount);
     this.add(pane);
   }
 
@@ -134,7 +142,7 @@ public class DollarCostAveragingView extends JPanel {
         e.printStackTrace();
       }
     });
-    executeStrategy.addActionListener(l-> {
+    executeStrategy.addActionListener(l -> {
       try {
         features.executeStrategy(features);
       } catch (IOException e) {
@@ -154,7 +162,7 @@ public class DollarCostAveragingView extends JPanel {
     float weight = 0.0f;
     try {
       if (stockWeightText.getText().equalsIgnoreCase("")) {
-        strategy.put(tickerSymbol, 0.0f);
+        strategy.put(tickerSymbol, 100.0f);
         recalculateWeight();
       } else {
         weight = Float.parseFloat(stockWeightText.getText());
@@ -209,22 +217,36 @@ public class DollarCostAveragingView extends JPanel {
 
   public void setPortfolioName(String selectedPortfolio) {
     this.selectedPortfolio = selectedPortfolio;
-    portfolioNameLabel = new JLabel("Selected Portfolio is : " + selectedPortfolio);
+    portfolioNameLabel.setText("Selected Portfolio is : " + selectedPortfolio);
     this.add(portfolioNameLabel, 0);
 
   }
 
   public Map<String, Object> getStrategyFeild() {
+    Map<String, Object> parameters = new HashMap<>();
     try {
-      Map<String, Object> parameters = new HashMap<>();
       parameters.put("portfolioName", selectedPortfolio);
+      for (String tickerSymbol : strategy.keySet()) {
+        strategy.put(tickerSymbol, strategy.get(tickerSymbol) / 100);
+      }
       parameters.put("tickerSymbols", strategy);
       float investment = Float.parseFloat(dollarAmountInvested.getText());
-      parameters.put("investmentAmount",investment);
-      //float commission = Float.parseFloat()
-    } catch (NumberFormatException e){
+      parameters.put("investmentAmount", investment);
+      float commission = Float.parseFloat(commissionAmount.getText());
+      parameters.put("commission", commission);
+      Date startDate = startDatePicker.getDate();
+      parameters.put("startDate", startDate);
+      Date endDate = endDatePicker.getDate();
+      parameters.put("endDate", endDate);
+      int frequency = 1;
+      if (!duration.getText().isEmpty()) {
+        frequency = Integer.parseInt(duration.getText());
+      }
+      parameters.put("frequency", frequency);
+
+    } catch (NumberFormatException e) {
       throw new IllegalArgumentException("Invalid parameter");
     }
-    return null;
+    return parameters;
   }
 }

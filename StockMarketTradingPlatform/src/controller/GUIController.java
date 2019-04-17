@@ -1,6 +1,9 @@
 package controller;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
@@ -8,7 +11,6 @@ import controller.Stratergy.DollarCostStrategy;
 import controller.Stratergy.IStrategy;
 import model.IUserV2;
 import model.TradeType;
-import view.IMainView;
 import view.guiview.IJFrameView;
 import view.guiview.JFrameView;
 
@@ -69,13 +71,9 @@ public class GUIController extends AbstractController {
   public boolean buyStocks(String portfolioName, TradeType tradeType,
                            Date date, String tickerSymbol,
                            String companyName, int quantity, float commission) {
-    try {
-      super.buyStocks(portfolioName, tradeType, date, tickerSymbol,
-              companyName, quantity, commission);
-    } catch (IllegalArgumentException e) {
-      view.showErrorMessage(e.getMessage());
-      return false;
-    }
+
+    super.buyStocks(portfolioName, tradeType, date, tickerSymbol,
+            companyName, quantity, commission);
     return true;
   }
 
@@ -83,13 +81,9 @@ public class GUIController extends AbstractController {
   public boolean buyStocks(String portfolioName, TradeType tradeType,
                            Date date, String tickerSymbol,
                            String companyName, float investmentAmount, float commission) {
-    try {
-      super.buyStocks(portfolioName, tradeType, date, tickerSymbol,
-              companyName, investmentAmount, commission);
-    } catch (IllegalArgumentException e) {
-      view.showErrorMessage(e.getMessage());
-      return false;
-    }
+
+    super.buyStocks(portfolioName, tradeType, date, tickerSymbol,
+            companyName, investmentAmount, commission);
     return true;
   }
 
@@ -116,12 +110,46 @@ public class GUIController extends AbstractController {
   }
 
   @Override
-  public void importStrategy(String path, String portfolioName, IMainView view) throws IOException {
+  public void importStrategy(String path, String portfolioName) throws IOException {
 
   }
 
   public void executeStrategy(IFeatures features) throws IOException {
-    Map<String, Object> parameters = this.view.getStrategyFields();
+    try {
+      Map<String, Object> parameters = this.view.getStrategyFields();
+      setStrategy(parameters);
+      super.executeStrategy(this);
+    } catch (IOException e) {
+      view.showErrorMessage("Error creating Strategy " + e.getMessage());
+    } catch (IllegalArgumentException e) {
+      view.showErrorMessage("Error executing strategy " + e.getMessage());
+    }
+
+  }
+
+  public void exportStrategy(String path) throws IOException {
+    try {
+      Map<String, Object> parameters = view.getStrategyFields();
+      setStrategy(parameters);
+      super.exportStrategy(path);
+    } catch (IOException e) {
+      view.showErrorMessage("Error exporting Strategy " + e.getMessage());
+    } catch (IllegalArgumentException e) {
+      view.showErrorMessage("Error executing strategy " + e.getMessage());
+    }
+
+  }
+
+  private Date addTimeToDate(Date ref) {
+    Calendar c = Calendar.getInstance();
+    c.setTime(ref);
+    c.set(Calendar.HOUR, 16);
+    c.set(Calendar.MINUTE, 00);
+    c.set(Calendar.SECOND, 00);
+    return c.getTime();
+  }
+
+  private void setStrategy(Map<String, Object> parameters) {
     String portfolioName = (String) parameters.get("portfolioName");
     TradeType type = TradeType.BUY;
     Map<String, Float> tickerSymbols = (Map<String, Float>) parameters.get("tickerSymbols");
@@ -129,39 +157,27 @@ public class GUIController extends AbstractController {
     float commission = (float) parameters.get("commission");
     Date startDate = (Date) parameters.get("startDate");
     Date endDate = (Date) parameters.get("endDate");
-    int freq = (int) parameters.get("frequency");
-
     try {
-      super.setStrategy(DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
-              .setTradeType(type).setTickerSymbolsAndProportions(tickerSymbols)
-              .setInvestmentAmount(investmentAmount).setCommission(commission)
-              .setDuration(startDate, endDate, freq).build());
-      super.executeStrategy(this);
-    } catch (IOException e) {
-      view.showErrorMessage("Error creating Strategy " + e.getMessage());
+
+      if (startDate == null) {
+        startDate = new SimpleDateFormat()
+                .parse(new SimpleDateFormat("MM/dd/yyyy").format(new Date()));
+      }
+      startDate = addTimeToDate(startDate);
+
+      if (endDate == null) {
+        endDate = new SimpleDateFormat()
+                .parse(new SimpleDateFormat("MM/dd/yyyy").format(new Date()));
+      }
+      endDate = addTimeToDate(endDate);
+    } catch (ParseException e) {
+      //do nothing since parameters will always be true.
     }
-
-  }
-
-  public void exportStrategy(String path) throws IOException {
-//    Map<String, Object> parameters = this.view.getStrategyFields();
-//    String portfolioName = (String) parameters.get("portfolioName");
-//    TradeType type = TradeType.BUY;
-//    Map<String, Float> tickerSymbols = (Map<String, Float>) parameters.get("tickerSymbols");
-//    float investmentAmount = (float) parameters.get("investmentAmount");
-//    float commission = (float) parameters.get("commission");
-//    Date startDate = (Date) parameters.get("startDate");
-//    Date endDate = (Date) parameters.get("endDate");
-//    int freq = (int) parameters.get("frequency");
-//
-//    try {
-//      super.setStrategy(DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
-//              .setTradeType(type).setTickerSymbolsAndProportions(tickerSymbols)
-//              .setInvestmentAmount(investmentAmount).setCommission(commission)
-//              .setDuration(startDate, endDate, freq).build());
-      super.exportStrategy(path);
-//    } catch (IOException e) {
-//      view.showErrorMessage("Error creating Strategy " + e.getMessage());
-//    }
+    int freq = (int) parameters.get("frequency");
+    super.setStrategy(DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
+            .setTradeType(type).setTickerSymbolsAndProportions(tickerSymbols)
+            .setInvestmentAmount(investmentAmount).setCommission(commission)
+            .setDuration(startDate, endDate, freq).build());
   }
 }
+

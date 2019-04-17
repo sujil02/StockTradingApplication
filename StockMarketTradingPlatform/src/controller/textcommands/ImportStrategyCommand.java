@@ -13,7 +13,7 @@ public class ImportStrategyCommand implements ICommand {
     String importFile = view.getInput();
     view.append("Enter new Portfolio Name");
     String portfolioName = view.getInput();
-    textController.importStrategy(importFile, portfolioName,view);
+    textController.importStrategy(importFile, portfolioName);
   }
 
   @Override

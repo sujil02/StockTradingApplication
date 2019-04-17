@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 
 import controller.Stratergy.DollarCostStrategy;
-import controller.Stratergy.IStrategy;
 import controller.TextController;
 import model.TradeType;
 import view.IView;
