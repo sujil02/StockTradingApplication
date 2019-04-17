@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
-import controller.Stratergy.IStrategy;
+import controller.stratergy.IStrategy;
 import model.IPortfolioV2;
 import model.TradeType;
 

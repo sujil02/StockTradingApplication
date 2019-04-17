@@ -1,4 +1,4 @@
-package controller.Stratergy;
+package controller.stratergy;
 
 import java.io.IOException;
 

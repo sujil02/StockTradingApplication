@@ -2,7 +2,7 @@ package serializedeserialize;
 
 import java.io.IOException;
 
-import controller.Stratergy.IStrategy;
+import controller.stratergy.IStrategy;
 import model.IPortfolioV2;
 
 /**

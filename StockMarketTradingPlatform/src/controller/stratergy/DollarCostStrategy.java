@@ -1,4 +1,4 @@
-package controller.Stratergy;
+package controller.stratergy;
 
 import com.google.gson.annotations.Expose;
 
@@ -14,11 +14,11 @@ import model.TradeType;
 import view.IMainView;
 
 /**
- * This class implements {@link IStrategy} to implement Dollar Cost Average Strategy. This
- * strategy is based on the well-founded hypothesis that although the stock prices fluctuate every
- * day, the long-term trend of a well-chosen portfolio is upward. According to this strategy a
- * fixed amount is invested in fixed set of stocks for a particular duration recursively to earn
- * profit over the investment.
+ * This class implements {@link IStrategy} to implement Dollar Cost Average Strategy. This strategy
+ * is based on the well-founded hypothesis that although the stock prices fluctuate every day, the
+ * long-term trend of a well-chosen portfolio is upward. According to this strategy a fixed amount
+ * is invested in fixed set of stocks for a particular duration recursively to earn profit over the
+ * investment.
  */
 public class DollarCostStrategy implements IStrategy {
   private String portfolioName;
@@ -38,11 +38,11 @@ public class DollarCostStrategy implements IStrategy {
   @Expose
   private int period;
 
-  public DollarCostStrategy(String portfolioName, TradeType tradeType,
-                            Map<String, Float> tickerSymbols, int totalQuantity,
-                            float commission, float investmentAmount,
-                            Date startDate, Date endDate,
-                            int period) {
+  private DollarCostStrategy(String portfolioName, TradeType tradeType,
+                             Map<String, Float> tickerSymbols, int totalQuantity,
+                             float commission, float investmentAmount,
+                             Date startDate, Date endDate,
+                             int period) {
     this.portfolioName = portfolioName;
     this.tradeType = tradeType;
     this.tickerSymbols = tickerSymbols;
@@ -57,16 +57,14 @@ public class DollarCostStrategy implements IStrategy {
 
   /**
    * This method buys stock using dollar cost averaging strategy. All parameters for the strategy
-   * are set using the {@link IDollarCostStrategyBuilder}. According to this strategy a fixed
-   * amount is invested in fixed set of stocks for a particular duration recursively to earn
-   * profit over the investment.
-   *
-   * While buying stocks for the provided duration if the trade day falls on a day when market is
-   * closed then the trade will be completed on the next day when the market is open. If the end
-   * date of the strategy is not provided in the parameters the trade days are calculated till the
-   * day on which strategy is being executed. If the weights are not provided when providing
-   * ticker symbols of the companies the weights are equally distributed. If the frequency of
-   * trade is not mentioned it will be consider as 1 i.e. will be executed only once.
+   * are set using the {@link IDollarCostStrategyBuilder}. According to this strategy a fixed amount
+   * is invested in fixed set of stocks for a particular duration recursively to earn profit over
+   * the investment. While buying stocks for the provided duration if the trade day falls on a day
+   * when market is closed then the trade will be completed on the next day when the market is open.
+   * If the end date of the strategy is not provided in the parameters the trade days are calculated
+   * till the day on which strategy is being executed. If the weights are not provided when
+   * providing ticker symbols of the companies the weights are equally distributed. If the frequency
+   * of trade is not mentioned it will be consider as 1 i.e. will be executed only once.
    *
    * @param controller controller from which this strategy is being called.
    * @param view       view being used when this strategy is called.
@@ -102,7 +100,8 @@ public class DollarCostStrategy implements IStrategy {
                       , stock, "", amount, commission);
               break;
             } catch (IllegalArgumentException e) {
-              if (e.getMessage().equals("Invalid Date") || e.getMessage().equals("Invalid Purchase Date")) {
+              if (e.getMessage().equals("Invalid Date") ||
+                      e.getMessage().equals("Invalid Purchase Date")) {
                 purchaseDate = addDay(purchaseDate);
               } else {
                 throw new IllegalArgumentException("Invalid data" + e.getMessage());
@@ -117,7 +116,8 @@ public class DollarCostStrategy implements IStrategy {
   }
 
   private void validateWeightsInStategy() {
-    if (Math.abs(tickerSymbols.values().stream().mapToDouble(x -> x.doubleValue()).sum() - 1) > 0.01) {
+    if (Math.abs(tickerSymbols.values().stream()
+            .mapToDouble(x -> x.doubleValue()).sum() - 1) > 0.01) {
       throw new IllegalArgumentException("Weighs Does Not equal to 100%");
     }
   }
@@ -156,9 +156,12 @@ public class DollarCostStrategy implements IStrategy {
     return curr;
   }
 
+  /**
+   * This class represents Builder for DollarCostStrategy. It implements {@link
+   * IDollarCostStrategyBuilder} by extending abstract class {@link DollarCostStrategyBuilder} and
+   * implements build method which returns DollarCostStrategy object.
+   */
   public static class DollarCostWithPortfolioStrategyBuilder extends DollarCostStrategyBuilder {
-
-
     @Override
     public IStrategy build() {
       return new DollarCostStrategy(this.portfolioName, this.tradeType,

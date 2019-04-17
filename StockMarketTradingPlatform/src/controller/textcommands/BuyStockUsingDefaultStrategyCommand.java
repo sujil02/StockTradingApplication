@@ -6,8 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.NoSuchElementException;
 
-import controller.Stratergy.DefaultStrategy;
-import controller.Stratergy.IStrategy;
+import controller.stratergy.DefaultStrategy;
+import controller.stratergy.IStrategy;
 import controller.TextController;
 import view.IView;
 

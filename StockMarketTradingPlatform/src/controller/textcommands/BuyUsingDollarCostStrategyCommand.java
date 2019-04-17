@@ -1,7 +1,5 @@
 package controller.textcommands;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,8 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import controller.Stratergy.DollarCostStrategy;
-import controller.Stratergy.IStrategy;
+import controller.stratergy.DollarCostStrategy;
+import controller.stratergy.IStrategy;
 import controller.TextController;
 import model.TradeType;
 import view.IView;

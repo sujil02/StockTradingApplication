@@ -8,6 +8,10 @@ import java.util.NoSuchElementException;
 import controller.TextController;
 import view.IView;
 
+/**
+ * Class handles the command to buy a stock for a particular user over the selected portfolio by the
+ * user.
+ */
 public class BuyStockCommand implements IPortfolioCommand {
   private Map<Integer, IPortfolioCommand> commandsMap;
 

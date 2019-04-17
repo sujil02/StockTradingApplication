@@ -1,4 +1,4 @@
-package controller.Stratergy;
+package controller.stratergy;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -42,7 +42,8 @@ abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
   }
 
   @Override
-  public IDollarCostStrategyBuilder setTickerSymbolsAndProportions(Map<String, Float> tickerSymbols) {
+  public IDollarCostStrategyBuilder setTickerSymbolsAndProportions
+          (Map<String, Float> tickerSymbols) {
     if (tickerSymbols.isEmpty()) {
       throw new IllegalArgumentException("Invalid Input");
     }

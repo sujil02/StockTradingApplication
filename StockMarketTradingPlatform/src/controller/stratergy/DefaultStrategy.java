@@ -1,4 +1,4 @@
-package controller.Stratergy;
+package controller.stratergy;
 
 import com.google.gson.annotations.Expose;
 
@@ -17,7 +17,6 @@ import view.IMainView;
  */
 public class DefaultStrategy implements IStrategy {
   private String portfolioName;
-  private TradeType tradeType;
   @Expose
   private Date date;
   @Expose
@@ -32,7 +31,7 @@ public class DefaultStrategy implements IStrategy {
   private DefaultStrategy(String portfolioName, TradeType tradeType, Date date, String tickerSymbol
           , String companyName, int quantity, float commission, float investmentAmount) {
     this.portfolioName = portfolioName;
-    this.tradeType = tradeType;
+    TradeType tradeType1 = tradeType;
     this.date = date;
     this.tickerSymbol = tickerSymbol;
     this.companyName = companyName;

@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import controller.Stratergy.DollarCostStrategy;
-import controller.Stratergy.IStrategy;
+import controller.stratergy.DollarCostStrategy;
+import controller.stratergy.IStrategy;
 import model.FileIO;
 import model.IPortfolioV2;
 import model.IStock;
