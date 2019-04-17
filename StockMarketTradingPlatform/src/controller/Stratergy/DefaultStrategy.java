@@ -9,6 +9,12 @@ import controller.IFeatures;
 import model.TradeType;
 import view.IMainView;
 
+/**
+ * The strategy is defined to buy stocks/ invest in the market. However buying single stocks is also
+ * a strategy where no complex logic is involved. This class implements {@link IStrategy} to
+ * represents strategy of buying single stocks one at a time. This is the default strategy since it
+ * could be used as fallback when no strategy would be used.
+ */
 public class DefaultStrategy implements IStrategy {
   private String portfolioName;
   private TradeType tradeType;
@@ -23,7 +29,7 @@ public class DefaultStrategy implements IStrategy {
   private float commission;
   private float investmentAmount;
 
-  public DefaultStrategy(String portfolioName, TradeType tradeType, Date date, String tickerSymbol
+  private DefaultStrategy(String portfolioName, TradeType tradeType, Date date, String tickerSymbol
           , String companyName, int quantity, float commission, float investmentAmount) {
     this.portfolioName = portfolioName;
     this.tradeType = tradeType;
@@ -56,15 +62,15 @@ public class DefaultStrategy implements IStrategy {
   }
 
   @Override
-  public void export() {
-    //Not supported for this strategy.
-  }
-
-  @Override
   public void setPortfolioName(String portfolioName) {
     this.portfolioName = portfolioName;
   }
 
+  /**
+   * This class represents builder for {@link DefaultStrategy}. It initialises all the parameters
+   * required by {@link DefaultStrategy} to a default value which can be modified using the methods
+   * provided.
+   */
   public static class DefaultStrategyBuilder {
     private String portfolioName;
     private TradeType tradeType;
@@ -86,31 +92,51 @@ public class DefaultStrategy implements IStrategy {
       this.investmentAmount = 0;
     }
 
+    /**
+     * Sets the portfolio name for strategy.
+     */
     public DefaultStrategyBuilder setPortfolioName(String portfolioName) {
       this.portfolioName = portfolioName;
       return this;
     }
 
+    /**
+     * Sets TradeType of strategy.
+     */
     public DefaultStrategyBuilder setTradeType(TradeType tradeType) {
       this.tradeType = tradeType;
       return this;
     }
 
+    /**
+     * Sets Transaction date of strategy.
+     */
     public DefaultStrategyBuilder setDate(Date date) {
       this.date = date;
       return this;
     }
+
+    /**
+     * Sets ticker symbol of the stock which will be bought.
+     */
 
     public DefaultStrategyBuilder setTickerSymbol(String tickerSymbol) {
       this.tickerSymbol = tickerSymbol;
       return this;
     }
 
+    /**
+     * Sets the company name involved in the trade.
+     */
     public DefaultStrategyBuilder setCompanyName(String companyName) {
       this.companyName = companyName;
       return this;
     }
 
+    /**
+     * Sets the quantity of the stocks bought. if quantity is greater than zero it will reset the
+     * investment amount to 0.
+     */
     public DefaultStrategyBuilder setQuantity(int quantity) {
       if (quantity > 0) {
         this.quantity = quantity;
@@ -121,11 +147,18 @@ public class DefaultStrategy implements IStrategy {
       return this;
     }
 
+    /**
+     * Sets the commission paid on the trade.
+     */
     public DefaultStrategyBuilder setCommission(float commission) {
       this.commission = commission;
       return this;
     }
 
+    /**
+     * Sets the amount to be invested. If the amount is greater than 0 method will set quantity to
+     * zero.
+     */
     public DefaultStrategyBuilder setInvestmentAmount(float investmentAmount) {
       if (investmentAmount > 0) {
         this.investmentAmount = investmentAmount;
@@ -136,6 +169,11 @@ public class DefaultStrategy implements IStrategy {
       return this;
     }
 
+    /**
+     * creates the strategy object based on the parameters provided.
+     *
+     * @return Default Strategy object
+     */
     public IStrategy build() {
       return new DefaultStrategy(portfolioName, tradeType, date, tickerSymbol, companyName,
               quantity, commission, investmentAmount);

@@ -29,16 +29,19 @@ abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
     this.period = 0;
   }
 
+  @Override
   public IDollarCostStrategyBuilder setPortfolioName(String portfolioName) {
     this.portfolioName = portfolioName;
     return this;
   }
 
+  @Override
   public IDollarCostStrategyBuilder setTradeType(TradeType tradeType) {
     this.tradeType = tradeType;
     return this;
   }
 
+  @Override
   public IDollarCostStrategyBuilder setTickerSymbolsAndProportions(Map<String, Float> tickerSymbols) {
     if (tickerSymbols.isEmpty()) {
       throw new IllegalArgumentException("Invalid Input");
@@ -47,6 +50,7 @@ abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
     return this;
   }
 
+  @Override
   public IDollarCostStrategyBuilder setTotalQuantity(int totalQuantity) {
     if (totalQuantity > 0) {
       this.totalQuantity = totalQuantity;
@@ -57,11 +61,13 @@ abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
     return this;
   }
 
+  @Override
   public IDollarCostStrategyBuilder setCommission(float commission) {
     this.commission = commission;
     return this;
   }
 
+  @Override
   public IDollarCostStrategyBuilder setInvestmentAmount(float investmentAmount) {
     if (investmentAmount > 0) {
       this.investmentAmount = investmentAmount;
@@ -72,6 +78,7 @@ abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
     return this;
   }
 
+  @Override
   public IDollarCostStrategyBuilder setDuration(Date startDate, Date endDate, int period) {
     if (endDate.before(startDate)) {
       throw new IllegalArgumentException("End date can not be before start date");

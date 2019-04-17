@@ -13,6 +13,11 @@ import javax.swing.*;
 
 import controller.IFeatures;
 
+/**
+ * This class represents the GUI based view for creating and executing strategies. Allows several
+ * object to be created and displayed on the screen as the functionalitites. Also responsible to
+ * respond on several button clicks having different action listener implementations.
+ */
 public class DollarCostAveragingView extends JPanel {
   private JTextField dollarAmountInvested;
   private JLabel dollarAmountInvestLabel;
@@ -38,7 +43,10 @@ public class DollarCostAveragingView extends JPanel {
   private JButton executeStrategy;
   private JButton importStrategy;
 
-
+  /**
+   * GUI based view constructor. Creates a DollarCostAverage pane which will be loaded in Main
+   * view.
+   */
   public DollarCostAveragingView() {
     strategy = new HashMap<>();
     this.setLayout(new GridLayout(7, 1, 10, 10));
@@ -90,7 +98,7 @@ public class DollarCostAveragingView extends JPanel {
     enterWeights.setEnabled(true);
     enterWeights.addActionListener(l -> {
       if (enterWeights.isSelected()) {
-        enterWeights.setEnabled(false);
+        //enterWeights.setEnabled(false);
         stockWeightText.setVisible(true);
         stockWeightLabel.setVisible(true);
       } else {
@@ -133,6 +141,11 @@ public class DollarCostAveragingView extends JPanel {
   }
 
 
+  /**
+   * Get the set of feature callbacks that the view can use.
+   *
+   * @param features the set of feature callbacks as a Features object
+   */
   public void setFeatures(IFeatures features) {
     exportStrategy.addActionListener(l -> {
       try {
@@ -150,6 +163,7 @@ public class DollarCostAveragingView extends JPanel {
       }
     });
     addChoice.addActionListener(l -> {
+      enterWeights.setEnabled(false);
       addToCombinationToMap();
     });
   }
@@ -211,10 +225,25 @@ public class DollarCostAveragingView extends JPanel {
     return null;
   }
 
+  /**
+   * Clears the entered data in the text field.
+   */
   public void executeBackCleanUP() {
+    strategy = new HashMap<>();
+    dollarAmountInvested.setText("");
+    commissionAmount.setText("");
+    stockTickerSymbolText.setText("");
+    stockWeightText.setText("");
+    displayArea.setText("");
     enterWeights.setEnabled(true);
+    duration.setText("");
   }
 
+  /**
+   * Sets the selected portfolio name in top of view.
+   *
+   * @param selectedPortfolio selected portfolio name.
+   */
   public void setPortfolioName(String selectedPortfolio) {
     this.selectedPortfolio = selectedPortfolio;
     portfolioNameLabel.setText("Selected Portfolio is : " + selectedPortfolio);
@@ -222,6 +251,13 @@ public class DollarCostAveragingView extends JPanel {
 
   }
 
+  /**
+   * collects all the parameters entered by user and creates a dictionary with all the parameters
+   *
+   * @return Map with all the parameters. Following are the keys used in the map to retrieve the
+   *         parameters. portfolioName, tickerSymbols, investmentAmount, commission, startDate,
+   *         endDate, frequency.
+   */
   public Map<String, Object> getStrategyFeild() {
     Map<String, Object> parameters = new HashMap<>();
     try {
@@ -249,4 +285,5 @@ public class DollarCostAveragingView extends JPanel {
     }
     return parameters;
   }
+
 }

@@ -1,5 +1,7 @@
 package controller.textcommands;
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -10,14 +12,17 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 
 import controller.Stratergy.DollarCostStrategy;
+import controller.Stratergy.IStrategy;
 import controller.TextController;
 import model.TradeType;
 import view.IView;
 
 public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCommand {
   private Map<Integer, String> commandsMap;
+  private IStrategy strategy;
 
   public BuyUsingDollarCostStrategyCommand() {
+    strategy = null;
     commandsMap = new HashMap<>();
     commandsMap.put(1, "Create Strategy");
     commandsMap.put(2, "Export Strategy");
@@ -28,6 +33,7 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
     while (true) {
       int option = getInput(view);
       if (option == commandsMap.size() + 1) {
+        strategy = null;
         break;
       }
       switch (option) {
@@ -36,7 +42,7 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
           break;
         }
         case 2: {
-          //TODO add export strategy
+          exportStrategy(textController, view);
           break;
         }
         default: {
@@ -54,6 +60,7 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
     while (true) {
       int option = getInput(view);
       if (option == commandsMap.size() + 1) {
+        strategy = null;
         break;
       }
       switch (option) {
@@ -62,7 +69,7 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
           break;
         }
         case 2: {
-          //TODO add export strategy
+          exportStrategy(textController, view);
           break;
         }
         default: {
@@ -127,10 +134,11 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
     freq = (freq == 0) ? 1 : freq;
 
     try {
-      textController.setStrategy(DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
+      strategy = DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
               .setTickerSymbolsAndProportions(tickerSymbols)
               .setInvestmentAmount(investment).setTotalQuantity(quant).setTradeType(TradeType.BUY)
-              .setDuration(startDate, endDate, freq).setCommission(commission).build());
+              .setDuration(startDate, endDate, freq).setCommission(commission).build();
+      textController.setStrategy(strategy);
       textController.executeStrategy(textController);
     } catch (IllegalArgumentException e) {
       view.append("Error Creating strategy try again");
@@ -233,6 +241,23 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
     c.set(Calendar.MINUTE, 00);
     c.set(Calendar.SECOND, 00);
     return c.getTime();
+  }
+
+  private void exportStrategy(TextController textController, IView view) throws IOException {
+    if (strategy == null) {
+      view.append("Strategy not created");
+      return;
+    }
+    try {
+      view.append("Enter directory path for export");
+      String exportPath = view.getInput();
+      textController.exportStrategy(exportPath);
+      view.append("Export Successful");
+    } catch (IOException e) {
+      view.append("Error exporting data " + e.getMessage());
+    }
+
+
   }
 }
 

@@ -120,13 +120,38 @@ public interface IFeatures {
    */
   void exitProgram();
 
+
   void exportStrategy(String path) throws IOException;
 
+  /**
+   * This method imports a strategy from a file and executes it on a given portfolio. If the given
+   * portfolio name exists, the strategy will be implemented on the existing portfolio. Else, it
+   * will create a new portfolio with the given name and execute strategy on the new portfolio.
+   *
+   * @param path          Location from where the file is to be read.
+   * @param portfolioName name of the portfolio on which the strategy will be executed.
+   * @throws IOException If file is not found.
+   */
   void importStrategy(String path, String portfolioName) throws IOException;
 
+  /**
+   * This method executes the strategy on the set parameters.
+   *
+   * @param features instance of control to take control of the application.
+   */
   void executeStrategy(IFeatures features) throws IOException;
 
+  /**
+   * This method sets the strategy to be used.
+   *
+   * @param strategy strategy which should be used.
+   */
   void setStrategy(IStrategy strategy);
 
+  /**
+   * This method provides the current strategy object.
+   *
+   * @return In-Use strategy
+   */
   IStrategy getStrategy();
 }

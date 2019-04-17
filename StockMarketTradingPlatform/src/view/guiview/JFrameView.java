@@ -79,7 +79,7 @@ public class JFrameView extends JFrame implements IJFrameView {
 
   /**
    * GUI based view constructor. Creates a master container representing the basic GUI design having
-   * to main fram pane the managePane and the userpane.
+   * to main frame pane the managePane and the userpane.
    */
   public JFrameView() {
     super();
@@ -507,7 +507,6 @@ public class JFrameView extends JFrame implements IJFrameView {
       hideManagePane();
     }
     //setStrategyPanel();
-    dollarPnel = new DollarCostAveragingView();
     dollarCostAverageStrategyPane.add(dollarPnel, BorderLayout.CENTER);
     dollarCostAverageStrategyPane.add(backFromStrategy, BorderLayout.SOUTH);
     dollarCostAverageStrategyPane.setVisible(true);
