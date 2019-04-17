@@ -21,7 +21,6 @@ import view.guiview.JFrameView;
  */
 public class GUIController extends AbstractController {
   private IJFrameView view;
-  private IStrategy strategy;
 
   /**
    * Constructor to initialize a GUI Controller with its respective model.
@@ -30,7 +29,6 @@ public class GUIController extends AbstractController {
    */
   public GUIController(IUserV2 model) {
     super(model);
-    strategy = null;
     setView();
     super.view = view;
   }
