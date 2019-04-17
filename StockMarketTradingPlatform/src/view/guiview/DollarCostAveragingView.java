@@ -201,7 +201,7 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   private void recalculateWeight() {
-    float newValue = Float.valueOf(100 / strategy.size());
+    float newValue = 100.0f / strategy.size();
     for (Map.Entry<String, Float> entry : strategy.entrySet()) {
       entry.setValue(newValue);
     }
