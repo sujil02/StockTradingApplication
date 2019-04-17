@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import serializedeserialize.SerializeAndDeserialize;
-import controller.Stratergy.IStrategy;
+import controller.stratergy.IStrategy;
 import model.IPortfolioV2;
 import model.IUserV2;
 import model.TradeType;
@@ -13,8 +13,8 @@ import view.IMainView;
 
 /**
  * This class abstracts out the funtionalities offered by the controller. The model object and all
- * its functionalitites are accessed from here directly and whichever controller extending this
- * can use to communicate with the model.
+ * its functionalitites are accessed from here directly and whichever controller extending this can
+ * use to communicate with the model.
  */
 public abstract class AbstractController implements IController, IFeatures {
   protected IUserV2 model;
@@ -94,11 +94,13 @@ public abstract class AbstractController implements IController, IFeatures {
     model.importPortfolio(path);
   }
 
+  @Override
   public void exportStrategy(String path) throws IOException {
     SerializeAndDeserialize serializeAndDeserialize = new SerializeAndDeserialize();
     serializeAndDeserialize.exportStrategy(strategy, path);
   }
 
+  @Override
   public void importStrategy(String path, String portfolioName) throws IOException {
     SerializeAndDeserialize serializeAndDeserialize = new SerializeAndDeserialize();
     this.strategy = serializeAndDeserialize.importStrategy(path);
@@ -109,10 +111,12 @@ public abstract class AbstractController implements IController, IFeatures {
     this.strategy.buyStock(this, view);
   }
 
+  @Override
   public void executeStrategy(IFeatures features) throws IOException {
     strategy.buyStock(features, view);
   }
 
+  @Override
   public void setStrategy(IStrategy strategy) {
     this.strategy = strategy;
   }
