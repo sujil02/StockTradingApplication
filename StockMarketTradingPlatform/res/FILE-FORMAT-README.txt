@@ -21,7 +21,7 @@ Refer to the sample json written below with left tag as key name and right tag a
 }
 
 ************* Strategy JSON explanation ********************************
-
+Sup of all the values in the entity should sum to 1.
 {
   "tickerSymbols": { All the stocks which this strategy is going to invest in in a key value pair format. Example as below.
     "MSFT": 0.33,

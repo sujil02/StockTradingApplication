@@ -1,0 +1,14 @@
+{
+  "tickerSymbols": {
+    "MSFT": 0.2,
+    "GOOG": 0.1,
+    "AAPL": 0.2,
+    "FB": 0.5
+  },
+  "totalQuantity": 0,
+  "commission": 5.0,
+  "investmentAmount": 50000.0,
+  "startDate": "11/01/2018 16:00:00",
+  "endDate": "04/16/2019 16:00:00",
+  "period": 30
+}
