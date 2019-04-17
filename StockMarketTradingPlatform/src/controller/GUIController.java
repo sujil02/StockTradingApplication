@@ -144,6 +144,7 @@ public class GUIController extends AbstractController {
       Map<String, Object> parameters = view.getStrategyFields();
       setStrategy(parameters);
       super.exportStrategy(path);
+      view.showSuccessMessage("Export Successful");
     } catch (IOException e) {
       view.showErrorMessage("Error exporting Strategy " + e.getMessage());
     } catch (IllegalArgumentException e) {
