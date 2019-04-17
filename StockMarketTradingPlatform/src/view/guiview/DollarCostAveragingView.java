@@ -179,7 +179,7 @@ public class DollarCostAveragingView extends JPanel {
           executeBackCleanUP();
         }
       } catch (IOException e) {
-        //Do Nothing
+        showerrorMessages("Invalid file path entry");
       }
     });
     executeStrategy.addActionListener(l -> {
