@@ -1,0 +1,14 @@
+{
+  "tickerSymbols": {
+    "goog": 0.25,
+    "msft": 0.25,
+    "fb": 0.25,
+    "amzn": 0.25
+  },
+  "totalQuantity": 0,
+  "commission": 100.0,
+  "investmentAmount": 10000.0,
+  "startDate": "03/11/2019 16:00:00",
+  "endDate": "04/15/2019 16:00:00",
+  "period": 25
+}

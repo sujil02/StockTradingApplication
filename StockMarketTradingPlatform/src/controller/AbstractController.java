@@ -102,7 +102,6 @@ public abstract class AbstractController implements IController, IFeatures {
   public void importStrategy(String path, String portfolioName) throws IOException {
     SerializeAndDeserialize serializeAndDeserialize = new SerializeAndDeserialize();
     this.strategy = serializeAndDeserialize.importStrategy(path);
-    //TODO import strategy
     if (!validatePortfolioName(portfolioName)) {
       createPortfolio(portfolioName);
     }

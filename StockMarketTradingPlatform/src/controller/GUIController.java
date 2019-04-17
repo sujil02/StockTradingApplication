@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -165,17 +166,16 @@ public class GUIController extends AbstractController {
     float commission = (float) parameters.get("commission");
     Date startDate = (Date) parameters.get("startDate");
     Date endDate = (Date) parameters.get("endDate");
+    SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
     try {
 
       if (startDate == null) {
-        startDate = new SimpleDateFormat()
-                .parse(new SimpleDateFormat("MM/dd/yyyy").format(new Date()));
+        startDate = df.parse(new SimpleDateFormat("MM/dd/yyyy").format(new Date()));
       }
       startDate = addTimeToDate(startDate);
 
       if (endDate == null) {
-        endDate = new SimpleDateFormat()
-                .parse(new SimpleDateFormat("MM/dd/yyyy").format(new Date()));
+        endDate = df.parse(new SimpleDateFormat("MM/dd/yyyy").format(new Date()));
       }
       endDate = addTimeToDate(endDate);
     } catch (ParseException e) {

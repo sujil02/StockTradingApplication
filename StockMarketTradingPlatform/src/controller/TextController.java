@@ -10,12 +10,13 @@ import controller.textcommands.CreatePortfolioCommand;
 import controller.textcommands.ExaminePortfolioCommand;
 import controller.textcommands.ICommand;
 import controller.textcommands.ImportPortfolioCommand;
+import controller.textcommands.ImportStrategyCommand;
 import model.IUserV2;
 import view.IView;
 
 /**
- * TextController class which takes inputs from the user and tells the model what to do and the
- * view what to show.
+ * TextController class which takes inputs from the user and tells the model what to do and the view
+ * what to show.
  */
 public class TextController extends AbstractController {
   private final IView view;
@@ -41,6 +42,7 @@ public class TextController extends AbstractController {
     commands.put(2, new ExaminePortfolioCommand());
     commands.put(3, new BuyUsingDollarCostStrategyCommand());
     commands.put(4, new ImportPortfolioCommand());
+    commands.put(5, new ImportStrategyCommand());
   }
 
   @Override

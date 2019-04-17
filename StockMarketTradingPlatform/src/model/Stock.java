@@ -130,11 +130,12 @@ public class Stock implements IStock {
     IStockDataAPI stockData = new StockDataAPI();
 
     Map<String, String> data = stockData.getStockData(this.tickerSymbol, refDate);
-    float hi = Float.parseFloat(data.get("HIGH"));
-    float lo = Float.parseFloat(data.get("LOW"));
+//    float hi = Float.parseFloat(data.get("HIGH"));
+//    float lo = Float.parseFloat(data.get("LOW"));
 
 
-    return (hi + lo) / 2;
+    //return (hi + lo) / 2;
+    return Float.parseFloat(data.get("CLOSE"));
   }
 
   public void setCostPrice() {
