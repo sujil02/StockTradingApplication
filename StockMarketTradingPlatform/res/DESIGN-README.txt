@@ -112,7 +112,15 @@ Changes in Model: There is no public facing change in model. All the features ex
 
 Changes in Controller:
 The Feature to implement strategies is implemented in controller since the basic functions required to perform any investing strategy is buying stocks which is already exposed from model.
-Each strategy
+Each strategy has a different variant of investing money in stocks which eventually will lead up to buy one or multiple stocks once or recursively on various dates.
+Looking at this attribute of the strategy we decided to add strategy in controller using Strategy design pattern.
+
+To implement Strategy we have created IStrategy interface which exposes method to buy stock, taking in controller and view (in other words taking control of the application).
+DollarCostAverage strategy is created by implementing IStrategy in DollarCostStrategy class. to initialise the parameters of the strategy a builder is created to create strategy object.
+The strategy takes in all parameters to perform a transaction (portfolio name, investment amount, duration of strategy, ticker symbols and weights).
+The strategy will calculate all the dates on which it needs to perform transaction and it will perform trade on all the dates. If the trade day falls on a non working day it will add a day to trade day and try again till the new date is in the duration of strategy.
+For the cases the end date of the strategy is not given current date is assumed to be end date and strategy is executed.
+If the start date and end date of the strategy is not given
 
 
 

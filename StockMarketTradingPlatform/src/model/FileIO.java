@@ -10,8 +10,7 @@ import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 
 /**
- * This class is responsible to do all the File IO operations for this
- * application.
+ * This class is responsible to do all the File IO operations for this application.
  */
 public class FileIO {
   /**
@@ -43,7 +42,7 @@ public class FileIO {
       bw = new BufferedWriter(fw);
       bw.write(serializedContents);
     } catch (IOException e) {
-      e.printStackTrace();
+      //Do nothing
     } finally {
       try {
         if (bw != null && fw != null) {
@@ -51,7 +50,7 @@ public class FileIO {
           fw.close();
         }
       } catch (IOException ex) {
-        ex.printStackTrace();
+        //Do Nothing
       }
     }
   }

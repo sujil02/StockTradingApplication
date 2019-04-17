@@ -78,8 +78,8 @@ public class JFrameView extends JFrame implements IJFrameView {
   String prevScreen;
 
   /**
-   * GUI based view constructor. Creates a master container representing the basic GUI design
-   * having to main frame pane the managePane and the userpane.
+   * GUI based view constructor. Creates a master container representing the basic GUI design having
+   * to main frame pane the managePane and the userpane.
    */
   public JFrameView() {
     super();
@@ -397,6 +397,8 @@ public class JFrameView extends JFrame implements IJFrameView {
     hourLabel.setVisible(visibility);
     minLabel.setVisible(visibility);
     secLabel.setVisible(visibility);
+    quantityButton.setVisible(visibility);
+    investAmountButton.setVisible(visibility);
   }
 
   private void displayQuantity() {
@@ -674,9 +676,11 @@ public class JFrameView extends JFrame implements IJFrameView {
               , min.getText(),
               sec.getText());
       Date ref = getdate(dateInput);
-      float costBias = features.getPortfolioCostBias(selectedPortfolio, ref);
-      displayArea.append("Cost Bias: $" + costBias);
-      clearTextFields();
+      if (ref != null) {
+        float costBias = features.getPortfolioCostBias(selectedPortfolio, ref);
+        displayArea.append("Cost Bias: $" + costBias);
+        clearTextFields();
+      }
     }
   }
 
@@ -698,9 +702,11 @@ public class JFrameView extends JFrame implements IJFrameView {
               , min.getText(),
               sec.getText());
       Date ref = getdate(dateInput);
-      float portfolioValue = features.getPortfolioValue(selectedPortfolio, ref);
-      displayArea.append("Portfolio Value: $" + portfolioValue);
-      clearTextFields();
+      if (ref != null) {
+        float portfolioValue = features.getPortfolioValue(selectedPortfolio, ref);
+        displayArea.append("Portfolio Value: $" + portfolioValue);
+        clearTextFields();
+      }
     }
 
   }
