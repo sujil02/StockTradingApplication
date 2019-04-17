@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="6047.985997442456" y="195.5">model.IStock</node>
+    <node x="4347.345925899551" y="4044.0">controller.textcommands.ExportPortfolioCommand</node>
+    <node x="2088.4798630976175" y="2190.0">controller.textcommands.CreatePortfolioCommand</node>
+    <node x="6777.860997442456" y="1841.5">controller.stratergy.DollarCostStrategyBuilder</node>
+    <node x="629.2552254164584" y="3178.5">view.guiview.JFrameView</node>
+    <node x="2687.9985059826377" y="2168.0">controller.textcommands.ImportStrategyCommand</node>
+    <node x="6520.610997442456" y="1398.0">controller.stratergy.IDollarCostStrategyBuilder</node>
+    <node x="6023.491759232884" y="1133.5">model.StockDataAPI</node>
+    <node x="5872.001352141978" y="1830.5">serializedeserialize.StockDeserializerFromJsonWithDifferentFields</node>
+    <node x="2303.536413043478" y="2168.0">controller.textcommands.ImportPortfolioCommand</node>
+    <node x="3291.741940392304" y="1797.0">view.View</node>
+    <node x="2281.9985059826377" y="1819.5">controller.textcommands.ICommand</node>
+    <node x="3555.485997442456" y="3145.5">controller.textcommands.ExaminePortfolioCommand</node>
+    <node x="5088.741759232884" y="1442.5">serializedeserialize.ISerializeAndDeserialize</node>
+    <node x="1841.3625" y="2623.5">model.IUserV2</node>
+    <node x="6363.491759232884" y="734.5">model.IStockDataAPI</node>
+    <node x="4673.726352141978" y="1819.5">controller.textcommands.PortfolioContentsCommand</node>
+    <node x="735.6875" y="2656.5">view.guiview.JFrameView.CostBiasButtonListener</node>
+    <node x="4642.626352141978" y="381.0">model.IPortfolioV2</node>
+    <node x="2993.1197463768117" y="723.5">view.IMainView</node>
+    <node x="3911.652664109123" y="679.0">model.IUser</node>
+    <node x="7366.735997442456" y="140.0">model.IPortfolio</node>
+    <node x="1401.2653546995216" y="3524.0">controller.GUIController</node>
+    <node x="1695.6125" y="2656.5">controller.IController</node>
+    <node x="3955.902664109123" y="0.0">model.TradeType</node>
+    <node x="6365.860997442456" y="1486.5">model.Stock</node>
+    <node x="5520.616759232884" y="3667.0">model.UserImpl</node>
+    <node x="3037.925244294869" y="2190.0">controller.textcommands.DisplayPortfoliosCommand</node>
+    <node x="2940.901360682159" y="3656.0">controller.TextController</node>
+    <node x="5509.001352141978" y="723.5">model.FileIO</node>
+    <node x="4282.437592566218" y="2645.5">controller.textcommands.PortfolioValueCommand</node>
+    <node x="4082.1734974424567" y="1177.0">controller.stratergy.IStrategy</node>
+    <node x="1338.4875000000002" y="1111.0">view.guiview.IJFrameView</node>
+    <node x="2551.9985059826377" y="1775.0">controller.stratergy.DollarCostStrategy</node>
+    <node x="1052.4875000000002" y="1188.5">view.guiview.JFrameView.DisplayPortfolioButtonListener</node>
+    <node x="3372.241940392304" y="2058.0">controller.textcommands.BuyUsingDollarCostStrategyCommand</node>
+    <node x="1586.1125000000002" y="3013.0">controller.AbstractController</node>
+    <node x="6912.735997442456" y="2179.0">serializedeserialize.PortfolioDeserializerFromJsonWithDifferentFields</node>
+    <node x="5151.845102141978" y="2623.5">serializedeserialize.SerializeAndDeserialize</node>
+    <node x="715.5607040502705" y="580.0">controller.IFeatures</node>
+    <node x="4107.840164109123" y="1808.5">controller.textcommands.BuyStockUsingDefaultStrategyCommand</node>
+    <node x="3621.0306999680647" y="1464.0">view.IView</node>
+    <node x="21.5" y="1188.5">view.guiview.JFrameView.BuyStockButtonListener</node>
+    <node x="4346.770925899551" y="3920.0">controller.textcommands.IPortfolioCommand</node>
+    <node x="191.6875" y="2656.5">view.guiview.JFrameView.ImportPortfolioButtonListener</node>
+    <node x="3975.437592566218" y="2645.5">controller.textcommands.BuyStockCommand</node>
+    <node x="506.0052254164584" y="3656.0">view.guiview.JFrameView.GetValueButtonListener</node>
+    <node x="465.6875" y="2502.0">view.guiview.DollarCostAveragingView</node>
+    <node x="6723.241759232884" y="3013.0">model.Portfolio</node>
+    <node x="3399.423497442456" y="2634.5">controller.textcommands.PortfolioCostBiasCommand</node>
+    <node x="4240.997185475311" y="1453.0">controller.stratergy.DefaultStrategy</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="controller.textcommands.IPortfolioCommand" target="view.IView">
+      <point x="129.14999999999964" y="-37.0" />
+      <point x="4619.420925899551" y="3900.0" />
+      <point x="4971.226352141978" y="3900.0" />
+      <point x="4971.226352141978" y="1685.0" />
+      <point x="3777.8542293798296" y="1685.0" />
+      <point x="70.82352941176487" y="37.5" />
+    </edge>
+    <edge source="model.UserImpl" target="model.Portfolio">
+      <point x="5.625" y="-15.0" />
+      <point x="5541.241759232884" y="3484.0" />
+      <point x="6917.241759232884" y="3484.0" />
+      <point x="0.0" y="180.5" />
+    </edge>
+    <edge source="controller.AbstractController" target="view.IMainView">
+      <point x="-54.0" y="-180.5" />
+      <point x="1748.1125000000002" y="2973.0" />
+      <point x="1674.1125" y="2973.0" />
+      <point x="1674.1125" y="1071.0" />
+      <point x="3054.8697463768117" y="1071.0" />
+      <point x="-61.75" y="37.0" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockUsingDefaultStrategyCommand" target="view.IView">
+      <point x="-95.66666666666697" y="-48.0" />
+      <point x="4155.673497442456" y="1715.0" />
+      <point x="3747.5012882033584" y="1715.0" />
+      <point x="40.47058823529369" y="37.5" />
+    </edge>
+    <edge source="controller.GUIController" target="controller.stratergy.DollarCostStrategy">
+      <point x="26.999999999999545" y="-158.0" />
+      <point x="1644.2653546995211" y="3494.0" />
+      <point x="1555.7375000000002" y="3494.0" />
+      <point x="1555.7375000000002" y="2482.0" />
+      <point x="2173.468312745922" y="2482.0" />
+      <point x="2173.468312745922" y="2038.0" />
+      <point x="2604.165172649304" y="2038.0" />
+      <point x="-104.33333333333348" y="81.5" />
+    </edge>
+    <edge source="controller.GUIController" target="model.IUserV2">
+      <point x="188.99999999999955" y="-158.0" />
+      <point x="1806.2653546995211" y="3504.0" />
+      <point x="2053.8625" y="3504.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="model.Portfolio" target="model.IStock">
+      <point x="0.0" y="-180.5" />
+      <point x="6917.241759232884" y="2993.0" />
+      <point x="6902.235997442456" y="2993.0" />
+      <point x="6902.235997442456" y="321.0" />
+      <point x="6070.485997442456" y="321.0" />
+      <point x="7.5" y="15.0" />
+    </edge>
+    <edge source="serializedeserialize.ISerializeAndDeserialize" target="controller.stratergy.IStrategy">
+      <point x="-69.75" y="-59.0" />
+      <point x="5158.491759232884" y="1348.0" />
+      <point x="4297.173497442456" y="1348.0" />
+      <point x="86.0" y="37.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView" target="controller.IFeatures">
+      <point x="6.5625" y="-15.0" />
+      <point x="650.8177254164584" y="2953.0" />
+      <point x="1000.1875" y="2953.0" />
+      <point x="1000.1875" y="1091.0" />
+      <point x="920.7607040502703" y="1091.0" />
+      <point x="-10.800000000000182" y="180.5" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioCostBiasCommand" target="controller.TextController">
+      <point x="-95.66666666666697" y="48.0" />
+      <point x="3447.2568307757892" y="2973.0" />
+      <point x="3445.3386709825577" y="2973.0" />
+      <point x="3445.3386709825577" y="3464.0" />
+      <point x="3040.640491116942" y="3464.0" />
+      <point x="37.739130434782965" y="-26.0" />
+    </edge>
+    <edge source="model.UserImpl" target="model.IUserV2">
+      <point x="-13.125" y="-15.0" />
+      <point x="5522.491759232884" y="3504.0" />
+      <point x="4993.031499200802" y="3504.0" />
+      <point x="4993.031499200802" y="2883.0" />
+      <point x="2223.8625" y="2883.0" />
+      <point x="170.0" y="59.0" />
+    </edge>
+    <edge source="serializedeserialize.SerializeAndDeserialize" target="model.IPortfolioV2">
+      <point x="-17.4375" y="-59.0" />
+      <point x="5273.907602141978" y="2442.0" />
+      <point x="5378.241759232884" y="2442.0" />
+      <point x="5378.241759232884" y="550.0" />
+      <point x="4894.826352141978" y="550.0" />
+      <point x="58.200000000000045" y="59.5" />
+    </edge>
+    <edge source="model.IPortfolioV2" target="model.TradeType">
+      <point x="-129.33333333333348" y="-59.5" />
+      <point x="4707.293018808644" y="301.0" />
+      <point x="4618.623497442456" y="301.0" />
+      <point x="4618.623497442456" y="110.0" />
+      <point x="4020.13795822677" y="110.0" />
+      <point x="12.235294117646845" y="15.0" />
+    </edge>
+    <edge source="serializedeserialize.StockDeserializerFromJsonWithDifferentFields" target="model.Stock">
+      <point x="102.0" y="-26.0" />
+      <point x="6178.001352141978" y="1745.0" />
+      <point x="6373.360997442456" y="1745.0" />
+      <point x="-7.5" y="15.0" />
+    </edge>
+    <edge source="model.IPortfolio" target="model.TradeType">
+      <point x="0.0" y="-70.5" />
+      <point x="7540.735997442456" y="60.0" />
+      <point x="4050.726193520888" y="60.0" />
+      <point x="42.823529411764866" y="15.0" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="view.IView">
+      <point x="19.5625" y="-48.0" />
+      <point x="3731.548497442456" y="2923.0" />
+      <point x="3920.937592566218" y="2923.0" />
+      <point x="3920.937592566218" y="1735.0" />
+      <point x="3727.2659940857116" y="1735.0" />
+      <point x="20.235294117646845" y="37.5" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategy" target="view.IMainView">
+      <point x="26.083333333333485" y="-81.5" />
+      <point x="2734.581839315971" y="1655.0" />
+      <point x="2755.1651726493046" y="1655.0" />
+      <point x="2755.1651726493046" y="1081.0" />
+      <point x="3096.0364130434787" y="1081.0" />
+      <point x="-20.58333333333303" y="37.0" />
+    </edge>
+    <edge source="controller.textcommands.BuyUsingDollarCostStrategyCommand" target="view.IView">
+      <point x="70.80000000000018" y="-147.0" />
+      <point x="3620.0419403923042" y="1998.0" />
+      <point x="3691.6831168628923" y="1998.0" />
+      <point x="3691.6831168628923" y="1745.0" />
+      <point x="3707.0306999680647" y="1745.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView.CostBiasButtonListener" target="view.guiview.JFrameView">
+      <point x="0.0" y="26.0" />
+      <point x="862.6875" y="2933.0" />
+      <point x="647.0677254164584" y="2933.0" />
+      <point x="2.8125" y="-15.0" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioValueCommand" target="view.IView">
+      <point x="0.0" y="-37.0" />
+      <point x="4425.937592566218" y="2482.0" />
+      <point x="4663.226352141978" y="2482.0" />
+      <point x="4663.226352141978" y="1705.0" />
+      <point x="3757.6189352621827" y="1705.0" />
+      <point x="50.58823529411802" y="37.5" />
+    </edge>
+    <edge source="controller.IFeatures" target="controller.stratergy.IStrategy">
+      <point x="183.5999999999999" y="180.5" />
+      <point x="1115.1607040502704" y="1001.0" />
+      <point x="4211.173497442456" y="1001.0" />
+      <point x="0.0" y="-37.5" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioValueCommand" target="controller.textcommands.IPortfolioCommand">
+      <point x="95.66666666666697" y="37.0" />
+      <point x="4521.604259232885" y="2973.0" />
+      <point x="4495.770925899551" y="2973.0" />
+      <point x="4495.770925899551" y="3900.0" />
+      <point x="4504.620925899551" y="3900.0" />
+      <point x="14.350000000000364" y="-37.0" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockUsingDefaultStrategyCommand" target="controller.stratergy.DefaultStrategy">
+      <point x="95.66666666666697" y="-48.0" />
+      <point x="4347.00683077579" y="1745.0" />
+      <point x="4406.497185475311" y="1745.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="controller.textcommands.BuyUsingDollarCostStrategyCommand" target="controller.textcommands.ICommand">
+      <point x="-141.60000000000036" y="-147.0" />
+      <point x="3407.6419403923037" y="1988.0" />
+      <point x="2490.3318393159707" y="1988.0" />
+      <point x="83.33333333333303" y="37.0" />
+    </edge>
+    <edge source="controller.stratergy.IDollarCostStrategyBuilder" target="controller.stratergy.IStrategy">
+      <point x="-87.75" y="-103.5" />
+      <point x="6608.360997442456" y="1338.0" />
+      <point x="4325.840164109124" y="1338.0" />
+      <point x="114.66666666666697" y="37.5" />
+    </edge>
+    <edge source="controller.textcommands.ImportPortfolioCommand" target="controller.TextController">
+      <point x="-62.5" y="37.0" />
+      <point x="2366.036413043478" y="2482.0" />
+      <point x="2425.840760869565" y="2482.0" />
+      <point x="2425.840760869565" y="3424.0" />
+      <point x="2981.336143290855" y="3424.0" />
+      <point x="-21.56521739130403" y="-26.0" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockUsingDefaultStrategyCommand" target="controller.TextController">
+      <point x="-95.66666666666697" y="48.0" />
+      <point x="4155.673497442456" y="2018.0" />
+      <point x="3736.741940392304" y="2018.0" />
+      <point x="3736.741940392304" y="2462.0" />
+      <point x="3383.5321930946293" y="2462.0" />
+      <point x="3383.5321930946293" y="3444.0" />
+      <point x="3029.857882421289" y="3444.0" />
+      <point x="26.95652173913004" y="-26.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView.GetValueButtonListener" target="view.guiview.JFrameView">
+      <point x="50.80000000000018" y="-26.0" />
+      <point x="683.8052254164586" y="3504.0" />
+      <point x="640.5052254164584" y="3504.0" />
+      <point x="-3.75" y="15.0" />
+    </edge>
+    <edge source="serializedeserialize.ISerializeAndDeserialize" target="model.IPortfolioV2">
+      <point x="69.75" y="-59.0" />
+      <point x="5297.991759232884" y="560.0" />
+      <point x="4856.026352141977" y="560.0" />
+      <point x="19.40000000000009" y="59.5" />
+    </edge>
+    <edge source="controller.TextController" target="controller.AbstractController">
+      <point x="-53.91304347826099" y="-26.0" />
+      <point x="2948.988317203898" y="3484.0" />
+      <point x="1964.1125000000002" y="3484.0" />
+      <point x="162.0" y="180.5" />
+    </edge>
+    <edge source="controller.IFeatures" target="model.IPortfolioV2">
+      <point x="108.0" y="-180.5" />
+      <point x="1039.5607040502705" y="530.0" />
+      <point x="4662.026352141977" y="530.0" />
+      <point x="-174.5999999999999" y="59.5" />
+    </edge>
+    <edge source="controller.textcommands.ImportStrategyCommand" target="view.IView">
+      <point x="62.5" y="-37.0" />
+      <point x="2875.4985059826377" y="2038.0" />
+      <point x="2955.425244294869" y="2038.0" />
+      <point x="2955.425244294869" y="1695.0" />
+      <point x="3656.4424646739467" y="1695.0" />
+      <point x="-50.58823529411802" y="37.5" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioCostBiasCommand" target="view.IView">
+      <point x="0.0" y="-48.0" />
+      <point x="3542.923497442456" y="2472.0" />
+      <point x="3821.937592566218" y="2472.0" />
+      <point x="3821.937592566218" y="1745.0" />
+      <point x="3717.148347026888" y="1745.0" />
+      <point x="10.117647058823422" y="37.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView" target="view.guiview.JFrameView.DisplayPortfolioButtonListener">
+      <point x="8.4375" y="-15.0" />
+      <point x="652.6927254164584" y="2963.0" />
+      <point x="1076.7124999999996" y="2963.0" />
+      <point x="1076.7124999999996" y="1378.0" />
+      <point x="1094.8208333333332" y="1378.0" />
+      <point x="-84.66666666666697" y="26.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView.BuyStockButtonListener" target="controller.IFeatures">
+      <point x="84.66666666666652" y="-26.0" />
+      <point x="233.16666666666652" y="1041.0" />
+      <point x="791.1607040502704" y="1041.0" />
+      <point x="-140.4000000000001" y="180.5" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.ICommand">
+      <point x="-19.5625" y="-48.0" />
+      <point x="3692.423497442456" y="2913.0" />
+      <point x="3909.937592566218" y="2913.0" />
+      <point x="3909.937592566218" y="1968.0" />
+      <point x="2518.109617093749" y="1968.0" />
+      <point x="111.11111111111131" y="37.0" />
+    </edge>
+    <edge source="model.IUserV2" target="model.TradeType">
+      <point x="-106.25" y="-59.0" />
+      <point x="1947.6125" y="2472.0" />
+      <point x="2066.9798630976175" y="2472.0" />
+      <point x="2066.9798630976175" y="90.0" />
+      <point x="3983.4320758738295" y="90.0" />
+      <point x="-24.470588235294144" y="15.0" />
+    </edge>
+    <edge source="controller.textcommands.DisplayPortfoliosCommand" target="controller.textcommands.ICommand">
+      <point x="-7.5" y="-15.0" />
+      <point x="3045.425244294869" y="2008.0" />
+      <point x="2434.776283760415" y="2008.0" />
+      <point x="27.777777777777374" y="37.0" />
+    </edge>
+    <edge source="view.guiview.DollarCostAveragingView" target="controller.IFeatures">
+      <point x="0.0" y="-180.5" />
+      <point x="590.6875" y="1071.0" />
+      <point x="855.9607040502706" y="1071.0" />
+      <point x="-75.59999999999991" y="180.5" />
+    </edge>
+    <edge source="model.UserImpl" target="model.IUser">
+      <point x="-9.375" y="-15.0" />
+      <point x="5526.241759232884" y="3494.0" />
+      <point x="5052.126352141978" y="3494.0" />
+      <point x="5052.126352141978" y="961.0" />
+      <point x="4200.402664109123" y="961.0" />
+      <point x="96.25" y="81.5" />
+    </edge>
+    <edge source="controller.AbstractController" target="controller.IController">
+      <point x="18.0" y="-180.5" />
+      <point x="1820.1125000000002" y="2953.0" />
+      <point x="1757.6125" y="2953.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockUsingDefaultStrategyCommand" target="controller.textcommands.IPortfolioCommand">
+      <point x="95.66666666666697" y="48.0" />
+      <point x="4347.00683077579" y="2018.0" />
+      <point x="4590.937592566218" y="2018.0" />
+      <point x="4590.937592566218" y="3880.0" />
+      <point x="4562.020925899551" y="3880.0" />
+      <point x="71.75" y="-37.0" />
+    </edge>
+    <edge source="controller.TextController" target="model.IUserV2">
+      <point x="-48.52173913043498" y="-26.0" />
+      <point x="2954.379621551724" y="3474.0" />
+      <point x="2168.1668478260863" y="3474.0" />
+      <point x="2168.1668478260863" y="2973.0" />
+      <point x="2138.8625" y="2973.0" />
+      <point x="85.0" y="59.0" />
+    </edge>
+    <edge source="controller.textcommands.ImportStrategyCommand" target="controller.TextController">
+      <point x="62.5" y="37.0" />
+      <point x="2875.4985059826377" y="2482.0" />
+      <point x="2853.097012856072" y="2482.0" />
+      <point x="2853.097012856072" y="3394.0" />
+      <point x="2997.510056334333" y="3394.0" />
+      <point x="-5.391304347826008" y="-26.0" />
+    </edge>
+    <edge source="controller.stratergy.DefaultStrategy" target="controller.IFeatures">
+      <point x="-41.375" y="-48.5" />
+      <point x="4365.122185475311" y="1378.0" />
+      <point x="4419.985997442456" y="1378.0" />
+      <point x="4419.985997442456" y="981.0" />
+      <point x="1136.7607040502708" y="981.0" />
+      <point x="205.20000000000027" y="180.5" />
+    </edge>
+    <edge source="controller.GUIController" target="controller.AbstractController">
+      <point x="80.99999999999955" y="-158.0" />
+      <point x="1698.2653546995211" y="3484.0" />
+      <point x="1640.1125000000002" y="3484.0" />
+      <point x="-162.0" y="180.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView" target="view.guiview.JFrameView.ImportPortfolioButtonListener">
+      <point x="-8.4375" y="-15.0" />
+      <point x="635.8177254164584" y="2963.0" />
+      <point x="234.02083333333348" y="2963.0" />
+      <point x="-84.66666666666652" y="26.0" />
+    </edge>
+    <edge source="controller.textcommands.ImportStrategyCommand" target="controller.textcommands.ICommand">
+      <point x="-62.5" y="-37.0" />
+      <point x="2750.4985059826377" y="2018.0" />
+      <point x="2406.9985059826377" y="2018.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="controller.GUIController" target="controller.IFeatures">
+      <point x="-135.00000000000045" y="-158.0" />
+      <point x="1482.2653546995211" y="3474.0" />
+      <point x="1316.9875000000002" y="3474.0" />
+      <point x="1316.9875000000002" y="1061.0" />
+      <point x="985.5607040502705" y="1061.0" />
+      <point x="54.0" y="180.5" />
+    </edge>
+    <edge source="controller.AbstractController" target="controller.stratergy.IStrategy">
+      <point x="54.0" y="-180.5" />
+      <point x="1856.1125000000002" y="2993.0" />
+      <point x="1830.1125" y="2993.0" />
+      <point x="1830.1125" y="1655.0" />
+      <point x="2404.856070827087" y="1655.0" />
+      <point x="2404.856070827087" y="1358.0" />
+      <point x="4125.173497442456" y="1358.0" />
+      <point x="-86.0" y="37.5" />
+    </edge>
+    <edge source="controller.textcommands.ImportPortfolioCommand" target="view.IView">
+      <point x="-62.5" y="-37.0" />
+      <point x="2366.036413043478" y="1998.0" />
+      <point x="2271.4985059826377" y="1998.0" />
+      <point x="2271.4985059826377" y="1675.0" />
+      <point x="3636.2071705563" y="1675.0" />
+      <point x="-70.82352941176487" y="37.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView.GetValueButtonListener" target="controller.IFeatures">
+      <point x="-101.59999999999991" y="-26.0" />
+      <point x="531.4052254164585" y="3504.0" />
+      <point x="0.0" y="3504.0" />
+      <point x="0.0" y="1011.0" />
+      <point x="726.3607040502707" y="1011.0" />
+      <point x="-205.19999999999982" y="180.5" />
+    </edge>
+    <edge source="model.Portfolio" target="model.IPortfolioV2">
+      <point x="-70.5454545454545" y="-180.5" />
+      <point x="6846.69630468743" y="2963.0" />
+      <point x="5861.501352141978" y="2963.0" />
+      <point x="5861.501352141978" y="520.0" />
+      <point x="5011.226352141977" y="520.0" />
+      <point x="174.5999999999999" y="59.5" />
+    </edge>
+    <edge source="controller.textcommands.BuyUsingDollarCostStrategyCommand" target="controller.textcommands.IPortfolioCommand">
+      <point x="132.75" y="147.0" />
+      <point x="3681.991940392304" y="2392.0" />
+      <point x="4579.937592566218" y="2392.0" />
+      <point x="4579.937592566218" y="3870.0" />
+      <point x="4533.320925899551" y="3870.0" />
+      <point x="43.05000000000018" y="-37.0" />
+    </edge>
+    <edge source="model.Stock" target="model.IStockDataAPI">
+      <point x="3.75" y="-15.0" />
+      <point x="6384.610997442456" y="1368.0" />
+      <point x="6601.241759232884" y="1368.0" />
+      <point x="79.25" y="26.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView.ImportPortfolioButtonListener" target="view.guiview.JFrameView">
+      <point x="84.66666666666652" y="26.0" />
+      <point x="403.3541666666665" y="2943.0" />
+      <point x="639.5677254164584" y="2943.0" />
+      <point x="-4.6875" y="-15.0" />
+    </edge>
+    <edge source="model.IUser" target="model.TradeType">
+      <point x="-96.25" y="-81.5" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="controller.stratergy.DefaultStrategy" target="view.IMainView">
+      <point x="41.375" y="-48.5" />
+      <point x="4447.872185475311" y="1378.0" />
+      <point x="4430.985997442456" y="1378.0" />
+      <point x="4430.985997442456" y="971.0" />
+      <point x="3219.5364130434787" y="971.0" />
+      <point x="102.91666666666697" y="37.0" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.TextController">
+      <point x="-39.125" y="48.0" />
+      <point x="3672.860997442456" y="3494.0" />
+      <point x="3056.81440416042" y="3494.0" />
+      <point x="53.91304347826099" y="-26.0" />
+    </edge>
+    <edge source="controller.textcommands.DisplayPortfoliosCommand" target="controller.TextController">
+      <point x="-7.5" y="15.0" />
+      <point x="3045.425244294869" y="3394.0" />
+      <point x="3002.901360682159" y="3394.0" />
+      <point x="0.0" y="-26.0" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="view.IView">
+      <point x="-95.66666666666697" y="-37.0" />
+      <point x="4721.559685475311" y="1695.0" />
+      <point x="3767.736582321006" y="1695.0" />
+      <point x="60.705882352941444" y="37.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView.DisplayPortfolioButtonListener" target="model.IStock">
+      <point x="31.75" y="-26.0" />
+      <point x="1211.2375000000002" y="1091.0" />
+      <point x="1237.4875000000002" y="1091.0" />
+      <point x="1237.4875000000002" y="311.0" />
+      <point x="6049.485997442456" y="311.0" />
+      <point x="-13.5" y="15.0" />
+    </edge>
+    <edge source="controller.GUIController" target="model.TradeType">
+      <point x="-81.00000000000045" y="-158.0" />
+      <point x="1536.2653546995211" y="3464.0" />
+      <point x="1327.9875000000002" y="3464.0" />
+      <point x="1327.9875000000002" y="70.0" />
+      <point x="3971.1967817561826" y="70.0" />
+      <point x="-36.70588235294099" y="15.0" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockCommand" target="view.IView">
+      <point x="0.0" y="-37.0" />
+      <point x="4118.937592566218" y="2402.0" />
+      <point x="3953.937592566218" y="2402.0" />
+      <point x="3953.937592566218" y="1725.0" />
+      <point x="3737.383641144535" y="1725.0" />
+      <point x="30.352941176470267" y="37.5" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategy" target="controller.stratergy.IStrategy">
+      <point x="78.25" y="-81.5" />
+      <point x="2786.7485059826377" y="1655.0" />
+      <point x="2927.953079710145" y="1655.0" />
+      <point x="2927.953079710145" y="1368.0" />
+      <point x="4153.840164109124" y="1368.0" />
+      <point x="-57.33333333333303" y="37.5" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockCommand" target="controller.textcommands.IPortfolioCommand">
+      <point x="35.875" y="37.0" />
+      <point x="4154.812592566218" y="2953.0" />
+      <point x="4362.663852141978" y="2953.0" />
+      <point x="4362.663852141978" y="3870.0" />
+      <point x="4447.220925899551" y="3870.0" />
+      <point x="-43.05000000000018" y="-37.0" />
+    </edge>
+    <edge source="model.Stock" target="model.StockDataAPI">
+      <point x="-11.25" y="-15.0" />
+      <point x="6369.610997442456" y="1378.0" />
+      <point x="6182.991759232884" y="1378.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="controller.textcommands.ExportPortfolioCommand" target="controller.TextController">
+      <point x="-11.25" y="-15.0" />
+      <point x="4351.095925899551" y="4024.0" />
+      <point x="2971.901360682159" y="4024.0" />
+      <point x="-31.0" y="26.0" />
+    </edge>
+    <edge source="serializedeserialize.PortfolioDeserializerFromJsonWithDifferentFields" target="model.IStock">
+      <point x="105.5" y="-26.0" />
+      <point x="7229.235997442456" y="311.0" />
+      <point x="6073.485997442456" y="311.0" />
+      <point x="10.5" y="15.0" />
+    </edge>
+    <edge source="controller.textcommands.ImportPortfolioCommand" target="controller.textcommands.ICommand">
+      <point x="62.5" y="-37.0" />
+      <point x="2491.036413043478" y="2028.0" />
+      <point x="2379.2207282048603" y="2028.0" />
+      <point x="-27.777777777777374" y="37.0" />
+    </edge>
+    <edge source="controller.IFeatures" target="model.TradeType">
+      <point x="-108.0" y="-180.5" />
+      <point x="823.5607040502705" y="60.0" />
+      <point x="3965.0791346973583" y="60.0" />
+      <point x="-42.823529411764866" y="15.0" />
+    </edge>
+    <edge source="view.IView" target="view.IMainView">
+      <point x="0.0" y="-37.5" />
+      <point x="3707.0306999680647" y="1338.0" />
+      <point x="3122.1197463768117" y="1338.0" />
+      <point x="3122.1197463768117" y="1081.0" />
+      <point x="3137.2030797101447" y="1081.0" />
+      <point x="20.58333333333303" y="37.0" />
+    </edge>
+    <edge source="controller.AbstractController" target="model.IPortfolioV2">
+      <point x="-90.0" y="-180.5" />
+      <point x="1712.1125000000002" y="2983.0" />
+      <point x="1663.1125" y="2983.0" />
+      <point x="1663.1125" y="550.0" />
+      <point x="4739.626352141978" y="550.0" />
+      <point x="-97.0" y="59.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView.BuyStockButtonListener" target="model.TradeType">
+      <point x="-84.66666666666652" y="-26.0" />
+      <point x="63.833333333333485" y="1001.0" />
+      <point x="103.63202136618747" y="1001.0" />
+      <point x="103.63202136618747" y="50.0" />
+      <point x="3958.961487638535" y="50.0" />
+      <point x="-48.94117647058829" y="15.0" />
+    </edge>
+    <edge source="serializedeserialize.SerializeAndDeserialize" target="serializedeserialize.StockDeserializerFromJsonWithDifferentFields">
+      <point x="87.1875" y="-59.0" />
+      <point x="5378.532602141978" y="2472.0" />
+      <point x="5422.032602141978" y="2472.0" />
+      <point x="5422.032602141978" y="2038.0" />
+      <point x="5974.001352141978" y="2038.0" />
+      <point x="-102.0" y="26.0" />
+    </edge>
+    <edge source="serializedeserialize.SerializeAndDeserialize" target="controller.stratergy.DollarCostStrategy">
+      <point x="-122.0625" y="-59.0" />
+      <point x="5169.282602141978" y="2382.0" />
+      <point x="3931.937592566218" y="2382.0" />
+      <point x="3931.937592566218" y="1958.0" />
+      <point x="2812.831839315971" y="1958.0" />
+      <point x="104.33333333333348" y="81.5" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioCostBiasCommand" target="controller.textcommands.IPortfolioCommand">
+      <point x="95.66666666666697" y="48.0" />
+      <point x="3638.590164109123" y="2893.0" />
+      <point x="4051.382602141978" y="2893.0" />
+      <point x="4051.382602141978" y="3880.0" />
+      <point x="4418.520925899551" y="3880.0" />
+      <point x="-71.75" y="-37.0" />
+    </edge>
+    <edge source="serializedeserialize.SerializeAndDeserialize" target="model.FileIO">
+      <point x="52.3125" y="-59.0" />
+      <point x="5343.657602141978" y="2462.0" />
+      <point x="5411.032602141978" y="2462.0" />
+      <point x="5411.032602141978" y="1091.0" />
+      <point x="5594.501352141978" y="1091.0" />
+      <point x="-85.5" y="37.0" />
+    </edge>
+    <edge source="serializedeserialize.PortfolioDeserializerFromJsonWithDifferentFields" target="serializedeserialize.StockDeserializerFromJsonWithDifferentFields">
+      <point x="-105.5" y="-26.0" />
+      <point x="7018.235997442456" y="2038.0" />
+      <point x="6178.001352141978" y="2038.0" />
+      <point x="102.0" y="26.0" />
+    </edge>
+    <edge source="controller.stratergy.IStrategy" target="controller.IFeatures">
+      <point x="-86.0" y="-37.5" />
+      <point x="4125.173497442456" y="1011.0" />
+      <point x="1093.5607040502705" y="1011.0" />
+      <point x="162.0" y="180.5" />
+    </edge>
+    <edge source="controller.AbstractController" target="serializedeserialize.SerializeAndDeserialize">
+      <point x="198.0" y="-180.5" />
+      <point x="2000.1125000000002" y="2993.0" />
+      <point x="5221.595102141978" y="2993.0" />
+      <point x="-69.75" y="59.0" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockUsingDefaultStrategyCommand" target="controller.stratergy.IStrategy">
+      <point x="0.0" y="-48.0" />
+      <point x="4251.340164109123" y="1745.0" />
+      <point x="4228.059685475311" y="1745.0" />
+      <point x="4228.059685475311" y="1378.0" />
+      <point x="4211.173497442456" y="1378.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView" target="view.guiview.JFrameView.CostBiasButtonListener">
+      <point x="0.9375" y="-15.0" />
+      <point x="645.1927254164584" y="2923.0" />
+      <point x="778.0208333333335" y="2923.0" />
+      <point x="-84.66666666666652" y="26.0" />
+    </edge>
+    <edge source="controller.GUIController" target="view.guiview.IJFrameView">
+      <point x="-27.000000000000455" y="-158.0" />
+      <point x="1590.2653546995211" y="3504.0" />
+      <point x="1544.7375000000002" y="3504.0" />
+      <point x="68.75" y="103.5" />
+    </edge>
+    <edge source="controller.textcommands.CreatePortfolioCommand" target="view.IView">
+      <point x="-7.5" y="-15.0" />
+      <point x="2095.9798630976175" y="1665.0" />
+      <point x="3626.0895234974764" y="1665.0" />
+      <point x="-80.94117647058829" y="37.5" />
+    </edge>
+    <edge source="controller.textcommands.ICommand" target="view.IView">
+      <point x="0.0" y="-37.0" />
+      <point x="2406.9985059826377" y="1685.0" />
+      <point x="3646.3248176151233" y="1685.0" />
+      <point x="-60.705882352941444" y="37.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView" target="view.guiview.JFrameView.BuyStockButtonListener">
+      <point x="-14.0625" y="-15.0" />
+      <point x="630.1927254164584" y="2993.0" />
+      <point x="84.53125" y="2993.0" />
+      <point x="84.53125" y="1378.0" />
+      <point x="63.833333333333485" y="1378.0" />
+      <point x="-84.66666666666652" y="26.0" />
+    </edge>
+    <edge source="controller.stratergy.DefaultStrategy" target="model.TradeType">
+      <point x="124.125" y="-48.5" />
+      <point x="4530.622185475311" y="1368.0" />
+      <point x="4441.985997442456" y="1368.0" />
+      <point x="4441.985997442456" y="120.0" />
+      <point x="4014.0203111679466" y="120.0" />
+      <point x="6.117647058823422" y="15.0" />
+    </edge>
+    <edge source="model.UserImpl" target="model.TradeType">
+      <point x="13.125" y="-15.0" />
+      <point x="5548.741759232884" y="3504.0" />
+      <point x="7725.235997442456" y="3504.0" />
+      <point x="7725.235997442456" y="50.0" />
+      <point x="4056.8438405797115" y="50.0" />
+      <point x="48.94117647058829" y="15.0" />
+    </edge>
+    <edge source="serializedeserialize.SerializeAndDeserialize" target="model.Portfolio">
+      <point x="116.25" y="59.0" />
+      <point x="5407.595102141978" y="2973.0" />
+      <point x="6811.423577414702" y="2973.0" />
+      <point x="-105.81818181818198" y="-180.5" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="controller.textcommands.IPortfolioCommand">
+      <point x="95.66666666666697" y="37.0" />
+      <point x="4912.893018808645" y="2038.0" />
+      <point x="4858.499881976029" y="2038.0" />
+      <point x="4858.499881976029" y="3890.0" />
+      <point x="4590.720925899551" y="3890.0" />
+      <point x="100.44999999999982" y="-37.0" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategyBuilder" target="controller.stratergy.IDollarCostStrategyBuilder">
+      <point x="-11.25" y="-15.0" />
+      <point x="6781.610997442456" y="1755.0" />
+      <point x="6696.110997442456" y="1755.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="controller.textcommands.DisplayPortfoliosCommand" target="view.IView">
+      <point x="7.5" y="-15.0" />
+      <point x="3060.425244294869" y="1705.0" />
+      <point x="3666.560111732771" y="1705.0" />
+      <point x="-40.47058823529369" y="37.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView" target="view.guiview.JFrameView.GetValueButtonListener">
+      <point x="3.75" y="15.0" />
+      <point x="648.0052254164584" y="3494.0" />
+      <point x="734.6052254164583" y="3494.0" />
+      <point x="101.59999999999991" y="-26.0" />
+    </edge>
+    <edge source="serializedeserialize.SerializeAndDeserialize" target="serializedeserialize.PortfolioDeserializerFromJsonWithDifferentFields">
+      <point x="122.0625" y="-59.0" />
+      <point x="5413.407602141978" y="2482.0" />
+      <point x="6983.06933077579" y="2482.0" />
+      <point x="-140.66666666666663" y="26.0" />
+    </edge>
+    <edge source="controller.TextController" target="controller.textcommands.ExaminePortfolioCommand">
+      <point x="48.52173913043498" y="-26.0" />
+      <point x="3051.423099812594" y="3484.0" />
+      <point x="3594.610997442456" y="3484.0" />
+      <point x="-117.375" y="48.0" />
+    </edge>
+    <edge source="controller.textcommands.CreatePortfolioCommand" target="controller.textcommands.ICommand">
+      <point x="7.5" y="-15.0" />
+      <point x="2110.9798630976175" y="2008.0" />
+      <point x="2295.8873948715263" y="2008.0" />
+      <point x="-111.11111111111131" y="37.0" />
+    </edge>
+    <edge source="controller.textcommands.ExportPortfolioCommand" target="controller.textcommands.IPortfolioCommand">
+      <point x="3.75" y="-15.0" />
+      <point x="4366.095925899551" y="4014.0" />
+      <point x="4490.270925899551" y="4014.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView.DisplayPortfolioButtonListener" target="model.IPortfolioV2">
+      <point x="95.25" y="-26.0" />
+      <point x="1274.7375000000002" y="1091.0" />
+      <point x="1248.4875000000002" y="1091.0" />
+      <point x="1248.4875000000002" y="540.0" />
+      <point x="4700.826352141978" y="540.0" />
+      <point x="-135.79999999999995" y="59.5" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioValueCommand" target="controller.TextController">
+      <point x="0.0" y="37.0" />
+      <point x="4425.937592566218" y="2973.0" />
+      <point x="4015.829747442456" y="2973.0" />
+      <point x="4015.829747442456" y="3504.0" />
+      <point x="3062.205708508246" y="3504.0" />
+      <point x="59.304347826086996" y="-26.0" />
+    </edge>
+    <edge source="model.UserImpl" target="model.IPortfolioV2">
+      <point x="1.875" y="-15.0" />
+      <point x="5537.491759232884" y="3464.0" />
+      <point x="5498.501352141978" y="3464.0" />
+      <point x="5498.501352141978" y="530.0" />
+      <point x="4972.426352141978" y="530.0" />
+      <point x="135.80000000000018" y="59.5" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategy" target="controller.IFeatures">
+      <point x="-130.41666666666652" y="-81.5" />
+      <point x="2578.081839315971" y="1645.0" />
+      <point x="2371.856070827087" y="1645.0" />
+      <point x="2371.856070827087" y="1021.0" />
+      <point x="1071.9607040502706" y="1021.0" />
+      <point x="140.4000000000001" y="180.5" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.PortfolioCostBiasCommand">
+      <point x="-97.8125" y="-48.0" />
+      <point x="3614.173497442456" y="2923.0" />
+      <point x="3542.923497442456" y="2923.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="controller.textcommands.BuyUsingDollarCostStrategyCommand" target="controller.stratergy.DollarCostStrategy">
+      <point x="-70.80000000000018" y="-147.0" />
+      <point x="3478.441940392304" y="1978.0" />
+      <point x="2708.4985059826377" y="1978.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="model.UserImpl" target="serializedeserialize.SerializeAndDeserialize">
+      <point x="-5.625" y="-15.0" />
+      <point x="5529.991759232884" y="3484.0" />
+      <point x="5268.095102141978" y="3484.0" />
+      <point x="-23.25" y="59.0" />
+    </edge>
+    <edge source="model.Stock" target="model.IStock">
+      <point x="-3.75" y="-15.0" />
+      <point x="6377.110997442456" y="1368.0" />
+      <point x="6352.991759232884" y="1368.0" />
+      <point x="6352.991759232884" y="341.0" />
+      <point x="6064.485997442456" y="341.0" />
+      <point x="1.5" y="15.0" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="model.IPortfolioV2">
+      <point x="0.0" y="-37.0" />
+      <point x="-19.40000000000009" y="59.5" />
+    </edge>
+    <edge source="serializedeserialize.SerializeAndDeserialize" target="serializedeserialize.ISerializeAndDeserialize">
+      <point x="-52.3125" y="-59.0" />
+      <point x="5239.032602141978" y="2482.0" />
+      <point x="5228.241759232884" y="2482.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.IPortfolioCommand">
+      <point x="117.375" y="48.0" />
+      <point x="3829.360997442456" y="3484.0" />
+      <point x="3904.4701021419783" y="3484.0" />
+      <point x="3904.4701021419783" y="3890.0" />
+      <point x="4389.820925899551" y="3890.0" />
+      <point x="-100.44999999999982" y="-37.0" />
+    </edge>
+    <edge source="view.guiview.IJFrameView" target="controller.IFeatures">
+      <point x="-68.75" y="-103.5" />
+      <point x="1407.2375000000002" y="1051.0" />
+      <point x="1007.1607040502704" y="1051.0" />
+      <point x="75.59999999999991" y="180.5" />
+    </edge>
+    <edge source="controller.TextController" target="view.IView">
+      <point x="10.782608695652016" y="-26.0" />
+      <point x="3013.683969377811" y="3414.0" />
+      <point x="3155.6393956202382" y="3414.0" />
+      <point x="3155.6393956202382" y="2432.0" />
+      <point x="3281.241940392304" y="2432.0" />
+      <point x="3281.241940392304" y="1725.0" />
+      <point x="3686.795405850418" y="1725.0" />
+      <point x="-20.235294117646845" y="37.5" />
+    </edge>
+    <edge source="controller.TextController" target="controller.textcommands.BuyUsingDollarCostStrategyCommand">
+      <point x="16.173913043478024" y="-26.0" />
+      <point x="3019.075273725637" y="3424.0" />
+      <point x="3234.2643956202382" y="3424.0" />
+      <point x="3234.2643956202382" y="2442.0" />
+      <point x="3416.491940392304" y="2442.0" />
+      <point x="-132.75" y="147.0" />
+    </edge>
+    <edge source="model.Portfolio" target="model.IPortfolio">
+      <point x="176.3636363636365" y="-180.5" />
+      <point x="7093.60539559652" y="2993.0" />
+      <point x="7540.735997442456" y="2993.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="controller.AbstractController" target="model.TradeType">
+      <point x="-126.0" y="-180.5" />
+      <point x="1676.1125000000002" y="2993.0" />
+      <point x="1652.1125" y="2993.0" />
+      <point x="1652.1125" y="80.0" />
+      <point x="3977.314428815006" y="80.0" />
+      <point x="-30.588235294117567" y="15.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView.CostBiasButtonListener" target="controller.IFeatures">
+      <point x="-63.5" y="-26.0" />
+      <point x="799.1875" y="2482.0" />
+      <point x="857.1875" y="2482.0" />
+      <point x="857.1875" y="1081.0" />
+      <point x="877.5607040502705" y="1081.0" />
+      <point x="-54.0" y="180.5" />
+    </edge>
+    <edge source="controller.textcommands.BuyUsingDollarCostStrategyCommand" target="controller.stratergy.IStrategy">
+      <point x="141.60000000000036" y="-147.0" />
+      <point x="3690.8419403923044" y="2008.0" />
+      <point x="4049.50683077579" y="2008.0" />
+      <point x="4049.50683077579" y="1378.0" />
+      <point x="4182.50683077579" y="1378.0" />
+      <point x="-28.66666666666697" y="37.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView.DisplayPortfolioButtonListener" target="controller.IFeatures">
+      <point x="-95.25" y="-26.0" />
+      <point x="1084.2375000000002" y="1081.0" />
+      <point x="942.3607040502707" y="1081.0" />
+      <point x="10.800000000000182" y="180.5" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.PortfolioValueCommand">
+      <point x="136.9375" y="-48.0" />
+      <point x="3848.923497442456" y="2963.0" />
+      <point x="4330.270925899551" y="2963.0" />
+      <point x="-95.66666666666697" y="37.0" />
+    </edge>
+    <edge source="controller.stratergy.DefaultStrategy" target="controller.stratergy.IStrategy">
+      <point x="-124.125" y="-48.5" />
+      <point x="4282.372185475311" y="1378.0" />
+      <point x="4239.840164109124" y="1378.0" />
+      <point x="28.66666666666697" y="37.5" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.DisplayPortfoliosCommand">
+      <point x="-136.9375" y="-48.0" />
+      <point x="3575.048497442456" y="2933.0" />
+      <point x="3245.2643956202382" y="2933.0" />
+      <point x="3245.2643956202382" y="2422.0" />
+      <point x="3060.425244294869" y="2422.0" />
+      <point x="7.5" y="15.0" />
+    </edge>
+    <edge source="view.guiview.IJFrameView" target="view.IMainView">
+      <point x="68.75" y="-103.5" />
+      <point x="1544.7375000000002" y="1061.0" />
+      <point x="3013.7030797101447" y="1061.0" />
+      <point x="-102.91666666666697" y="37.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView" target="view.guiview.IJFrameView">
+      <point x="14.0625" y="-15.0" />
+      <point x="658.3177254164584" y="2993.0" />
+      <point x="1244.3937500000002" y="2993.0" />
+      <point x="1244.3937500000002" y="1378.0" />
+      <point x="1407.2375000000002" y="1378.0" />
+      <point x="-68.75" y="103.5" />
+    </edge>
+    <edge source="serializedeserialize.SerializeAndDeserialize" target="controller.stratergy.IStrategy">
+      <point x="-87.1875" y="-59.0" />
+      <point x="5204.157602141978" y="2372.0" />
+      <point x="5078.241759232884" y="2372.0" />
+      <point x="5078.241759232884" y="1358.0" />
+      <point x="4268.50683077579" y="1358.0" />
+      <point x="57.33333333333303" y="37.5" />
+    </edge>
+    <edge source="controller.textcommands.BuyUsingDollarCostStrategyCommand" target="model.TradeType">
+      <point x="0.0" y="-147.0" />
+      <point x="3549.241940392304" y="120.0" />
+      <point x="4001.7850170502998" y="120.0" />
+      <point x="-6.117647058823422" y="15.0" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategy" target="model.TradeType">
+      <point x="-26.083333333333485" y="-81.5" />
+      <point x="2682.415172649304" y="1625.0" />
+      <point x="2393.856070827087" y="1625.0" />
+      <point x="2393.856070827087" y="110.0" />
+      <point x="3995.6673699914763" y="110.0" />
+      <point x="-12.235294117646845" y="15.0" />
+    </edge>
+    <edge source="model.UserImpl" target="model.IPortfolio">
+      <point x="9.375" y="-15.0" />
+      <point x="5544.991759232884" y="3494.0" />
+      <point x="7636.610997442456" y="3494.0" />
+      <point x="7636.610997442456" y="361.0" />
+      <point x="7656.735997442456" y="361.0" />
+      <point x="116.0" y="70.5" />
+    </edge>
+    <edge source="model.Portfolio" target="model.Stock">
+      <point x="-35.272727272727025" y="-180.5" />
+      <point x="6881.969031960157" y="2953.0" />
+      <point x="6388.360997442456" y="2953.0" />
+      <point x="7.5" y="15.0" />
+    </edge>
+    <edge source="controller.textcommands.IPortfolioCommand" target="controller.TextController">
+      <point x="-129.14999999999964" y="-37.0" />
+      <point x="4361.120925899551" y="3900.0" />
+      <point x="3033.901360682159" y="3900.0" />
+      <point x="31.0" y="26.0" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.PortfolioContentsCommand">
+      <point x="58.6875" y="-48.0" />
+      <point x="3770.673497442456" y="2933.0" />
+      <point x="3964.937592566218" y="2933.0" />
+      <point x="3964.937592566218" y="2038.0" />
+      <point x="4817.226352141978" y="2038.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="model.IUser" target="model.IPortfolioV2">
+      <point x="96.25" y="-81.5" />
+      <point x="4200.402664109123" y="560.0" />
+      <point x="4778.426352141978" y="560.0" />
+      <point x="-58.200000000000045" y="59.5" />
+    </edge>
+    <edge source="controller.AbstractController" target="controller.IFeatures">
+      <point x="-198.0" y="-180.5" />
+      <point x="1604.1125000000002" y="2993.0" />
+      <point x="1630.1125" y="2993.0" />
+      <point x="1630.1125" y="1041.0" />
+      <point x="1028.7607040502708" y="1041.0" />
+      <point x="97.20000000000027" y="180.5" />
+    </edge>
+    <edge source="controller.stratergy.IStrategy" target="view.IMainView">
+      <point x="86.0" y="-37.5" />
+      <point x="4297.173497442456" y="991.0" />
+      <point x="3178.3697463768117" y="991.0" />
+      <point x="61.75" y="37.0" />
+    </edge>
+    <edge source="controller.stratergy.IDollarCostStrategyBuilder" target="model.TradeType">
+      <point x="87.75" y="-103.5" />
+      <point x="6783.860997442456" y="100.0" />
+      <point x="4026.2556052855944" y="100.0" />
+      <point x="18.352941176470722" y="15.0" />
+    </edge>
+    <edge source="serializedeserialize.StockDeserializerFromJsonWithDifferentFields" target="model.IStock">
+      <point x="-102.0" y="-26.0" />
+      <point x="5974.001352141978" y="351.0" />
+      <point x="6061.485997442456" y="351.0" />
+      <point x="-1.5" y="15.0" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategyBuilder" target="model.TradeType">
+      <point x="11.25" y="-15.0" />
+      <point x="6804.110997442456" y="1755.0" />
+      <point x="6889.610997442456" y="1755.0" />
+      <point x="6889.610997442456" y="80.0" />
+      <point x="4038.490899403241" y="80.0" />
+      <point x="30.588235294117567" y="15.0" />
+    </edge>
+    <edge source="model.IPortfolioV2" target="model.IStock">
+      <point x="0.0" y="-59.5" />
+      <point x="4836.626352141978" y="321.0" />
+      <point x="6052.485997442456" y="321.0" />
+      <point x="-10.5" y="15.0" />
+    </edge>
+    <edge source="controller.textcommands.ICommand" target="controller.TextController">
+      <point x="-55.55555555555566" y="37.0" />
+      <point x="2351.442950427082" y="2028.0" />
+      <point x="2293.036413043478" y="2028.0" />
+      <point x="2293.036413043478" y="3434.0" />
+      <point x="2975.944838943029" y="3434.0" />
+      <point x="-26.95652173913004" y="-26.0" />
+    </edge>
+    <edge source="model.StockDataAPI" target="model.FileIO">
+      <point x="-79.75" y="-81.0" />
+      <point x="6103.241759232884" y="1091.0" />
+      <point x="5765.501352141978" y="1091.0" />
+      <point x="85.5" y="37.0" />
+    </edge>
+    <edge source="model.Portfolio" target="model.TradeType">
+      <point x="141.090909090909" y="-180.5" />
+      <point x="7058.332668323793" y="2983.0" />
+      <point x="7356.235997442456" y="2983.0" />
+      <point x="7356.235997442456" y="70.0" />
+      <point x="4044.6085464620646" y="70.0" />
+      <point x="36.70588235294099" y="15.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView.DisplayPortfolioButtonListener" target="view.guiview.JFrameView">
+      <point x="84.66666666666652" y="26.0" />
+      <point x="1264.1541666666667" y="1368.0" />
+      <point x="1242.5187500000002" y="1368.0" />
+      <point x="1242.5187500000002" y="2983.0" />
+      <point x="656.4427254164584" y="2983.0" />
+      <point x="12.1875" y="-15.0" />
+    </edge>
+    <edge source="controller.TextController" target="controller.textcommands.ImportPortfolioCommand">
+      <point x="-16.173913043478024" y="-26.0" />
+      <point x="2986.727447638681" y="3414.0" />
+      <point x="2431.232065217391" y="3414.0" />
+      <point x="2431.232065217391" y="2482.0" />
+      <point x="2491.036413043478" y="2482.0" />
+      <point x="62.5" y="37.0" />
+    </edge>
+    <edge source="controller.textcommands.CreatePortfolioCommand" target="controller.TextController">
+      <point x="7.5" y="15.0" />
+      <point x="2110.9798630976175" y="2452.0" />
+      <point x="2282.2538043478253" y="2452.0" />
+      <point x="2282.2538043478253" y="3454.0" />
+      <point x="2965.162230247376" y="3454.0" />
+      <point x="-37.739130434782965" y="-26.0" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.BuyStockCommand">
+      <point x="97.8125" y="-48.0" />
+      <point x="3809.798497442456" y="2953.0" />
+      <point x="4083.062592566218" y="2953.0" />
+      <point x="-35.875" y="37.0" />
+    </edge>
+    <edge source="controller.TextController" target="controller.textcommands.ICommand">
+      <point x="-32.34782608695696" y="-26.0" />
+      <point x="2970.553534595202" y="3444.0" />
+      <point x="2287.6451086956513" y="3444.0" />
+      <point x="2287.6451086956513" y="2018.0" />
+      <point x="2323.6651726493046" y="2018.0" />
+      <point x="-83.33333333333303" y="37.0" />
+    </edge>
+    <edge source="controller.textcommands.ExportPortfolioCommand" target="view.IView">
+      <point x="11.25" y="-15.0" />
+      <point x="4373.595925899551" y="4024.0" />
+      <point x="4981.343999200802" y="4024.0" />
+      <point x="4981.343999200802" y="1675.0" />
+      <point x="3787.971876438653" y="1675.0" />
+      <point x="80.94117647058829" y="37.5" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockCommand" target="controller.textcommands.BuyStockUsingDefaultStrategyCommand">
+      <point x="95.66666666666697" y="-37.0" />
+      <point x="4214.604259232885" y="2482.0" />
+      <point x="4251.340164109123" y="2482.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="model.IUserV2" target="model.IUser">
+      <point x="106.25" y="-59.0" />
+      <point x="2160.1125" y="2472.0" />
+      <point x="2077.9798630976175" y="2472.0" />
+      <point x="2077.9798630976175" y="1091.0" />
+      <point x="4007.902664109123" y="1091.0" />
+      <point x="-96.25" y="81.5" />
+    </edge>
+    <edge source="controller.textcommands.ExaminePortfolioCommand" target="controller.textcommands.ExportPortfolioCommand">
+      <point x="39.125" y="48.0" />
+      <point x="3751.110997442456" y="3494.0" />
+      <point x="3872.195102141978" y="3494.0" />
+      <point x="3872.195102141978" y="4014.0" />
+      <point x="4358.595925899551" y="4014.0" />
+      <point x="-3.75" y="-15.0" />
+    </edge>
+    <edge source="controller.TextController" target="controller.textcommands.ImportStrategyCommand">
+      <point x="-10.782608695652016" y="-26.0" />
+      <point x="2992.118751986507" y="3404.0" />
+      <point x="2847.705708508246" y="3404.0" />
+      <point x="2847.705708508246" y="2482.0" />
+      <point x="2750.4985059826377" y="2482.0" />
+      <point x="-62.5" y="37.0" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockCommand" target="controller.textcommands.BuyUsingDollarCostStrategyCommand">
+      <point x="-95.66666666666697" y="-37.0" />
+      <point x="4023.270925899551" y="2412.0" />
+      <point x="3593.491940392304" y="2412.0" />
+      <point x="44.25" y="147.0" />
+    </edge>
+    <edge source="serializedeserialize.SerializeAndDeserialize" target="model.IStock">
+      <point x="17.4375" y="-59.0" />
+      <point x="5308.782602141978" y="2452.0" />
+      <point x="5389.241759232884" y="2452.0" />
+      <point x="5389.241759232884" y="341.0" />
+      <point x="6058.485997442456" y="341.0" />
+      <point x="-4.5" y="15.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView" target="view.guiview.DollarCostAveragingView">
+      <point x="-0.9375" y="-15.0" />
+      <point x="643.3177254164584" y="2913.0" />
+      <point x="653.1875" y="2913.0" />
+      <point x="62.5" y="180.5" />
+    </edge>
+    <edge source="model.StockDataAPI" target="model.IStockDataAPI">
+      <point x="79.75" y="-81.0" />
+      <point x="6262.741759232884" y="1091.0" />
+      <point x="6442.741759232884" y="1091.0" />
+      <point x="-79.25" y="26.0" />
+    </edge>
+    <edge source="model.IPortfolioV2" target="model.IPortfolio">
+      <point x="129.33333333333326" y="-59.5" />
+      <point x="4965.959685475311" y="361.0" />
+      <point x="7424.735997442456" y="361.0" />
+      <point x="-116.0" y="70.5" />
+    </edge>
+    <edge source="controller.GUIController" target="view.guiview.JFrameView">
+      <point x="-189.00000000000045" y="-158.0" />
+      <point x="1428.2653546995211" y="3484.0" />
+      <point x="655.5052254164584" y="3484.0" />
+      <point x="11.25" y="15.0" />
+    </edge>
+    <edge source="serializedeserialize.PortfolioDeserializerFromJsonWithDifferentFields" target="model.Portfolio">
+      <point x="0.0" y="26.0" />
+      <point x="7123.735997442456" y="2953.0" />
+      <point x="6952.514486505611" y="2953.0" />
+      <point x="35.272727272727025" y="-180.5" />
+    </edge>
+    <edge source="controller.textcommands.BuyUsingDollarCostStrategyCommand" target="controller.TextController">
+      <point x="-44.25" y="147.0" />
+      <point x="3504.991940392304" y="2452.0" />
+      <point x="3256.2643956202382" y="2452.0" />
+      <point x="3256.2643956202382" y="3434.0" />
+      <point x="3024.466578073463" y="3434.0" />
+      <point x="21.56521739130403" y="-26.0" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategy" target="controller.stratergy.IDollarCostStrategyBuilder">
+      <point x="130.41666666666652" y="-81.5" />
+      <point x="2838.915172649304" y="1755.0" />
+      <point x="6579.110997442456" y="1755.0" />
+      <point x="-117.0" y="103.5" />
+    </edge>
+    <edge source="controller.AbstractController" target="model.IUserV2">
+      <point x="90.0" y="-180.5" />
+      <point x="1892.1125000000002" y="2993.0" />
+      <point x="1883.8625" y="2993.0" />
+      <point x="-170.0" y="59.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView.ImportPortfolioButtonListener" target="controller.IFeatures">
+      <point x="63.5" y="-26.0" />
+      <point x="382.1875" y="2482.0" />
+      <point x="324.1875" y="2482.0" />
+      <point x="324.1875" y="1061.0" />
+      <point x="834.3607040502707" y="1061.0" />
+      <point x="-97.19999999999982" y="180.5" />
+    </edge>
+    <edge source="controller.textcommands.BuyStockCommand" target="controller.TextController">
+      <point x="-107.625" y="37.0" />
+      <point x="4011.312592566218" y="2943.0" />
+      <point x="3507.971051790282" y="2943.0" />
+      <point x="3507.971051790282" y="3474.0" />
+      <point x="3046.031795464768" y="3474.0" />
+      <point x="43.13043478260897" y="-26.0" />
+    </edge>
+    <edge source="model.Portfolio" target="serializedeserialize.SerializeAndDeserialize">
+      <point x="-176.36363636363626" y="-180.5" />
+      <point x="6740.878122869248" y="2993.0" />
+      <point x="5314.595102141978" y="2993.0" />
+      <point x="23.25" y="59.0" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="controller.TextController">
+      <point x="-95.66666666666697" y="37.0" />
+      <point x="4721.559685475311" y="2028.0" />
+      <point x="3942.937592566218" y="2028.0" />
+      <point x="3942.937592566218" y="2482.0" />
+      <point x="3388.923497442456" y="2482.0" />
+      <point x="3388.923497442456" y="3454.0" />
+      <point x="3035.249186769116" y="3454.0" />
+      <point x="32.34782608695696" y="-26.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView.BuyStockButtonListener" target="view.guiview.JFrameView">
+      <point x="0.0" y="26.0" />
+      <point x="148.5" y="2983.0" />
+      <point x="632.0677254164584" y="2983.0" />
+      <point x="-12.1875" y="-15.0" />
+    </edge>
+    <edge source="view.View" target="view.IView">
+      <point x="0.0" y="-59.5" />
+      <point x="3415.241940392304" y="1735.0" />
+      <point x="3696.9130529092413" y="1735.0" />
+      <point x="-10.117647058823422" y="37.5" />
+    </edge>
+    <edge source="controller.textcommands.PortfolioContentsCommand" target="model.IStock">
+      <point x="95.66666666666697" y="-37.0" />
+      <point x="4912.893018808645" y="1745.0" />
+      <point x="5041.126352141978" y="1745.0" />
+      <point x="5041.126352141978" y="331.0" />
+      <point x="6055.485997442456" y="331.0" />
+      <point x="-7.5" y="15.0" />
+    </edge>
+    <edge source="controller.TextController" target="controller.textcommands.CreatePortfolioCommand">
+      <point x="-43.13043478260897" y="-26.0" />
+      <point x="2959.77092589955" y="3464.0" />
+      <point x="2276.8624999999993" y="3464.0" />
+      <point x="2276.8624999999993" y="2462.0" />
+      <point x="2095.9798630976175" y="2462.0" />
+      <point x="-7.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.2555093555093555" x="4181.0" y="2395.0" />
+  <SelectedNodes>
+    <node>model.IStock</node>
+    <node>controller.textcommands.ExportPortfolioCommand</node>
+    <node>controller.textcommands.CreatePortfolioCommand</node>
+    <node>controller.stratergy.DollarCostStrategyBuilder</node>
+    <node>view.guiview.JFrameView</node>
+    <node>controller.textcommands.ImportStrategyCommand</node>
+    <node>controller.stratergy.IDollarCostStrategyBuilder</node>
+    <node>model.StockDataAPI</node>
+    <node>serializedeserialize.StockDeserializerFromJsonWithDifferentFields</node>
+    <node>controller.textcommands.ImportPortfolioCommand</node>
+    <node>view.View</node>
+    <node>controller.textcommands.ICommand</node>
+    <node>controller.textcommands.ExaminePortfolioCommand</node>
+    <node>serializedeserialize.ISerializeAndDeserialize</node>
+    <node>model.IUserV2</node>
+    <node>model.IStockDataAPI</node>
+    <node>controller.textcommands.PortfolioContentsCommand</node>
+    <node>view.guiview.JFrameView.CostBiasButtonListener</node>
+    <node>model.IPortfolioV2</node>
+    <node>view.IMainView</node>
+    <node>model.IUser</node>
+    <node>model.IPortfolio</node>
+    <node>controller.GUIController</node>
+    <node>controller.IController</node>
+    <node>model.TradeType</node>
+    <node>model.Stock</node>
+    <node>model.UserImpl</node>
+    <node>controller.textcommands.DisplayPortfoliosCommand</node>
+    <node>controller.TextController</node>
+    <node>model.FileIO</node>
+    <node>controller.textcommands.PortfolioValueCommand</node>
+    <node>controller.stratergy.IStrategy</node>
+    <node>view.guiview.IJFrameView</node>
+    <node>controller.stratergy.DollarCostStrategy</node>
+    <node>view.guiview.JFrameView.DisplayPortfolioButtonListener</node>
+    <node>controller.textcommands.BuyUsingDollarCostStrategyCommand</node>
+    <node>controller.AbstractController</node>
+    <node>serializedeserialize.PortfolioDeserializerFromJsonWithDifferentFields</node>
+    <node>serializedeserialize.SerializeAndDeserialize</node>
+    <node>controller.IFeatures</node>
+    <node>controller.textcommands.BuyStockUsingDefaultStrategyCommand</node>
+    <node>view.IView</node>
+    <node>view.guiview.JFrameView.BuyStockButtonListener</node>
+    <node>controller.textcommands.IPortfolioCommand</node>
+    <node>view.guiview.JFrameView.ImportPortfolioButtonListener</node>
+    <node>controller.textcommands.BuyStockCommand</node>
+    <node>view.guiview.JFrameView.GetValueButtonListener</node>
+    <node>view.guiview.DollarCostAveragingView</node>
+    <node>model.Portfolio</node>
+    <node>controller.textcommands.PortfolioCostBiasCommand</node>
+    <node>controller.stratergy.DefaultStrategy</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
