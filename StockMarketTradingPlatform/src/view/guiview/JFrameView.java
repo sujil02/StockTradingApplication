@@ -702,9 +702,11 @@ public class JFrameView extends JFrame implements IJFrameView {
               , min.getText(),
               sec.getText());
       Date ref = getdate(dateInput);
-      float portfolioValue = features.getPortfolioValue(selectedPortfolio, ref);
-      displayArea.append("Portfolio Value: $" + portfolioValue);
-      clearTextFields();
+      if (ref != null) {
+        float portfolioValue = features.getPortfolioValue(selectedPortfolio, ref);
+        displayArea.append("Portfolio Value: $" + portfolioValue);
+        clearTextFields();
+      }
     }
 
   }
