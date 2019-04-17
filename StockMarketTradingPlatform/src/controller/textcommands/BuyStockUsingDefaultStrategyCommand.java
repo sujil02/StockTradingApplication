@@ -13,7 +13,7 @@ import view.IView;
 
 /**
  * Class handles the command to buy a stock for a particular user over the selected portfolio by the
- * user.
+ * user using default strategy.
  */
 public class BuyStockUsingDefaultStrategyCommand implements IPortfolioCommand {
   @Override
@@ -60,9 +60,10 @@ public class BuyStockUsingDefaultStrategyCommand implements IPortfolioCommand {
       }
     }
     try {
-      IStrategy strategy = DefaultStrategy.getDefaultStrategyBuilder().setPortfolioName(portfolioName)
-              .setCompanyName(companyName).setTickerSymbol(tickerSymbol).setQuantity(quant)
-              .setInvestmentAmount(investment).setDate(ref).setCommission(commission).build();
+      IStrategy strategy = DefaultStrategy.getDefaultStrategyBuilder().
+              setPortfolioName(portfolioName).setCompanyName(companyName)
+              .setTickerSymbol(tickerSymbol).setQuantity(quant).setInvestmentAmount(investment)
+              .setDate(ref).setCommission(commission).build();
       textController.setStrategy(strategy);
       textController.executeStrategy(textController);
 

@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -125,6 +124,7 @@ public class GUIController extends AbstractController {
     }
   }
 
+  @Override
   public void executeStrategy(IFeatures features) throws IOException {
     try {
       Map<String, Object> parameters = this.view.getStrategyFields();
@@ -138,6 +138,7 @@ public class GUIController extends AbstractController {
 
   }
 
+  @Override
   public void exportStrategy(String path) throws IOException {
     try {
       Map<String, Object> parameters = view.getStrategyFields();
@@ -185,7 +186,7 @@ public class GUIController extends AbstractController {
     }
     int freq = (int) parameters.get("frequency");
     super.setStrategy(DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
-            .setTradeType(type).setTickerSymbolsAndProportions(tickerSymbols)
+            .setTradeType(type).setTickerSymbols(tickerSymbols)
             .setInvestmentAmount(investmentAmount).setCommission(commission)
             .setDuration(startDate, endDate, freq).build());
   }

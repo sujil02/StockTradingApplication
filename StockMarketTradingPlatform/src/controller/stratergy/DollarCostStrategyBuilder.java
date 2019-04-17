@@ -42,8 +42,7 @@ abstract class DollarCostStrategyBuilder implements IDollarCostStrategyBuilder {
   }
 
   @Override
-  public IDollarCostStrategyBuilder setTickerSymbolsAndProportions
-          (Map<String, Float> tickerSymbols) {
+  public IDollarCostStrategyBuilder setTickerSymbols(Map<String, Float> tickerSymbols) {
     if (tickerSymbols.isEmpty()) {
       throw new IllegalArgumentException("Invalid Input");
     }

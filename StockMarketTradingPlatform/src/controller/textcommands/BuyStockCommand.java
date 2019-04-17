@@ -15,6 +15,10 @@ import view.IView;
 public class BuyStockCommand implements IPortfolioCommand {
   private Map<Integer, IPortfolioCommand> commandsMap;
 
+  /**
+   * Void constructor to initialize the list of all possible commands that could be executed for
+   * buying a stock.
+   */
   public BuyStockCommand() {
     commandsMap = new HashMap<>();
     commandsMap.put(1, new BuyStockUsingDefaultStrategyCommand());
@@ -22,7 +26,8 @@ public class BuyStockCommand implements IPortfolioCommand {
   }
 
   @Override
-  public void execute(TextController textController, IView view, String portfolioName) throws IOException, NoSuchElementException {
+  public void execute(TextController textController, IView view, String portfolioName)
+          throws IOException, NoSuchElementException {
     while (true) {
       view.append("Selected Portfolio: " + portfolioName);
       for (int i : commandsMap.keySet()) {
