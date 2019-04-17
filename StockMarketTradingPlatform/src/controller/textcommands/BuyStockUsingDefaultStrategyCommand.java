@@ -12,8 +12,8 @@ import controller.TextController;
 import view.IView;
 
 /**
- * Class handles the command to buy a stock for a particular user over the selected portfolio by the
- * user.
+ * Class handles the command to buy a stock for a particular user over the selected portfolio by
+ * the user.
  */
 public class BuyStockUsingDefaultStrategyCommand implements IPortfolioCommand {
   @Override

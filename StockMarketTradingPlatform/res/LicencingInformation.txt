@@ -5,3 +5,5 @@ For serialization and deserialization to support the following operations.
 
 We have used the free open source google's gson library which converts the java objects to appropriate json objects and vice-versa.
 Licencing information for the library could be found at :- https://github.com/google/gson
+
+The project also uses the org.jdesktop.swingx library to support date features on the UI.

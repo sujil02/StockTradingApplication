@@ -5,6 +5,11 @@ import java.util.Map;
 
 import model.TradeType;
 
+/**
+ * This interface is used as a builder class implementation to make a strategy object ensuring all
+ * the neccessary parameters are included in the strategy before its executed.
+ */
+
 public interface IDollarCostStrategyBuilder {
   /**
    * Sets the portfolio name for strategy.
@@ -25,8 +30,8 @@ public interface IDollarCostStrategyBuilder {
   IDollarCostStrategyBuilder setTickerSymbolsAndProportions(Map<String, Float> tickerSymbols);
 
   /**
-   * Sets the total quantity of the stocks bought on each day of transaction. if quantity is greater
-   * than zero it will reset the investment amount to 0.
+   * Sets the total quantity of the stocks bought on each day of transaction. if quantity is
+   * greater than zero it will reset the investment amount to 0.
    */
   IDollarCostStrategyBuilder setTotalQuantity(int totalQuantity);
 
@@ -36,8 +41,8 @@ public interface IDollarCostStrategyBuilder {
   IDollarCostStrategyBuilder setCommission(float commission);
 
   /**
-   * Sets the total amount to be invested on each day of transaction. If the amount is greater than
-   * 0 method will set quantity to zero.
+   * Sets the total amount to be invested on each day of transaction. If the amount is greater
+   * than 0 method will set quantity to zero.
    */
   IDollarCostStrategyBuilder setInvestmentAmount(float investmentAmount);
 
