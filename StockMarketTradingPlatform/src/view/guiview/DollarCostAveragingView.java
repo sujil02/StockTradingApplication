@@ -252,7 +252,7 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   /**
-   * collects all the parameters entered by user and creates a dictionary with all the parameters
+   * collects all the parameters entered by user and creates a dictionary with all the parameters.
    *
    * @return Map with all the parameters. Following are the keys used in the map to retrieve the
    *         parameters. portfolioName, tickerSymbols, investmentAmount, commission, startDate,
