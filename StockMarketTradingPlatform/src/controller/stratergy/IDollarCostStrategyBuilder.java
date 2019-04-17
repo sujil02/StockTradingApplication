@@ -27,7 +27,7 @@ public interface IDollarCostStrategyBuilder {
    *
    * @param tickerSymbols map of ticker symbols and thier corresponding weights.
    */
-  IDollarCostStrategyBuilder setTickerSymbolsAndProportions(Map<String, Float> tickerSymbols);
+  IDollarCostStrategyBuilder setTickerSymbols(Map<String, Float> tickerSymbols);
 
   /**
    * Sets the total quantity of the stocks bought on each day of transaction. if quantity is

@@ -16,8 +16,8 @@ public class BuyStockCommand implements IPortfolioCommand {
   private Map<Integer, IPortfolioCommand> commandsMap;
 
   /**
-   * Void constructor to initialize the list of all possible commands that could be executed over a
-   * portfolio.
+   * Void constructor to initialize the list of all possible commands that could be executed for
+   * buying a stock.
    */
   public BuyStockCommand() {
     commandsMap = new HashMap<>();

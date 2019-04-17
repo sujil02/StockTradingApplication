@@ -23,6 +23,10 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
   private Map<Integer, String> commandsMap;
   private IStrategy strategy;
 
+  /**
+   * Void constructor to initialize the list of all possible commands that could be executed over a
+   * strategy.
+   */
   public BuyUsingDollarCostStrategyCommand() {
     strategy = null;
     commandsMap = new HashMap<>();
@@ -141,7 +145,7 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
 
     try {
       strategy = DollarCostStrategy.getStrategyBuilder().setPortfolioName(portfolioName)
-              .setTickerSymbolsAndProportions(tickerSymbols)
+              .setTickerSymbols(tickerSymbols)
               .setInvestmentAmount(investment).setTotalQuantity(quant).setTradeType(TradeType.BUY)
               .setDuration(startDate, endDate, freq).setCommission(commission).build();
       textController.setStrategy(strategy);

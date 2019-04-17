@@ -52,6 +52,7 @@ public class SerializeAndDeserialize implements ISerializeAndDeserialize {
     new FileIO().createFile(jsonString, path, portfolio.getPortfolioName(), false, ".json");
   }
 
+  @Override
   public void exportStrategy(IStrategy strategy, String path) {
     GsonBuilder gsonBuilder = new GsonBuilder();
     gsonBuilder.setDateFormat("MM/dd/yyyy HH:mm:ss");

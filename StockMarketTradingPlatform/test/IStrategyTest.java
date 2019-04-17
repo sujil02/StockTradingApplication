@@ -12,6 +12,10 @@ import view.View;
 
 import static org.junit.Assert.assertTrue;
 
+/**
+ * This class contains automated test cases which tests Strategy feature using text based
+ * controller.
+ */
 public class IStrategyTest {
 
   @Test
@@ -251,7 +255,8 @@ public class IStrategyTest {
     IUserV2 model = new UserImpl();
     IController controller = new TextController(model, view);
     controller.start();
-    assertTrue(out.toString().contains("GOOG\t21\t$1175.76\tMon Mar 11 16:00:00 EDT 2019\t$100.0\t\n" +
+    assertTrue(out.toString().contains("GOOG\t21\t$1175.76\tMon Mar 11 16:00:00 EDT 2019\t" +
+            "$100.0\t\n" +
             "\tMSFT\t221\t$112.83\tMon Mar 11 16:00:00 EDT 2019\t$100.0\t\n" +
             "\tFB\t145\t$172.07\tMon Mar 11 16:00:00 EDT 2019\t$100.0\t\n" +
             "\tAMZN\t14\t$1670.62\tMon Mar 11 16:00:00 EDT 2019\t$100.0\t\n" +
