@@ -45,7 +45,7 @@ public class PortfolioTest {
     int quantity = 100;
     IPortfolio portfolio = new Portfolio("Default");
     portfolio.makeATrade(TradeType.BUY, refDate, tickerSymbol, companyName, quantity);
-    assertEquals("Google\tGOOG\t100\t118959.0\tFri Mar 15 12:00:00 EDT 2019"
+    assertEquals("Google\tGOOG\t100\t118446.0\tFri Mar 15 12:00:00 EDT 2019"
             , portfolio.getPortfolioContents());
   }
 
@@ -72,8 +72,8 @@ public class PortfolioTest {
     }
     portfolio.makeATrade(TradeType.BUY, refDate, tickerSymbol, companyName, quantity);
 
-    assertEquals("Google\tGOOG\t100\t118959.0\tFri Mar 15 12:00:00 EDT 2019\n" +
-                    "Google\tGOOG\t500\t580160.0\tMon Mar 11 12:00:00 EDT 2019"
+    assertEquals("Google\tGOOG\t100\t118446.0\tFri Mar 15 12:00:00 EDT 2019\n" +
+                    "Google\tGOOG\t500\t587880.0\tMon Mar 11 12:00:00 EDT 2019"
             , portfolio.getPortfolioContents());
   }
 
@@ -102,8 +102,8 @@ public class PortfolioTest {
     }
     portfolio.makeATrade(TradeType.BUY, refDate, tickerSymbol, companyName, quantity);
 
-    assertEquals("Google\tGOOG\t100\t118959.0\tFri Mar 15 12:00:00 EDT 2019\n" +
-                    "Microsoft\tMSFT\t500\t55982.5\tMon Mar 11 12:00:00 EDT 2019"
+    assertEquals("Google\tGOOG\t100\t118446.0\tFri Mar 15 12:00:00 EDT 2019\n" +
+                    "Microsoft\tMSFT\t500\t56415.0\tMon Mar 11 12:00:00 EDT 2019"
             , portfolio.getPortfolioContents());
   }
 
@@ -291,7 +291,7 @@ public class PortfolioTest {
       //do nothing
     }
 
-    assertEquals(174941.5, portfolio.getPortfolioCostBias(refDate), 0.01);
+    assertEquals(174861.0, portfolio.getPortfolioCostBias(refDate), 0.01);
 
     try {
       refDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
@@ -300,7 +300,7 @@ public class PortfolioTest {
       //do nothing
     }
 
-    assertEquals(55982.5, portfolio.getPortfolioCostBias(refDate), 0.01);
+    assertEquals(56415.0, portfolio.getPortfolioCostBias(refDate), 0.01);
   }
 
   @Test(expected = IllegalArgumentException.class)
@@ -352,7 +352,7 @@ public class PortfolioTest {
       //do nothing
     }
 
-    assertEquals(176786.0, portfolio.getPortfolioValue(refDate), 0.01);
+    assertEquals(177211.0, portfolio.getPortfolioValue(refDate), 0.01);
 
     try {
       refDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
@@ -361,7 +361,7 @@ public class PortfolioTest {
       //do nothing
     }
 
-    assertEquals(57195.0, portfolio.getPortfolioValue(refDate), 0.01);
+    assertEquals(57250.0, portfolio.getPortfolioValue(refDate), 0.01);
   }
 
   @Test(expected = IllegalArgumentException.class)

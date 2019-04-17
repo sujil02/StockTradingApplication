@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import controller.Stratergy.DollarCostStrategy;
 import controller.Stratergy.IStrategy;
@@ -57,7 +59,8 @@ public class SerializeAndDeserialize implements ISerializeAndDeserialize {
     gsonBuilder.excludeFieldsWithoutExposeAnnotation();
     Gson gson = gsonBuilder.setPrettyPrinting().create();
     String jsonString = gson.toJson(strategy);
-    new FileIO().createFile(jsonString, path, "YO", false, ".json");
+    String fileName = "Strategy_" + new SimpleDateFormat("yyyyMMddkkmmss").format(new Date());
+    new FileIO().createFile(jsonString, path, fileName, false, ".json");
   }
 
   @Override

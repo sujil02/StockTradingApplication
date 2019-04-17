@@ -3,19 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a7da8f00-6ee5-45cd-aa98-7ff0d9efe06d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/IFeatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/IFeatures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategyBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategyBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Stratergy/IDollarCostStrategyBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Stratergy/IDollarCostStrategyBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Stratergy/IStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Stratergy/IStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/guiview/JFrameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/guiview/JFrameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SerializeAndDeserialize/SerializeAndDeserialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SerializeAndDeserialize/SerializeAndDeserialize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AbstractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AbstractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/GUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/GUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/TextController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TextController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/IStrategyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/IStrategyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/IUserV2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/IUserV2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/PortfolioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/PortfolioTest.java" afterDir="false" />
     </list>
-    <list id="fe131591-8a64-487d-8a13-a60ecaa55e05" name="Revert &quot;Adding export strategy functionalities&quot;" comment="Revert &quot;Adding export strategy functionalities&quot;&#10;&#10;This reverts commit 57800942">
-      <change beforePath="$PROJECT_DIR$/src/SerializeAndDeserialize/ISerializeAndDeserialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SerializeAndDeserialize/ISerializeAndDeserialize.java" afterDir="false" />
-    </list>
+    <list id="fe131591-8a64-487d-8a13-a60ecaa55e05" name="Revert &quot;Adding export strategy functionalities&quot;" comment="Revert &quot;Adding export strategy functionalities&quot;&#10;&#10;This reverts commit 57800942" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/IStrategyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="176" selection-start-line="171" selection-end-line="176" />
+            <state relative-caret-position="429">
+              <caret line="266" column="73" selection-start-line="266" selection-start-column="73" selection-end-line="266" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,10 +35,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/IDollarCostStrategyBuilder.java">
+        <entry file="file://$PROJECT_DIR$/res/Strategy JSON's/Strategy_20190417130111.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/Strategy JSON's/YO.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/IPortfolioV2Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+            <state relative-caret-position="-3587">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/GUIController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="178" column="7" lean-forward="true" selection-start-line="178" selection-start-column="7" selection-end-line="178" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/textcommands/ImportStrategyCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,22 +75,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategyBuilder.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/AbstractController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1033">
-              <caret line="68" column="72" selection-start-line="68" selection-start-column="72" selection-end-line="68" selection-end-column="72" />
+            <state relative-caret-position="218">
+              <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,58 +89,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/TextController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="544">
+              <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/textcommands/ExaminePortfolioCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/IFeatures.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="17">
+              <caret line="122" selection-start-line="122" selection-end-line="122" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyStockCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="1111">
+              <caret line="179" column="13" lean-forward="true" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/guiview/IJFrameView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="16" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/guiview/JFrameView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="509" column="4" selection-start-line="509" selection-start-column="4" selection-end-line="509" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="256" column="53" selection-start-line="256" selection-start-column="53" selection-end-line="256" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#createStrategy#0;class#BuyUsingDollarCostStrategyCommand#0" />
               </folding>
             </state>
           </provider>
@@ -139,6 +123,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -154,6 +139,7 @@
       <find>start</find>
       <find>setDate</find>
       <find>2019-01-22</find>
+      <find>view</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/controller/textcommands/BuyStockCommand.java" />
         <option value="$PROJECT_DIR$/src/model/StockDataAPI.java" />
         <option value="$PROJECT_DIR$/src/Stratergy/DollarCostStrategyBuilder.java" />
-        <option value="$PROJECT_DIR$/src/controller/TextController.java" />
         <option value="$PROJECT_DIR$/src/controller/IGUIFeatures.java" />
         <option value="$PROJECT_DIR$/src/Stratergy/IStrategy.java" />
         <option value="$PROJECT_DIR$/src/Stratergy/DefaultStrategy.java" />
@@ -196,11 +181,7 @@
         <option value="$PROJECT_DIR$/src/view/guiview/IJFrameView.java" />
         <option value="$PROJECT_DIR$/src/controller/textcommands/ImportStrategyCommand.java" />
         <option value="$PROJECT_DIR$/src/controller/textcommands/BuyStockUsingDefaultStrategyCommand.java" />
-        <option value="$PROJECT_DIR$/src/SerializeAndDeserialize/SerializeAndDeserialize.java" />
-        <option value="$PROJECT_DIR$/src/controller/AbstractController.java" />
-        <option value="$PROJECT_DIR$/src/controller/GUIController.java" />
         <option value="$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java" />
-        <option value="$PROJECT_DIR$/src/controller/IFeatures.java" />
         <option value="$PROJECT_DIR$/src/controller/Stratergy/IStrategy.java" />
         <option value="$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java" />
         <option value="$PROJECT_DIR$/src/controller/Stratergy/IDollarCostStrategyBuilder.java" />
@@ -208,6 +189,15 @@
         <option value="$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java" />
         <option value="$PROJECT_DIR$/src/view/guiview/JFrameView.java" />
         <option value="$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java" />
+        <option value="$PROJECT_DIR$/src/model/Stock.java" />
+        <option value="$PROJECT_DIR$/test/IUserV2Test.java" />
+        <option value="$PROJECT_DIR$/test/PortfolioTest.java" />
+        <option value="$PROJECT_DIR$/src/SerializeAndDeserialize/SerializeAndDeserialize.java" />
+        <option value="$PROJECT_DIR$/src/controller/GUIController.java" />
+        <option value="$PROJECT_DIR$/src/controller/AbstractController.java" />
+        <option value="$PROJECT_DIR$/src/controller/TextController.java" />
+        <option value="$PROJECT_DIR$/src/controller/IFeatures.java" />
+        <option value="$PROJECT_DIR$/test/IStrategyTest.java" />
       </list>
     </option>
   </component>
@@ -233,6 +223,17 @@
             <path>
               <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="Strategy JSON's" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -252,6 +253,19 @@
               <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
               <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="textcommands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -260,6 +274,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="guiview" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StockMarketTradingPlatform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StockMarketTradingPlatform" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -275,13 +294,23 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555484590174" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555521234709" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/res/swingx-plaf-1.6.7.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -295,19 +324,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Stocks">
+  <component name="RunManager" selected="JUnit.IStrategyTest">
     <configuration name="Stocks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Stocks" />
       <module name="StockMarketTradingPlatform" />
+      <option name="PROGRAM_PARAMETERS" value="text" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IPortfolioV2Test.testMakeAPortfolioAndExport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IStrategyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StockMarketTradingPlatform" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IPortfolioV2Test" />
-      <option name="METHOD_NAME" value="testMakeAPortfolioAndExport" />
+      <option name="MAIN_CLASS_NAME" value="IStrategyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IStrategyTest.testExportStrategy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StockMarketTradingPlatform" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IStrategyTest" />
+      <option name="METHOD_NAME" value="testExportStrategy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IStrategyTest.testImportStrategyExportedFromApplication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StockMarketTradingPlatform" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IStrategyTest" />
+      <option name="METHOD_NAME" value="testImportStrategyExportedFromApplication" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IStrategyTest.testImportStrategyUserCreated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StockMarketTradingPlatform" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IStrategyTest" />
+      <option name="METHOD_NAME" value="testImportStrategyUserCreated" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -315,12 +374,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Stocks" />
-      <item itemvalue="JUnit.IPortfolioV2Test.testMakeAPortfolioAndExport" />
+      <item itemvalue="JUnit.IStrategyTest.testExportStrategy" />
+      <item itemvalue="JUnit.IStrategyTest.testImportStrategyUserCreated" />
+      <item itemvalue="JUnit.IStrategyTest.testImportStrategyExportedFromApplication" />
+      <item itemvalue="JUnit.IStrategyTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IStrategyTest" />
+        <item itemvalue="JUnit.IStrategyTest.testImportStrategyExportedFromApplication" />
+        <item itemvalue="JUnit.IStrategyTest.testImportStrategyUserCreated" />
         <item itemvalue="Application.Stocks" />
-        <item itemvalue="JUnit.IPortfolioV2Test.testMakeAPortfolioAndExport" />
+        <item itemvalue="JUnit.IStrategyTest.testExportStrategy" />
       </list>
     </recent_temporary>
   </component>
@@ -419,15 +484,53 @@
       <option name="project" value="LOCAL" />
       <updated>1555473975377</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added documentation to new methods.">
+      <created>1555484709984</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555484709984</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added testcase for strategy">
+      <created>1555486756340</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1555486756340</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IPortfolioV2Test_testMakeAPortfolioAndExport - 2019.04.16 at 16h 31m 56s.xml">
-      <configuration name="IPortfolioV2Test.testMakeAPortfolioAndExport" configurationId="JUnit" />
+    <history-entry file="IStrategyTest_testCreationAndExecutionOfStrategyOnExistingPortfolioWithWeights - 2019.04.17 at 12h 52m 12s.xml">
+      <configuration name="IStrategyTest.testCreationAndExecutionOfStrategyOnExistingPortfolioWithWeights" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IPortfolioV2Test_testMakeAPortfolioAndExport - 2019.04.16 at 16h 32m 17s.xml">
-      <configuration name="IPortfolioV2Test.testMakeAPortfolioAndExport" configurationId="JUnit" />
+    <history-entry file="IStrategyTest_testCreationAndExecutionOfStrategyOnExistingPortfolioWithWeights - 2019.04.17 at 12h 53m 50s.xml">
+      <configuration name="IStrategyTest.testCreationAndExecutionOfStrategyOnExistingPortfolioWithWeights" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IStrategyTest_testCreationAndExecutionOfStrategyOnExistingPortfolioWithoutGivingWeights - 2019.04.17 at 12h 55m 12s.xml">
+      <configuration name="IStrategyTest.testCreationAndExecutionOfStrategyOnExistingPortfolioWithoutGivingWeights" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IStrategyTest_testExportStrategy - 2019.04.17 at 13h 00m 01s.xml">
+      <configuration name="IStrategyTest.testExportStrategy" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IStrategyTest_testImportStrategyUserCreated - 2019.04.17 at 13h 09m 04s.xml">
+      <configuration name="IStrategyTest.testImportStrategyUserCreated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IStrategyTest_testImportStrategyUserCreated - 2019.04.17 at 13h 09m 30s.xml">
+      <configuration name="IStrategyTest.testImportStrategyUserCreated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IStrategyTest_testImportStrategyUserCreated - 2019.04.17 at 13h 10m 06s.xml">
+      <configuration name="IStrategyTest.testImportStrategyUserCreated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IStrategyTest_testImportStrategyUserCreated - 2019.04.17 at 13h 10m 17s.xml">
+      <configuration name="IStrategyTest.testImportStrategyUserCreated" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IStrategyTest_testImportStrategyExportedFromApplication - 2019.04.17 at 13h 11m 50s.xml">
+      <configuration name="IStrategyTest.testImportStrategyExportedFromApplication" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IStrategyTest_testImportStrategyExportedFromApplication - 2019.04.17 at 13h 12m 35s.xml">
+      <configuration name="IStrategyTest.testImportStrategyExportedFromApplication" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -439,7 +542,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.24949698" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24949698" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -529,7 +632,9 @@
     <MESSAGE value="view moved to abstractcontroller" />
     <MESSAGE value="added implementation to export" />
     <MESSAGE value="execute strategy working from text and GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="execute strategy working from text and GUI" />
+    <MESSAGE value="added documentation to new methods." />
+    <MESSAGE value="added testcase for strategy" />
+    <option name="LAST_COMMIT_MESSAGE" value="added testcase for strategy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -542,87 +647,62 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java</url>
-          <line>261</line>
+          <line>239</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controller/GUIController.java</url>
-          <line>120</line>
+          <line>129</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java</url>
-          <line>137</line>
+          <line>144</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java</url>
-          <line>96</line>
+          <line>73</line>
           <properties />
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/Stock.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategyBuilder.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/GUIController.java</url>
+          <line>174</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/IStrategyTest.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Stratergy/IStratergyGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/IView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/IControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-901">
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SerializeAndDeserialize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/IMainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/PortfolioContentsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/PortfolioValueCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/textcommands/IPortfolioCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -654,16 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stocks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -675,13 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="788" column="29" selection-start-line="788" selection-start-column="29" selection-end-line="788" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Stock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1550">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -713,18 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/ImportStrategyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/textcommands/ICommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -741,20 +792,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/Portfolio JSON's/Default.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/IPortfolioV2Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3039">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/PortfolioTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SerializeAndDeserialize/ISerializeAndDeserialize.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -781,13 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SerializeAndDeserialize/SerializeAndDeserialize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="52" column="2" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/res/swingx-core-1.6.7.jar!/org/jdesktop/swingx/JXDatePicker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -795,13 +825,6 @@
           <folding>
             <element signature="e#3666#3667#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/GUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -826,17 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createStrategy#0;class#BuyUsingDollarCostStrategyCommand#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/IPortfolioV2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-506">
@@ -848,46 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="101" column="72" lean-forward="true" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/AbstractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="117" column="19" selection-start-line="117" selection-start-column="19" selection-end-line="117" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1896#1897#0" expanded="true" />
-            <element signature="e#1941#1942#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2432#2433#0" expanded="true" />
-            <element signature="e#3751#3752#0" expanded="true" />
-            <element signature="e#3812#3813#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/IFeatures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="153" column="28" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/IStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/TextController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -908,40 +880,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="176" selection-start-line="171" selection-end-line="176" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/IDollarCostStrategyBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategyBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1033">
-          <caret line="68" column="72" selection-start-line="68" selection-start-column="72" selection-end-line="68" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -955,17 +897,201 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/IStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/IControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/IStockDataAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Stock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="137" column="43" selection-start-line="137" selection-start-column="43" selection-end-line="137" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/UserImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/IUserV2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/PortfolioTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="302" column="24" selection-start-line="302" selection-start-column="24" selection-end-line="302" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SerializeAndDeserialize/SerializeAndDeserialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Stocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/guiview/JFrameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="509" column="4" selection-start-line="509" selection-start-column="4" selection-end-line="509" selection-end-column="4" />
+        <state relative-caret-position="193">
+          <caret line="449" selection-start-line="449" selection-end-line="449" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-572">
+          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DefaultStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="61" column="3" lean-forward="true" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/IController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="256" column="53" selection-start-line="256" selection-start-column="53" selection-end-line="256" selection-end-column="53" />
+        <state relative-caret-position="329">
+          <caret line="275" selection-start-line="275" selection-end-line="275" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Stratergy/DollarCostStrategyBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="92" column="3" lean-forward="true" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/ImportStrategyCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/IFeatures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/GUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="178" column="7" lean-forward="true" selection-start-line="178" selection-start-column="7" selection-end-line="178" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/textcommands/BuyUsingDollarCostStrategyCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1111">
+          <caret line="179" column="13" lean-forward="true" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createStrategy#0;class#BuyUsingDollarCostStrategyCommand#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/TextController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/IPortfolioV2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3587">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/AbstractController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/Strategy JSON's/YO.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/Strategy JSON's/Strategy_20190417130111.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/IStrategyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="266" column="73" selection-start-line="266" selection-start-column="73" selection-end-line="266" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

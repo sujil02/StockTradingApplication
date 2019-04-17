@@ -56,7 +56,7 @@ public class IUserV2Test {
         //do nothing
       }
       Float yo = user.getPortfolioCostBias("Default", refDate);
-      assertEquals(204627.20, yo, 0.01);
+      assertEquals(174941.5, yo, 0.01);
     } catch (IOException e) {
       e.printStackTrace();
     }
