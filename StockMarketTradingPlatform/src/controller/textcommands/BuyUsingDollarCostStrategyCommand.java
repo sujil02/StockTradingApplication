@@ -112,7 +112,7 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
       return;
     }
 
-    view.append("Enter amount to be invested(enter 0 if wish to invest using quantity)");
+    view.append("Enter amount to be invested");
     float investment = getFloatFromUser(view);
 
     int quant = 0;
@@ -123,10 +123,10 @@ public class BuyUsingDollarCostStrategyCommand implements ICommand, IPortfolioCo
     view.append("Enter Commission");
     float commission = getFloatFromUser(view);
 
-    view.append("Enter Start Date(optional)");
+    view.append("Enter Start Date(optional) n MM/dd/yyyy format Ex: 03/11/2019 for 11th March 2019");
     Date startDate = addTimeToDate(getDateFromUser(view));
 
-    view.append("Enter End Date(optional)");
+    view.append("Enter End Date(optional) in MM/dd/yyyy format Ex: 03/11/2019 for 11th March 2019");
     Date endDate = addTimeToDate(getDateFromUser(view));
 
     view.append("Enter frequency of purchase in days(enter 0 if no repetition)");

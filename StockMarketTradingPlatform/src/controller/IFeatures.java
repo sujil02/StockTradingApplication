@@ -120,7 +120,45 @@ public interface IFeatures {
    */
   void exitProgram();
 
-
+  /**
+   * This method saves the strategy data in a file at the provided location. Name of the file is
+   * as Strategy_[current date time in yyyyMMddhhmmss format]. It saves all the parameters set by
+   * the user for a strategy in a persistent memory. The file is created in following format:
+   * {
+   *   "tickerSymbols": {
+   *     [ticker symbol of company1]: [weight of company1],
+   *     [ticker symbol of company2]: [weight of company2],
+   *     .
+   *     .
+   *     .
+   *     [ticker symbol of companyN]: [weight of companyN],
+   *   },
+   *   "commission": [commission paid on each trade],
+   *   "investmentAmount": [total amount invested],
+   *   "startDate": [Start Date of the strategy],
+   *   "endDate": [End Date of the strategy],
+   *   "period": [Frequency of trades]
+   * }
+   * if more than one ticker symbol is added to strategy "tickerSymbols will contain multiple
+   * entries. Also the sum of all weights should be equal to 1"
+   * {
+   *   "tickerSymbols": {
+   *     "goog": 0.25,
+   *     "msft": 0.25,
+   *     "fb": 0.25,
+   *     "amzn": 0.25
+   *   },
+   *   "totalQuantity": 0,
+   *   "commission": 100.0,
+   *   "investmentAmount": 10000.0,
+   *   "startDate": "03/11/2019 16:00:00",
+   *   "endDate": "04/15/2019 16:00:00",
+   *   "period": 25
+   * }
+   *
+   * @param path location directory where portfolio needs to be exported.
+   * @throws IOException If the path is not accessible.
+   */
   void exportStrategy(String path) throws IOException;
 
   /**

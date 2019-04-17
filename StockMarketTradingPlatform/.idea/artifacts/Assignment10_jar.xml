@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Assignment10:jar">
+    <output-path>$PROJECT_DIR$/res</output-path>
+    <root id="archive" name="Assignment10.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/res/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="StockMarketTradingPlatform" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/res/swingx-common-1.6.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/res/swingx-autocomplete-1.6.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/res/swingx-plaf-1.6.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/res/gson-2.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/res/swingx-action-1.6.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/res/swingx-core-1.6.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/res/swingx-graphics-1.6.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/res/swingx-painters-1.6.7.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
