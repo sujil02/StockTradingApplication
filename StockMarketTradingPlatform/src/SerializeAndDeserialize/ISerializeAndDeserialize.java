@@ -28,4 +28,6 @@ public interface ISerializeAndDeserialize {
   public void exportPortfolio(IPortfolioV2 portfolio, String path);
 
   void exportStrategy(IStrategy strategy, String path);
+
+  IStrategy importStrategy(String path) throws IOException;
 }

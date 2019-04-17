@@ -78,8 +78,8 @@ public class JFrameView extends JFrame implements IJFrameView {
   String prevScreen;
 
   /**
-   * GUI based view constructor. Creates a master container representing the basic GUI design having
-   * to main frame pane the managePane and the userpane.
+   * GUI based view constructor. Creates a master container representing the basic GUI design
+   * having to main frame pane the managePane and the userpane.
    */
   public JFrameView() {
     super();
@@ -491,8 +491,10 @@ public class JFrameView extends JFrame implements IJFrameView {
     importButton.addActionListener(new ImportPortfolioButtonListener(features));
     exportButton.addActionListener(l -> {
       try {
-        features.exportPortfolio(selectedPortfolio,
-                getPathFromChooser(JFileChooser.DIRECTORIES_ONLY));
+        String exportPath = getPathFromChooser(JFileChooser.DIRECTORIES_ONLY);
+        if (exportPath != null) {
+          features.exportPortfolio(selectedPortfolio, exportPath);
+        }
       } catch (IOException e) {
         e.printStackTrace();
       }
@@ -642,11 +644,13 @@ public class JFrameView extends JFrame implements IJFrameView {
     public void actionPerformed(ActionEvent e) {
       String fileID = getPathFromChooser(JFileChooser.FILES_ONLY);
       try {
-        features.importPortfolio(fileID);
-        List<String> portfolioNames = features.getAllPortfolioNames();
-        displayPortfolioNames(portfolioNames);
+        if (fileID != null) {
+          features.importPortfolio(fileID);
+          List<String> portfolioNames = features.getAllPortfolioNames();
+          displayPortfolioNames(portfolioNames);
+        }
       } catch (IOException e1) {
-        e1.printStackTrace();
+
       }
     }
   }
@@ -697,6 +701,7 @@ public class JFrameView extends JFrame implements IJFrameView {
       displayArea.append("Portfolio Value: $" + portfolioValue);
       clearTextFields();
     }
+
   }
 
 

@@ -149,17 +149,28 @@ public class DollarCostAveragingView extends JPanel {
   public void setFeatures(IFeatures features) {
     exportStrategy.addActionListener(l -> {
       try {
-        features.exportStrategy(
-                getPathFromChooser(JFileChooser.DIRECTORIES_ONLY));
+        String filePath = getPathFromChooser(JFileChooser.DIRECTORIES_ONLY);
+        if (filePath != null) {
+          features.exportStrategy(filePath);
+        }
       } catch (IOException e) {
-        e.printStackTrace();
       }
     });
     executeStrategy.addActionListener(l -> {
       try {
         features.executeStrategy(features);
       } catch (IOException e) {
-        e.printStackTrace();
+        showerrorMessages("Invalid file path entry");
+      }
+    });
+    importStrategy.addActionListener(l -> {
+      try {
+        String filePath = getPathFromChooser(JFileChooser.FILES_ONLY);
+        if (filePath != null) {
+          features.importStrategy(filePath, selectedPortfolio);
+        }
+      } catch (IOException e) {
+        showerrorMessages("Invalid file path entry");
       }
     });
     addChoice.addActionListener(l -> {
@@ -252,11 +263,12 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   /**
-   * collects all the parameters entered by user and creates a dictionary with all the parameters.
+   * collects all the parameters entered by user and creates a dictionary with all the
+   * parameters.
    *
    * @return Map with all the parameters. Following are the keys used in the map to retrieve the
-   *         parameters. portfolioName, tickerSymbols, investmentAmount, commission, startDate,
-   *         endDate, frequency.
+   * parameters. portfolioName, tickerSymbols, investmentAmount, commission, startDate, endDate,
+   * frequency.
    */
   public Map<String, Object> getStrategyFeild() {
     Map<String, Object> parameters = new HashMap<>();
@@ -286,4 +298,7 @@ public class DollarCostAveragingView extends JPanel {
     return parameters;
   }
 
+  private void showerrorMessages(String message) {
+    JOptionPane.showMessageDialog(new JFrame(), message, "Dialog", JOptionPane.ERROR_MESSAGE);
+  }
 }

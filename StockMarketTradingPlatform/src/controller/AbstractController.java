@@ -96,22 +96,18 @@ public abstract class AbstractController implements IController, IFeatures {
 
   public void exportStrategy(String path) throws IOException {
     SerializeAndDeserialize serializeAndDeserialize = new SerializeAndDeserialize();
-//    Map<String,Float> stringDoubleMap = new HashMap<>();
-//    stringDoubleMap.put("GOOG",Float.valueOf(10));
-//    strategy = new DollarCostStrategy("aa", TradeType.BUY, stringDoubleMap, 5, 5, 5, new Date(), new Date(),5);
     serializeAndDeserialize.exportStrategy(strategy, path);
   }
 
   public void importStrategy(String path, String portfolioName) throws IOException {
-    IStrategy strategy;
+    SerializeAndDeserialize serializeAndDeserialize = new SerializeAndDeserialize();
+    this.strategy = serializeAndDeserialize.importStrategy(path);
     //TODO import strategy
     if (!validatePortfolioName(portfolioName)) {
       createPortfolio(portfolioName);
     }
     getStrategy().setPortfolioName(portfolioName);
-    executeStrategy(this);
-
-
+    this.strategy.buyStock(this, view);
   }
 
   public void executeStrategy(IFeatures features) throws IOException {
