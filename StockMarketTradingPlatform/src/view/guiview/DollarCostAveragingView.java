@@ -292,17 +292,18 @@ public class DollarCostAveragingView extends JPanel {
    * collects all the parameters entered by user and creates a dictionary with all the parameters.
    *
    * @return Map with all the parameters. Following are the keys used in the map to retrieve the
-   *         parameters. portfolioName, tickerSymbols, investmentAmount, commission, startDate,
-   *         endDate, frequency.
+   * parameters. portfolioName, tickerSymbols, investmentAmount, commission, startDate, endDate,
+   * frequency.
    */
   public Map<String, Object> getStrategyFeild() {
     Map<String, Object> parameters = new HashMap<>();
     try {
       parameters.put("portfolioName", selectedPortfolio);
+      Map<String, Float> tickerSymbols = new HashMap<>();
       for (String tickerSymbol : strategy.keySet()) {
-        strategy.put(tickerSymbol, strategy.get(tickerSymbol) / 100);
+        tickerSymbols.put(tickerSymbol, strategy.get(tickerSymbol) / 100);
       }
-      parameters.put("tickerSymbols", strategy);
+      parameters.put("tickerSymbols", tickerSymbols);
       float investment = Float.parseFloat(dollarAmountInvested.getText());
       parameters.put("investmentAmount", investment);
       float commission = Float.parseFloat(commissionAmount.getText().isEmpty()
