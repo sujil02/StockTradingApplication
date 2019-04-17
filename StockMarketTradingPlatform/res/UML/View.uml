@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="527.0" y="381.0">view.guiview.JFrameView</node>
+    <node x="843.0" y="733.0">view.View</node>
+    <node x="537.5" y="124.0">view.guiview.IJFrameView</node>
+    <node x="1096.0" y="1254.0">view.guiview.JFrameView.DisplayPortfolioButtonListener</node>
+    <node x="548.0" y="1254.0">view.guiview.JFrameView.CostBiasButtonListener</node>
+    <node x="697.25" y="0.0">view.IMainView</node>
+    <node x="880.5" y="190.0">view.IView</node>
+    <node x="274.0" y="1254.0">view.guiview.JFrameView.BuyStockButtonListener</node>
+    <node x="822.0" y="1254.0">view.guiview.JFrameView.ImportPortfolioButtonListener</node>
+    <node x="0.0" y="1254.0">view.guiview.JFrameView.GetValueButtonListener</node>
+    <node x="1395.0" y="0.0">view.guiview.DollarCostAveragingView</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="view.guiview.JFrameView.CostBiasButtonListener" target="view.guiview.JFrameView">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="411.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView.ImportPortfolioButtonListener" target="view.guiview.JFrameView">
+      <point x="0.0" y="-26.0" />
+      <point x="949.0" y="1234.0" />
+      <point x="734.1999999999999" y="1234.0" />
+      <point x="59.19999999999993" y="411.5" />
+    </edge>
+    <edge source="view.guiview.IJFrameView" target="view.IMainView">
+      <point x="0.0" y="-103.5" />
+      <point x="675.0" y="99.0" />
+      <point x="759.0" y="99.0" />
+      <point x="-61.75" y="37.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView" target="view.guiview.IJFrameView">
+      <point x="0.0" y="-411.5" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView.GetValueButtonListener" target="view.guiview.JFrameView">
+      <point x="0.0" y="-26.0" />
+      <point x="127.0" y="1224.0" />
+      <point x="556.6" y="1224.0" />
+      <point x="-118.39999999999998" y="411.5" />
+    </edge>
+    <edge source="view.IView" target="view.IMainView">
+      <point x="0.0" y="-37.5" />
+      <point x="966.5" y="99.0" />
+      <point x="882.5" y="99.0" />
+      <point x="61.75" y="37.0" />
+    </edge>
+    <edge source="view.guiview.JFrameView.DisplayPortfolioButtonListener" target="view.guiview.JFrameView">
+      <point x="0.0" y="-26.0" />
+      <point x="1223.0" y="1224.0" />
+      <point x="793.4" y="1224.0" />
+      <point x="118.39999999999998" y="411.5" />
+    </edge>
+    <edge source="view.guiview.JFrameView.BuyStockButtonListener" target="view.guiview.JFrameView">
+      <point x="0.0" y="-26.0" />
+      <point x="401.0" y="1234.0" />
+      <point x="615.8" y="1234.0" />
+      <point x="-59.200000000000045" y="411.5" />
+    </edge>
+    <edge source="view.View" target="view.IView">
+      <point x="0.0" y="-59.5" />
+      <point x="0.0" y="37.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4306236860546601" x="387.5" y="1417.0" />
+  <SelectedNodes>
+    <node>view.IMainView</node>
+    <node>view.IView</node>
+    <node>view.guiview.IJFrameView</node>
+    <node>view.View</node>
+    <node>view.guiview.DollarCostAveragingView</node>
+    <node>view.guiview.JFrameView</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

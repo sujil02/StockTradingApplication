@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="363.0" y="1032.0">controller.stratergy.DollarCostStrategyBuilder</node>
+    <node x="552.5835097001764" y="655.5">controller.stratergy.IDollarCostStrategyBuilder</node>
+    <node x="883.0" y="1175.0">controller.TextController</node>
+    <node x="605.2500000000001" y="421.0">controller.stratergy.IStrategy</node>
+    <node x="1176.0" y="1042.5">controller.stratergy.DollarCostStrategy</node>
+    <node x="1142.2032186948852" y="556.0">controller.AbstractController</node>
+    <node x="871.5782186948852" y="1639.5">controller.textcommands</node>
+    <node x="1173.1982804232803" y="0.0">controller.IFeatures</node>
+    <node x="1336.262566137566" y="1485.0">controller.GUIController</node>
+    <node x="0.0" y="644.0">controller.stratergy.DefaultStrategy</node>
+    <node x="1416.525" y="432.5">controller.IController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="controller.stratergy.IStrategy" target="controller.IFeatures">
+      <point x="-64.5" y="-37.5" />
+      <point x="669.7500000000001" y="391.0" />
+      <point x="1265.769708994709" y="391.0" />
+      <point x="-123.42857142857144" y="180.5" />
+    </edge>
+    <edge source="controller.textcommands" target="controller.stratergy.IStrategy">
+      <point x="-22.57142857142844" y="-15.0" />
+      <point x="928.0067901234568" y="1445.0" />
+      <point x="352.5" y="1445.0" />
+      <point x="352.5" y="536.0" />
+      <point x="697.3928571428572" y="536.0" />
+      <point x="-36.85714285714289" y="37.5" />
+    </edge>
+    <edge source="controller.GUIController" target="controller.stratergy.DollarCostStrategy">
+      <point x="-162.0" y="-169.5" />
+      <point x="1390.262566137566" y="1465.0" />
+      <point x="1410.75" y="1465.0" />
+      <point x="78.25" y="181.0" />
+    </edge>
+    <edge source="controller.textcommands" target="controller.textcommands">
+      <point x="-52.66666666666666" y="15.0" />
+      <point x="897.9115520282186" y="1689.5" />
+      <point x="851.5782186948852" y="1689.5" />
+      <point x="851.5782186948852" y="1664.5" />
+      <point x="-79.0" y="10.0" />
+    </edge>
+    <edge source="controller.AbstractController" target="controller.IController">
+      <point x="172.8" y="-203.0" />
+      <point x="1531.0032186948852" y="536.0" />
+      <point x="1478.525" y="536.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="controller.textcommands" target="controller.stratergy.DollarCostStrategy">
+      <point x="67.71428571428578" y="-15.0" />
+      <point x="1018.292504409171" y="1465.0" />
+      <point x="1254.25" y="1465.0" />
+      <point x="-78.25" y="181.0" />
+    </edge>
+    <edge source="controller.IFeatures" target="controller.stratergy.IStrategy">
+      <point x="-61.71428571428578" y="180.5" />
+      <point x="1327.4839947089945" y="401.0" />
+      <point x="798.7500000000001" y="401.0" />
+      <point x="64.5" y="-37.5" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategy" target="controller.stratergy.IStrategy">
+      <point x="0.0" y="-181.0" />
+      <point x="1332.5" y="982.0" />
+      <point x="1091.8697089947088" y="982.0" />
+      <point x="1091.8697089947088" y="536.0" />
+      <point x="771.107142857143" y="536.0" />
+      <point x="36.85714285714289" y="37.5" />
+    </edge>
+    <edge source="controller.stratergy.DefaultStrategy" target="controller.IFeatures">
+      <point x="-82.75" y="-115.0" />
+      <point x="82.75" y="381.0" />
+      <point x="1204.0554232804234" y="381.0" />
+      <point x="-185.1428571428571" y="180.5" />
+    </edge>
+    <edge source="controller.GUIController" target="controller.AbstractController">
+      <point x="53.99999999999994" y="-169.5" />
+      <point x="1606.262566137566" y="1465.0" />
+      <point x="1637.8282186948852" y="1465.0" />
+      <point x="1637.8282186948852" y="992.0" />
+      <point x="1520.2032186948852" y="992.0" />
+      <point x="162.0" y="203.0" />
+    </edge>
+    <edge source="controller.AbstractController" target="controller.IFeatures">
+      <point x="86.39999999999998" y="-203.0" />
+      <point x="1444.603218694885" y="536.0" />
+      <point x="1406.025" y="536.0" />
+      <point x="1406.025" y="401.0" />
+      <point x="1450.912566137566" y="401.0" />
+      <point x="61.714285714285666" y="180.5" />
+    </edge>
+    <edge source="controller.TextController" target="controller.textcommands">
+      <point x="0.0" y="48.5" />
+      <point x="1019.5" y="1445.0" />
+      <point x="973.1496472663139" y="1445.0" />
+      <point x="22.57142857142867" y="-15.0" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategy" target="controller.stratergy.IDollarCostStrategyBuilder">
+      <point x="-104.33333333333337" y="-181.0" />
+      <point x="1228.1666666666665" y="992.0" />
+      <point x="845.0835097001764" y="992.0" />
+      <point x="117.00000000000011" y="103.5" />
+    </edge>
+    <edge source="controller.GUIController" target="controller.IFeatures">
+      <point x="161.99999999999994" y="-169.5" />
+      <point x="1714.262566137566" y="1465.0" />
+      <point x="1698.012566137566" y="1465.0" />
+      <point x="1698.012566137566" y="391.0" />
+      <point x="1574.3411375661376" y="391.0" />
+      <point x="185.1428571428571" y="180.5" />
+    </edge>
+    <edge source="controller.AbstractController" target="controller.stratergy.IStrategy">
+      <point x="-172.79999999999995" y="-203.0" />
+      <point x="1185.4032186948853" y="526.0" />
+      <point x="807.9642857142859" y="526.0" />
+      <point x="73.71428571428578" y="37.5" />
+    </edge>
+    <edge source="controller.stratergy.IDollarCostStrategyBuilder" target="controller.stratergy.IStrategy">
+      <point x="1.1368683772161603E-13" y="-103.5" />
+      <point x="728.0835097001764" y="536.0" />
+      <point x="734.2500000000001" y="536.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategyBuilder" target="controller.stratergy.IDollarCostStrategyBuilder">
+      <point x="123.75" y="-191.5" />
+      <point x="734.25" y="1012.0" />
+      <point x="728.0835097001764" y="1012.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="controller.textcommands" target="controller.TextController">
+      <point x="0.0" y="-15.0" />
+      <point x="950.5782186948852" y="1435.0" />
+      <point x="928.5" y="1435.0" />
+      <point x="-91.0" y="48.5" />
+    </edge>
+    <edge source="controller.textcommands" target="controller.stratergy.DefaultStrategy">
+      <point x="-67.71428571428578" y="-15.0" />
+      <point x="882.8639329805994" y="1465.0" />
+      <point x="165.5" y="1465.0" />
+      <point x="0.0" y="115.0" />
+    </edge>
+    <edge source="controller.stratergy.DefaultStrategy" target="controller.stratergy.IStrategy">
+      <point x="82.75" y="-115.0" />
+      <point x="248.25" y="516.0" />
+      <point x="623.6785714285716" y="516.0" />
+      <point x="-110.57142857142856" y="37.5" />
+    </edge>
+    <edge source="controller.TextController" target="controller.AbstractController">
+      <point x="-68.25" y="-48.5" />
+      <point x="951.25" y="1002.0" />
+      <point x="1196.2032186948852" y="1002.0" />
+      <point x="-162.0" y="203.0" />
+    </edge>
+    <edge source="controller.stratergy.DollarCostStrategy" target="controller.IFeatures">
+      <point x="104.33333333333337" y="-181.0" />
+      <point x="1436.8333333333335" y="1012.0" />
+      <point x="1584.7032186948852" y="1012.0" />
+      <point x="1584.7032186948852" y="401.0" />
+      <point x="1512.6268518518518" y="401.0" />
+      <point x="123.42857142857133" y="180.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes>
+    <node>controller.stratergy.IStrategy</node>
+    <node>controller.stratergy.DollarCostStrategy</node>
+    <node>controller.TextController</node>
+    <node>controller.AbstractController</node>
+    <node>controller.stratergy.DollarCostStrategyBuilder</node>
+    <node>controller.GUIController</node>
+    <node>controller.stratergy.IDollarCostStrategyBuilder</node>
+    <node>controller.textcommands</node>
+    <node>controller.IFeatures</node>
+    <node>controller.stratergy.DefaultStrategy</node>
+    <node>controller.IController</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
