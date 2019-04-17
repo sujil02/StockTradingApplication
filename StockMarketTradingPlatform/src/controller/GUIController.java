@@ -1,28 +1,25 @@
 package controller;
 
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
-import controller.Stratergy.DollarCostStrategy;
-import controller.Stratergy.IStrategy;
+import controller.stratergy.DollarCostStrategy;
 import model.IUserV2;
 import model.TradeType;
 import view.guiview.IJFrameView;
 import view.guiview.JFrameView;
 
 /**
- * GUI Controller class which takes inputs from the user and tells the model what to do and the
- * view what to show. Basically decides which operations to be called over the model based on the
- * inputs from the view.
+ * GUI Controller class which takes inputs from the user and tells the model what to do and the view
+ * what to show. Basically decides which operations to be called over the model based on the inputs
+ * from the view.
  */
 public class GUIController extends AbstractController {
   private IJFrameView view;
-  private IStrategy strategy;
 
   public GUIController(IUserV2 model) {
     super(model);
@@ -123,6 +120,7 @@ public class GUIController extends AbstractController {
     }
   }
 
+  @Override
   public void executeStrategy(IFeatures features) throws IOException {
     try {
       Map<String, Object> parameters = this.view.getStrategyFields();
@@ -136,6 +134,7 @@ public class GUIController extends AbstractController {
 
   }
 
+  @Override
   public void exportStrategy(String path) throws IOException {
     try {
       Map<String, Object> parameters = view.getStrategyFields();
