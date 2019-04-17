@@ -42,6 +42,8 @@ public class DollarCostAveragingView extends JPanel {
   private JTextField duration;
   private JButton executeStrategy;
   private JButton importStrategy;
+  private JLabel addStockMessage;
+  private JLabel addStockMessage2;
 
   /**
    * GUI based view constructor. Creates a DollarCostAverage pane which will be loaded in Main
@@ -49,7 +51,7 @@ public class DollarCostAveragingView extends JPanel {
    */
   public DollarCostAveragingView() {
     strategy = new HashMap<>();
-    this.setLayout(new GridLayout(7, 1, 10, 10));
+    this.setLayout(new GridLayout(8, 1, 10, 10));
     setDollarAmountInvestment();
     setWeightsCheckBox();
     setStockEntryFeilds();
@@ -137,7 +139,15 @@ public class DollarCostAveragingView extends JPanel {
     pane.add(stockWeightLabel);
     pane.add(stockWeightText);
     pane.add(addChoice);
+
     this.add(pane);
+    addStockMessage = new JLabel(" ** To change any added stock values " +
+            "please re-enter the same stock symbol and click add.");
+    addStockMessage2 = new JLabel(" **To drop any value please enter weight as -1.");
+    Container pane2 = new JPanel(new GridLayout(2, 1));
+    pane2.add(addStockMessage);
+    pane2.add(addStockMessage2);
+    this.add(pane2);
   }
 
 
@@ -263,7 +273,8 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   /**
-   * collects all the parameters entered by user and creates a dictionary with all the parameters.
+   * collects all the parameters entered by user and creates a dictionary with all the
+   * parameters.
    *
    * @return Map with all the parameters. Following are the keys used in the map to retrieve the
    * parameters. portfolioName, tickerSymbols, investmentAmount, commission, startDate, endDate,
