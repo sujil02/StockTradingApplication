@@ -69,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="158" column="87" selection-start-line="158" selection-start-column="87" selection-end-line="158" selection-end-column="87" />
+            <state relative-caret-position="262">
+              <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -299,7 +299,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555543811263" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555544167095" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/res" />
@@ -617,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555543498835</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="drop ticker symbol on negative and view cleanup">
+      <created>1555543856986</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1555543856986</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -740,7 +747,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="added method to GUI controller" />
     <MESSAGE value="text based controller working with strategies" />
     <MESSAGE value="refactoring strategy package" />
     <MESSAGE value="refactoring strategy in features" />
@@ -765,7 +771,8 @@
     <MESSAGE value="grader full" />
     <MESSAGE value="export message bug fixed" />
     <MESSAGE value="bug fixed for strategy weights" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixed for strategy weights" />
+    <MESSAGE value="drop ticker symbol on negative and view cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="drop ticker symbol on negative and view cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -778,7 +785,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java</url>
-          <line>270</line>
+          <line>271</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
@@ -826,7 +833,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java</url>
-          <line>206</line>
+          <line>208</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
@@ -1227,8 +1234,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="158" column="87" selection-start-line="158" selection-start-column="87" selection-end-line="158" selection-end-column="87" />
+        <state relative-caret-position="262">
+          <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

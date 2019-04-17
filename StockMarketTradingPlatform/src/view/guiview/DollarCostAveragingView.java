@@ -62,6 +62,7 @@ public class DollarCostAveragingView extends JPanel {
     setStockEntryFeilds();
     setDateCapturePanel();
     displayArea = new JTextArea(50000, 50);
+    displayArea.setEditable(false);
     JScrollPane display = new JScrollPane(displayArea
             , JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
             , JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -220,8 +221,7 @@ public class DollarCostAveragingView extends JPanel {
         weight = Float.parseFloat(stockWeightText.getText());
         if (weight >= 0) {
           strategy.put(tickerSymbol, weight);
-        }
-        else {
+        } else {
           strategy.remove(tickerSymbol);
         }
       }
@@ -246,8 +246,8 @@ public class DollarCostAveragingView extends JPanel {
     for (Map.Entry<String, Float> entry : strategy.entrySet()) {
       displayArea.append(entry.getKey() + "\t" + entry.getValue());
       displayArea.append("\n");
-      clearSymbolAndWeight();
     }
+    clearSymbolAndWeight();
   }
 
   private void clearSymbolAndWeight() {
