@@ -1,4 +1,4 @@
-package controller.Stratergy;
+package controller.stratergy;
 
 import java.util.Date;
 import java.util.Map;
