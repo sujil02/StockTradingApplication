@@ -1,3 +1,79 @@
+Assignment 10:
+Changes in Model: There is no public facing change in model. All the features exposed earlier are still available and were tested to check continuity.
+
+Changes in Controller:
+The Feature to implement strategies is implemented in controller since the basic functions required to perform any investing strategy is buying stocks which is already exposed from model.
+Each strategy has a different variant of investing money in stocks which eventually will lead up to buy one or multiple stocks once or recursively on various dates.
+Looking at this attribute of the strategy we decided to add strategy in controller using Strategy design pattern.
+
+To implement Strategy we have created IStrategy interface which exposes method to buy stock, taking in controller and view (in other words taking control of the application).
+
+DollarCostAverage strategy is created by implementing IStrategy in DollarCostStrategy class. to initialise the parameters of the strategy a builder is created to create strategy object.
+The strategy takes in all parameters to perform a transaction (portfolio name, investment amount, duration of strategy, ticker symbols and weights).
+The strategy will calculate all the dates on which it needs to perform transaction and it will perform trade on all the dates. If the trade day falls on a non working day it will add a day to trade day and try again till the new date is in the duration of strategy.
+For the cases the end date of the strategy is not given current date is assumed to be end date and strategy is executed.
+If the start date and end date of the strategy is not given then the strategy is executed on the current date.
+If the frequency is not given frequency is considered to be 1.
+
+User has provision to create a new portfolio and execute strategy or execute strategy on existing portfolio.
+
+Buying single stocks is also considered as a strategy since it also does the same action of investing money without any complex computation.
+Hence it is defined as default strategy. It follows same flow as buying single stocks in previous assignment.
+
+The flow of application has been changes in text based controller where new options are available to user.
+On the first menu new options are added to buy stocks using strategy and to import a strategy.
+buy stocks using strategy will buy stocks by creating a new portfolio taking the portfolio name first and then creating the strategy.
+the new menu also provides an option to export strategy to do so it is mandatory to create a strategy first.
+
+If user wish to invest using strategy in existing portfolio user will have to go to manage portfolio option for that portfolio. Then upon selection of
+buy stocks option it will provide an option to buy using strategy or default. user can select buy using strategy from here on same flow will be processed
+as before.
+
+While creating strategy if user wish to perform transaction on a particular day it can select start date and end date to be same.
+If user does not provide end date current date is assumed to be end date.
+If the frequency of the trades is not provided it is considered to be 1.
+if start date and end date is not given trade is performed on the current date.
+
+Changes in View:
+To add provision to add inputs for creating a strategy a new Jpanel is created which contains all the inputs required by a strategy to be created.
+This pane gets displayed when create portfolio using strategy or buy using strategy buttons are clicked from user and manage pane respectively.
+
+Assignment 9:
+Changes in Model:
+New features of trade with commission and trade using investment amount are added to model using new version of interface.
+to support feature of making a trade with commission new property has been added to stock which stores the commission fee payed during the trade
+and while calculating the cost bias of the trade. User has an option to put commission as 0 however user cannot put negative commission.
+
+New Feature of trade with investment amount is been supported by calculating the quantity of shares which can be bought from the investment amount.
+logic considers maximum number of stocks which can be bought using the provided amount without going over the amount.
+logic will throw an exception if the investment amount is lower than the price of 1 stock on the given day.
+
+Export portfolio
+user is given an option to export the created portfolio in a json file. User is asked the directory where the exported file needs to be saved.
+if the directory is not present error is thrown. At the given location a new file is created with portfolio name as file name and .json extension.
+
+Import portfolio
+user is given an option to import previously saved portfolio as well as create a portfolio in the published format and import it to the application.
+user needs to give the file path for the file which needs to be imported. if the file is blank or file is in a different format exceptions are thrown.
+
+Changes in Controller:
+All the features common to GUI and Text based controller are abstracted in IFeatures interface and default implementation is provided in Abstract controller interface.
+
+Text based interface still follows command design pattern. new commands for export and import has been added to controller to support export and import feature.
+User is asked to enter commission while buying stock to support trade with commissions. User is given an option to invest using Investment amount by giving quantity as 0.
+
+A new controller has been added for GUI view. This controller also implements IController and IFeatures which contains all the features. It overrides the features to
+provide its implementation of the features using abstract controller.
+
+Changes in View:
+No changes are done in Text view of the program.
+
+A new View has been added to support GUI view of the program. It provides User interface to all the features provided by controller and takes input from user and provides
+inputs to controller depending upon the feature called.
+
+
+Assignment 8:
+
 Model:
 Features which needed to be supported by model were:
 1. create new portfolio
@@ -107,20 +183,9 @@ No changes are done in Text view of the program.
 A new View has been added to support GUI view of the program. It provides User interface to all the features provided by controller and takes input from user and provides
 inputs to controller depending upon the feature called.
 
-Assignment 10:
-Changes in Model: There is no public facing change in model. All the features exposed earlier are still available and were tested to check continuity.
 
-Changes in Controller:
-The Feature to implement strategies is implemented in controller since the basic functions required to perform any investing strategy is buying stocks which is already exposed from model.
-Each strategy has a different variant of investing money in stocks which eventually will lead up to buy one or multiple stocks once or recursively on various dates.
-Looking at this attribute of the strategy we decided to add strategy in controller using Strategy design pattern.
 
-To implement Strategy we have created IStrategy interface which exposes method to buy stock, taking in controller and view (in other words taking control of the application).
-DollarCostAverage strategy is created by implementing IStrategy in DollarCostStrategy class. to initialise the parameters of the strategy a builder is created to create strategy object.
-The strategy takes in all parameters to perform a transaction (portfolio name, investment amount, duration of strategy, ticker symbols and weights).
-The strategy will calculate all the dates on which it needs to perform transaction and it will perform trade on all the dates. If the trade day falls on a non working day it will add a day to trade day and try again till the new date is in the duration of strategy.
-For the cases the end date of the strategy is not given current date is assumed to be end date and strategy is executed.
-If the start date and end date of the strategy is not given
+
 
 
 
