@@ -74,6 +74,7 @@ Changes in New Version:
 Optimization in IStock to make the portfolio exportable. No impact on user since The interface supports all old methods.
 New Methods in interface are added as a new version of interface so that any old user of interface is not affected by the change and all method functionality is intact.
 
+Assignment 9:
 Changes in Model:
 New features of trade with commission and trade using investment amount are added to model using new version of interface.
 to support feature of making a trade with commission new property has been added to stock which stores the commission fee payed during the trade
@@ -106,6 +107,12 @@ No changes are done in Text view of the program.
 A new View has been added to support GUI view of the program. It provides User interface to all the features provided by controller and takes input from user and provides
 inputs to controller depending upon the feature called.
 
+Assignment 10:
+Changes in Model: There is no public facing change in model. All the features exposed earlier are still available and were tested to check continuity.
+
+Changes in Controller:
+The Feature to implement strategies is implemented in controller since the basic functions required to perform any investing strategy is buying stocks which is already exposed from model.
+Each strategy
 
 
 

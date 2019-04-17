@@ -105,7 +105,7 @@ public class DollarCostStrategy implements IStrategy {
               if (e.getMessage().equals("Invalid Date") || e.getMessage().equals("Invalid Purchase Date")) {
                 purchaseDate = addDay(purchaseDate);
               } else {
-                throw new IllegalArgumentException("Invalid data");
+                throw new IllegalArgumentException("Invalid data" + e.getMessage());
               }
             }
           }

@@ -263,8 +263,7 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   /**
-   * collects all the parameters entered by user and creates a dictionary with all the
-   * parameters.
+   * collects all the parameters entered by user and creates a dictionary with all the parameters.
    *
    * @return Map with all the parameters. Following are the keys used in the map to retrieve the
    * parameters. portfolioName, tickerSymbols, investmentAmount, commission, startDate, endDate,
@@ -280,7 +279,8 @@ public class DollarCostAveragingView extends JPanel {
       parameters.put("tickerSymbols", strategy);
       float investment = Float.parseFloat(dollarAmountInvested.getText());
       parameters.put("investmentAmount", investment);
-      float commission = Float.parseFloat(commissionAmount.getText());
+      float commission = Float.parseFloat(commissionAmount.getText().isEmpty()
+              ? "0" : commissionAmount.getText());
       parameters.put("commission", commission);
       Date startDate = startDatePicker.getDate();
       parameters.put("startDate", startDate);

@@ -496,7 +496,7 @@ public class JFrameView extends JFrame implements IJFrameView {
           features.exportPortfolio(selectedPortfolio, exportPath);
         }
       } catch (IOException e) {
-        e.printStackTrace();
+        showErrorMessage("Export Failed");
       }
     });
     exitButton.addActionListener(l -> features.exitProgram());
@@ -509,6 +509,7 @@ public class JFrameView extends JFrame implements IJFrameView {
       hideManagePane();
     }
     //setStrategyPanel();
+    dollarPnel.executeBackCleanUP();
     dollarCostAverageStrategyPane.add(dollarPnel, BorderLayout.CENTER);
     dollarCostAverageStrategyPane.add(backFromStrategy, BorderLayout.SOUTH);
     dollarCostAverageStrategyPane.setVisible(true);
