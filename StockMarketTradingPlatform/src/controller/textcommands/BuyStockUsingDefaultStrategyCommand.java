@@ -12,8 +12,8 @@ import controller.TextController;
 import view.IView;
 
 /**
- * Class handles the command to buy a stock for a particular user over the selected portfolio by
- * the user.
+ * Class handles the command to buy a stock for a particular user over the selected portfolio by the
+ * user.
  */
 public class BuyStockUsingDefaultStrategyCommand implements IPortfolioCommand {
   @Override
@@ -86,7 +86,7 @@ public class BuyStockUsingDefaultStrategyCommand implements IPortfolioCommand {
         try {
           view.append("Invalid Date. Try Again.");
         } catch (IOException e1) {
-          e1.printStackTrace();
+          // Do Nothing
         }
       }
     }
