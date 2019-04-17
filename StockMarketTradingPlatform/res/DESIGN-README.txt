@@ -112,7 +112,11 @@ Changes in Model: There is no public facing change in model. All the features ex
 
 Changes in Controller:
 The Feature to implement strategies is implemented in controller since the basic functions required to perform any investing strategy is buying stocks which is already exposed from model.
-Each strategy
+Each strategy has a different variant of investing money in stocks which eventually will lead up to buy one or multiple stocks once or recursively on various dates.
+Looking at this attribute of the strategy we decided to add strategy in controller using Strategy design pattern.
+
+To implement Strategy we have created IStrategy interface which exposes method to buy stock, taking in controller and view (in other words taking control of the application).
+Buying single stock is also a strategy in
 
 
 

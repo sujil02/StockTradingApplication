@@ -397,6 +397,8 @@ public class JFrameView extends JFrame implements IJFrameView {
     hourLabel.setVisible(visibility);
     minLabel.setVisible(visibility);
     secLabel.setVisible(visibility);
+    quantityButton.setVisible(visibility);
+    investAmountButton.setVisible(visibility);
   }
 
   private void displayQuantity() {
