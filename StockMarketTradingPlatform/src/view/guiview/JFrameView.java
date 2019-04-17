@@ -1,6 +1,10 @@
 package view.guiview;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -11,7 +15,18 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import javax.swing.*;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 import controller.IFeatures;
 import model.IPortfolioV2;
@@ -78,8 +93,8 @@ public class JFrameView extends JFrame implements IJFrameView {
   String prevScreen;
 
   /**
-   * GUI based view constructor. Creates a master container representing the basic GUI design having
-   * to main frame pane the managePane and the userpane.
+   * GUI based view constructor. Creates a master container representing the basic GUI design
+   * having to main frame pane the managePane and the userpane.
    */
   public JFrameView() {
     super();
@@ -242,7 +257,6 @@ public class JFrameView extends JFrame implements IJFrameView {
     pane.add(commissionLabel);
     commissionInput = new JTextField();
     pane.add(commissionInput);
-    // dollarCostAverageStrategyPane.add(new DollarCostAveragingView(selectedPortfolio),BorderLayout.CENTER);
     setTradeSelectionPane(pane);
     parentPanel.add(pane);
   }
@@ -316,7 +330,8 @@ public class JFrameView extends JFrame implements IJFrameView {
   private void setDisplayArea(Container parentPanel) {
     displayArea = new JTextArea();
     displayArea.setEditable(false);
-    JScrollPane displayPane = new JScrollPane(displayArea, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
+    JScrollPane displayPane = new JScrollPane(displayArea,
+            JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
             , JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
     parentPanel.add(displayPane);
   }
@@ -653,7 +668,7 @@ public class JFrameView extends JFrame implements IJFrameView {
           displayPortfolioNames(portfolioNames);
         }
       } catch (IOException e1) {
-
+        showErrorMessage("File cannot be read.");
       }
     }
   }

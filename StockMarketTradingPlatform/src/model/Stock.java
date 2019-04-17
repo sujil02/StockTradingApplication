@@ -4,9 +4,9 @@ import java.util.Date;
 import java.util.Map;
 
 /**
- * This method implements IStock. It represents a stock by its company name and
- * its ticker symbol. ticker symbol is assumed to be unique for a particular
- * company. Hence companies with same ticker symbol are considered same.
+ * This method implements IStock. It represents a stock by its company name and its ticker symbol.
+ * ticker symbol is assumed to be unique for a particular company. Hence companies with same
+ * ticker symbol are considered same.
  */
 public class Stock implements IStock {
   private String companyName;
@@ -17,19 +17,18 @@ public class Stock implements IStock {
   private float commission;
 
   /**
-   * This method initialises an object of Stock with provided company name and
-   * ticker symbol and the provided properties of a trade. company name can be
-   * empty but ticker symbol is mandatory.
+   * This method initialises an object of Stock with provided company name and ticker symbol and
+   * the provided properties of a trade. company name can be empty but ticker symbol is
+   * mandatory.
    *
    * @param companyName  name of company
    * @param tickerSymbol unique ticker symbol of the company
    * @param quantity     number of shares bought
    * @param purchaseDate purchase date of stock.
    * @param commission   commission paid on a trade.
-   * @throws IllegalArgumentException If company name or ticker symbol is null.
-   *                                  If tickerSymbol is empty. If quantity or
-   *                                  cost price is less than or equal to 0. If
-   *                                  purchase Date is null.
+   * @throws IllegalArgumentException If company name or ticker symbol is null. If tickerSymbol is
+   *                                  empty. If quantity or cost price is less than or equal to 0.
+   *                                  If purchase Date is null.
    */
   public Stock(String companyName, String tickerSymbol, int quantity,
                Date purchaseDate, float commission)
@@ -52,18 +51,17 @@ public class Stock implements IStock {
   }
 
   /**
-   * This method initialises an object of Stock with provided company name and
-   * ticker symbol and the provided properties of a trade. quantity is set to 0.
-   * company name can be empty but ticker symbol is mandatory.
+   * This method initialises an object of Stock with provided company name and ticker symbol and
+   * the provided properties of a trade. quantity is set to 0. company name can be empty but
+   * ticker symbol is mandatory.
    *
    * @param companyName  name of company
    * @param tickerSymbol unique ticker symbol of the company
    * @param purchaseDate purchase date of stock.
    * @param commission   commission paid on a trade.
-   * @throws IllegalArgumentException If company name or ticker symbol is null.
-   *                                  If tickerSymbol is empty. If quantity or
-   *                                  cost price is less than or equal to 0. If
-   *                                  purchase Date is null.
+   * @throws IllegalArgumentException If company name or ticker symbol is null. If tickerSymbol is
+   *                                  empty. If quantity or cost price is less than or equal to 0.
+   *                                  If purchase Date is null.
    */
   public Stock(String companyName, String tickerSymbol, Date purchaseDate,
                float commission) throws IllegalArgumentException {
@@ -86,19 +84,18 @@ public class Stock implements IStock {
   }
 
   /**
-   * This method initialises an object of Stock with provided company name and
-   * ticker symbol and the provided properties of a trade. quantity is set to 0.
-   * company name can be empty but ticker symbol is mandatory.
+   * This method initialises an object of Stock with provided company name and ticker symbol and
+   * the provided properties of a trade. quantity is set to 0. company name can be empty but
+   * ticker symbol is mandatory.
    *
    * @param companyName  name of company
    * @param tickerSymbol unique ticker symbol of the company
    * @param purchaseDate purchase date of stock.
    * @param commission   commission paid on a trade.
    * @param costPrice    Price of the stock.
-   * @throws IllegalArgumentException If company name or ticker symbol is null.
-   *                                  If tickerSymbol is empty. If quantity or
-   *                                  cost price is less than or equal to 0. If
-   *                                  purchase Date is null.
+   * @throws IllegalArgumentException If company name or ticker symbol is null. If tickerSymbol is
+   *                                  empty. If quantity or cost price is less than or equal to 0.
+   *                                  If purchase Date is null.
    */
   public Stock(String companyName, String tickerSymbol, int quantity, float costPrice,
                Date purchaseDate, float commission) throws IllegalArgumentException {
@@ -130,11 +127,6 @@ public class Stock implements IStock {
     IStockDataAPI stockData = new StockDataAPI();
 
     Map<String, String> data = stockData.getStockData(this.tickerSymbol, refDate);
-//    float hi = Float.parseFloat(data.get("HIGH"));
-//    float lo = Float.parseFloat(data.get("LOW"));
-
-
-    //return (hi + lo) / 2;
     return Float.parseFloat(data.get("CLOSE"));
   }
 
@@ -205,8 +197,8 @@ public class Stock implements IStock {
   }
 
   /**
-   * This validated the quantity while making a purchase such that atleast one
-   * stock could be bought for the invested amount.
+   * This validated the quantity while making a purchase such that atleast one stock could be
+   * bought for the invested amount.
    */
   public void setQuantity(float investmentAmount) {
     if (this.costPrice == 0) {

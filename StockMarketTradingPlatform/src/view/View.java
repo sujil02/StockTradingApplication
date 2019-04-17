@@ -40,12 +40,12 @@ public class View implements IView {
   }
 
   @Override
-  public void showErrorMessage(String message) throws IOException{
+  public void showErrorMessage(String message) throws IOException {
     append(message);
   }
 
   @Override
-  public void showSuccessMessage(String message) throws IOException{
+  public void showSuccessMessage(String message) throws IOException {
     append(message);
   }
 }

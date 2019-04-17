@@ -2,14 +2,26 @@ package view.guiview;
 
 import org.jdesktop.swingx.JXDatePicker;
 
-import java.awt.*;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JDialog;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 import controller.IFeatures;
 
@@ -20,11 +32,8 @@ import controller.IFeatures;
  */
 public class DollarCostAveragingView extends JPanel {
   private JTextField dollarAmountInvested;
-  private JLabel dollarAmountInvestLabel;
   private JTextField commissionAmount;
-  private JLabel commissionAmountLabel;
   private JLabel portfolioNameLabel;
-  private JLabel stockTickerSymbolLabel;
   private JLabel stockWeightLabel;
   private JTextField stockTickerSymbolText;
   private JTextField stockWeightText;
@@ -36,14 +45,10 @@ public class DollarCostAveragingView extends JPanel {
   private String selectedPortfolio;
   private JXDatePicker startDatePicker;
   private JXDatePicker endDatePicker;
-  private JLabel durationLable;
-  private JLabel startDateLabel;
-  private JLabel endDateLable;
   private JTextField duration;
   private JButton executeStrategy;
   private JButton importStrategy;
-  private JLabel addStockMessage;
-  private JLabel addStockMessage2;
+
 
   /**
    * GUI based view constructor. Creates a DollarCostAverage pane which will be loaded in Main
@@ -78,6 +83,9 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   private void setDateCapturePanel() {
+    JLabel durationLable;
+    JLabel startDateLabel;
+    JLabel endDateLable;
     Container pane = new JPanel(new GridLayout(1, 6, 5, 5));
     startDateLabel = new JLabel("Strategy Start Date");
     startDatePicker = new JXDatePicker();
@@ -113,6 +121,8 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   private void setDollarAmountInvestment() {
+    JLabel commissionAmountLabel;
+    JLabel dollarAmountInvestLabel;
     Container pane = new JPanel(new GridLayout(1, 4, 5, 5));
     dollarAmountInvestLabel = new JLabel("Investment Amount in dollars $");
     pane.add(dollarAmountInvestLabel);
@@ -126,6 +136,8 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   private void setStockEntryFeilds() {
+    JLabel stockTickerSymbolLabel;
+
     Container pane = new JPanel(new GridLayout(1, 5, 5, 5));
     stockTickerSymbolLabel = new JLabel("Ticker symbol");
     stockTickerSymbolText = new JTextField(20);
@@ -139,7 +151,8 @@ public class DollarCostAveragingView extends JPanel {
     pane.add(stockWeightLabel);
     pane.add(stockWeightText);
     pane.add(addChoice);
-
+    JLabel addStockMessage;
+    JLabel addStockMessage2;
     this.add(pane);
     addStockMessage = new JLabel(" ** To change any added stock values " +
             "please re-enter the same stock symbol and click add.");
@@ -192,7 +205,8 @@ public class DollarCostAveragingView extends JPanel {
   private void addToCombinationToMap() {
     String tickerSymbol = stockTickerSymbolText.getText();
     if (tickerSymbol == null) {
-      JOptionPane.showMessageDialog(new JFrame(), "Ticker Symbol cannot be null", "Dialog", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(new JFrame(), "Ticker Symbol cannot be null",
+              "Dialog", JOptionPane.ERROR_MESSAGE);
     }
     float weight = 0.0f;
     try {
@@ -204,7 +218,8 @@ public class DollarCostAveragingView extends JPanel {
         strategy.put(tickerSymbol, weight);
       }
     } catch (NumberFormatException e) {
-      JOptionPane.showMessageDialog(new JFrame(), "Invalid weight entry", "Dialog", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(new JFrame(), "Invalid weight entry",
+              "Dialog", JOptionPane.ERROR_MESSAGE);
       stockWeightText.setText("");
     }
     display();
@@ -310,6 +325,7 @@ public class DollarCostAveragingView extends JPanel {
   }
 
   private void showerrorMessages(String message) {
-    JOptionPane.showMessageDialog(new JFrame(), message, "Dialog", JOptionPane.ERROR_MESSAGE);
+    JOptionPane.showMessageDialog(new JFrame(), message, "Dialog",
+            JOptionPane.ERROR_MESSAGE);
   }
 }

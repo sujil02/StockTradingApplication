@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -9,7 +8,6 @@ import java.util.Date;
 import java.util.Map;
 
 import controller.Stratergy.DollarCostStrategy;
-import controller.Stratergy.IStrategy;
 import model.IUserV2;
 import model.TradeType;
 import view.guiview.IJFrameView;
@@ -22,11 +20,14 @@ import view.guiview.JFrameView;
  */
 public class GUIController extends AbstractController {
   private IJFrameView view;
-  private IStrategy strategy;
 
+  /**
+   * Constructor to initialize a GUI Controller with its respective model.
+   *
+   * @param model object of the model which the controller is communicating.
+   */
   public GUIController(IUserV2 model) {
     super(model);
-    strategy = null;
     setView();
     super.view = view;
   }
