@@ -156,7 +156,7 @@ public class DollarCostAveragingView extends JPanel {
     this.add(pane);
     addStockMessage = new JLabel(" ** To change any added stock values " +
             "please re-enter the same stock symbol and click add.");
-    addStockMessage2 = new JLabel(" **To drop any value please enter weight as -1.");
+    addStockMessage2 = new JLabel(" **To drop any value please enter weight as Negative.");
     Container pane2 = new JPanel(new GridLayout(2, 1));
     pane2.add(addStockMessage);
     pane2.add(addStockMessage2);
@@ -175,6 +175,7 @@ public class DollarCostAveragingView extends JPanel {
         String filePath = getPathFromChooser(JFileChooser.DIRECTORIES_ONLY);
         if (filePath != null) {
           features.exportStrategy(filePath);
+          executeBackCleanUP();
         }
       } catch (IOException e) {
         //Do Nothing
@@ -183,6 +184,7 @@ public class DollarCostAveragingView extends JPanel {
     executeStrategy.addActionListener(l -> {
       try {
         features.executeStrategy(features);
+        executeBackCleanUP();
       } catch (IOException e) {
         showerrorMessages("Invalid file path entry");
       }
@@ -216,7 +218,12 @@ public class DollarCostAveragingView extends JPanel {
         recalculateWeight();
       } else {
         weight = Float.parseFloat(stockWeightText.getText());
-        strategy.put(tickerSymbol, weight);
+        if (weight >= 0) {
+          strategy.put(tickerSymbol, weight);
+        }
+        else {
+          strategy.remove(tickerSymbol);
+        }
       }
     } catch (NumberFormatException e) {
       JOptionPane.showMessageDialog(new JFrame(), "Invalid weight entry",
