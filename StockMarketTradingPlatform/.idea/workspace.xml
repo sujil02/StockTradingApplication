@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a7da8f00-6ee5-45cd-aa98-7ff0d9efe06d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java" afterDir="false" />
     </list>
     <list id="fe131591-8a64-487d-8a13-a60ecaa55e05" name="Revert &quot;Adding export strategy functionalities&quot;" comment="Revert &quot;Adding export strategy functionalities&quot;&#10;&#10;This reverts commit 57800942" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -69,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="4" />
+            <state relative-caret-position="279">
+              <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -299,7 +298,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555544167095" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555546119213" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/res" />
@@ -624,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555543856986</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="drop ticker symbol on negative bug fixed">
+      <created>1555544239673</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1555544239673</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -661,7 +667,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -747,7 +752,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="text based controller working with strategies" />
     <MESSAGE value="refactoring strategy package" />
     <MESSAGE value="refactoring strategy in features" />
     <MESSAGE value="view moved to abstractcontroller" />
@@ -772,7 +776,8 @@
     <MESSAGE value="export message bug fixed" />
     <MESSAGE value="bug fixed for strategy weights" />
     <MESSAGE value="drop ticker symbol on negative and view cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="drop ticker symbol on negative and view cleanup" />
+    <MESSAGE value="drop ticker symbol on negative bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="drop ticker symbol on negative bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -785,7 +790,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java</url>
-          <line>271</line>
+          <line>272</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
@@ -833,7 +838,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java</url>
-          <line>208</line>
+          <line>209</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
@@ -1234,8 +1239,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/guiview/DollarCostAveragingView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="247" column="4" selection-start-line="247" selection-start-column="4" selection-end-line="247" selection-end-column="4" />
+        <state relative-caret-position="279">
+          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
