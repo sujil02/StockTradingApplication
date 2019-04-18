@@ -99,7 +99,7 @@ public class JFrameView extends JFrame implements IJFrameView {
   public JFrameView() {
     super();
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    this.setMinimumSize(new Dimension(900, 600));
+    this.setMinimumSize(new Dimension(800, 600));
     userPane = new JPanel();
     managePane = new JPanel();
     dollarCostAverageStrategyPane = new JPanel();
@@ -166,7 +166,7 @@ public class JFrameView extends JFrame implements IJFrameView {
 
   private void setSelectPortfolioPane(Container parentPanel) {
     Container pane = new JPanel();
-    pane.setLayout(new BorderLayout(10, 10));
+    pane.setLayout(new BorderLayout(50, 50));
     JLabel selectPortfolioDisplay = new JLabel("Enter the portfolio \n name to be managed.");
     pane.add(selectPortfolioDisplay, BorderLayout.WEST);
     selectPortfolioInput = new JTextField(10);
@@ -174,7 +174,7 @@ public class JFrameView extends JFrame implements IJFrameView {
     managePortfolio = new JButton("Manage Portfolio");
     managePortfolio.setActionCommand("Manage Portfolio Button");
     pane.add(managePortfolio, BorderLayout.EAST);
-    pane.setSize(5, 5);
+    pane.add(new JLabel(),BorderLayout.SOUTH);
     parentPanel.add(pane);
   }
 
@@ -191,7 +191,7 @@ public class JFrameView extends JFrame implements IJFrameView {
 
   private void setCreatePortfolioPane(Container parentPanel) {
     Container pane = new JPanel();
-    pane.setLayout(new BorderLayout(10, 10));
+    pane.setLayout(new BorderLayout(50, 50));
     JLabel createPortfolioDisplay = new JLabel("Enter the portfolio \n name to be created.");
     pane.add(createPortfolioDisplay, BorderLayout.WEST);
     createPortfolioInput = new JTextField(10);
