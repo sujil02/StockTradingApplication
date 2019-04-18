@@ -99,7 +99,7 @@ public class JFrameView extends JFrame implements IJFrameView {
   public JFrameView() {
     super();
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    this.setMinimumSize(new Dimension(800, 600));
+    this.setMinimumSize(new Dimension(900, 600));
     userPane = new JPanel();
     managePane = new JPanel();
     dollarCostAverageStrategyPane = new JPanel();
@@ -148,6 +148,7 @@ public class JFrameView extends JFrame implements IJFrameView {
       hideStrategyPane();
       dollarPnel.executeBackCleanUP();
       showPrevScreen();
+      createPortfolioInput.setText("");
     });
     buyUsingStrategy.addActionListener(l -> {
       prevScreen = "MANAGE";
